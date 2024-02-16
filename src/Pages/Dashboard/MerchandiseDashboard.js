@@ -14,7 +14,7 @@ const MerchandiseDashboard = () => {
 
   const getOrderData = async () => {
     const res = await axiosInstance.post('/merchandise/getAllOrderList');
-    console.log(res.data.orderList);
+    // console.log(res.data.orderList);
     setAllOrders(res.data.orderList);
   }
 
@@ -38,7 +38,7 @@ const MerchandiseDashboard = () => {
           totalOrders: allOrders.filter(cloth => cloth.clothId === '3').length
         },
       ])
-      console.log(cloths);
+      // console.log(cloths);
     })();
   }, []);
 

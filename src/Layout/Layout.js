@@ -77,7 +77,7 @@ const Layout = ({ children }) => {
             )}
             {isLoggedIn && role === "ADMIN" && (
               <li>
-                <Link style={{ textDecoration: 'none' }} to={"/admin/accomodation"}>Accomodation Dashboard</Link>
+                <Link style={{ textDecoration: 'none' }} to={"/admin/accommodation"}>Accomodation Dashboard</Link>
               </li>
             )}
 
