@@ -62,7 +62,7 @@ import FacultyCoordinators from "./USER/members/FacultyCoordinators";
 import EventRegistrationForm from "./Pages/Dashboard/EventRegistrationForm";
 import AccomodationRegistrationForm from "./Pages/Dashboard/AccomodationRegistrationForm";
 import Pronight from "./USER/Pro-Night/Pronight";
-import Schedule from "./USER/Schedule/Schedule";
+// import Schedule from "./USER/Schedule/Schedule";
 import Pronightmainpage from "./USER/Pro-Night/Pronightmainpage";
 // userside end
 
@@ -145,7 +145,7 @@ const App = () => {
         <Route path="/Clubevents/Rajbhasha" element={< Rajbhasha />} />
         <Route path="/Clubevents/Sanskriti" element={< Sanskriti />} />
         <Route path="/Gallery" element={< Gallery />} />
-        <Route path="/schedule" element={< Schedule />} />
+        {/* <Route path="/schedule" element={< Schedule />} /> */}
         <Route path="/megaevent" element={< Pronightmainpage />} />
 
 

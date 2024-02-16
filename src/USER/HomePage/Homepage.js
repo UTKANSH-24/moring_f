@@ -4,9 +4,10 @@ import AboutUsSection from '../About/About';
 import ContactSection from '../Contact/Contact';
 import FallingText from '../Backgroundtext/FallingText';
 import Gallery from '../clubs and event/Gallery';
-import Navbar from '../navbar/Navbar';
-import Schedule from '../Schedule/Schedule';
+// import Navbar from '../navbar/Navbar';
+// import Schedule from '../schedule/Horizontaltab';
 import Pronightmainpage from '../Pro-Night/Pronightmainpage';
+import LabTabs from '../schedule/Horizontaltab';
 const Homepage = () => {
 
     return (
@@ -17,6 +18,7 @@ const Homepage = () => {
             <AboutUsSection />
             {/* <Schedule/> */}
             <Gallery />
+            <LabTabs/>
             <Pronightmainpage />
             
             <ContactSection />

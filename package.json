@@ -25,7 +25,14 @@
     "react-router-dom": "^6.7.0",
     "react-scripts": "5.0.1",
     "swiper": "^11.0.6",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@mui/material": "latest",
+    "prop-types": "latest",
+   
+    "@mui/lab": "latest"
+    
   },
   "scripts": {
     "start": "react-scripts start",
