@@ -86,6 +86,7 @@ const App = () => {
         </Route>
 
         <Route element={<RequireAuth allowedRoles={["USER", "ADMIN", "COORDINATOR"]} />}>
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/event/description" element={<EventDescription />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/checkout/success" element={<CheckoutSuccess />} />
@@ -105,7 +106,7 @@ const App = () => {
 
 
         <Route element={<RequireAuth allowedRoles={["ADMIN"]} />}>
-          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          {/* <Route path="/admin/dashboard" element={<AdminDashboard />} /> */}
           <Route path="/admin/accomodation" element={<AccomodationDashboard />} />
           <Route path="/admin/merchandise" element={<MerchandiseDashboard />} />
           <Route path="/event/AddParticipant" element={<AddParticipant />} />

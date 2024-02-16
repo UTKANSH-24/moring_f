@@ -14,11 +14,9 @@ const DisplayParticipants = () => {
   // for getting the data from location of previous component
  
   const eventDetails = useLocation().state;
-  console.log("eventDetailsed2rf2gtq3");
-  console.log(eventDetails);
+
   const { participants } = useSelector((state) => state.lecture);
-  console.log("participants123");
-  console.log(participants);
+  
  
   const { role } = useSelector((state) => state.auth);
 
@@ -42,6 +40,8 @@ const DisplayParticipants = () => {
 
     })();
   }, []);
+
+ 
 
   
   return (
@@ -112,7 +112,7 @@ const DisplayParticipants = () => {
                         {" "}
                         Participant {index + 1} :{" "}
                       </span>
-                      {element?.title}
+                      {element?.collegeName}
                     </p>
                     
                   </li>

@@ -34,10 +34,9 @@ export const getEventParticipants = createAsyncThunk(
   async ({ courseId, isVerified }) => { // Accept an object with courseId and isVerified
     try {
       const res = axiosInstance.get(`/event/${courseId}?verified=${isVerified}`); // Pass isVerified as a query parameter
-      console.log("courseId");
-      console.log(courseId);
-      console.log("isVerified");
-      console.log(isVerified);
+      
+
+  
       toast.promise(res, {
         loading: "Fetching the lectures...",
         success: "Lectures fetched successfully",
@@ -45,8 +44,7 @@ export const getEventParticipants = createAsyncThunk(
       });
 
       const response = await res;
-      console.log("response");
-      console.log(response.data);
+   
       return response.data;
     } catch (error) {
       toast.error(error?.response?.data?.message);
