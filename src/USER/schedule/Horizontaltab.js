@@ -36,11 +36,12 @@ export default function LabTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+  
+  
   return (
     <Container>
       <h2 className="title">Schedule</h2>
-      <Box sx={{ width: '90%', margin: 'auto',paddingTop:'20px',borderRadius:'20px', typography: 'body1', backgroundColor: 'green' }}>
+      <Box sx={{ width: '90%', margin: 'auto',paddingTop:'20px',borderRadius:'20px', typography: 'body1', backgroundColor: 'rgb(115, 124, 175)' }}>
         <TabContext value={value}>
           <Box>
             <ResponsiveTabList onChange={handleChange}>

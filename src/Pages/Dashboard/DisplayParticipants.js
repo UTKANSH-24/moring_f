@@ -90,8 +90,12 @@ const DisplayParticipants = () => {
               {role === "ADMIN" && (
                 <button
                   onClick={() =>
-                    navigate("/event/AddParticipant", {
-                      state: { ...eventDetails },
+                    navigate("/event/registerinevent", {
+                      state: { 
+                        eventId: eventDetails._id,
+                        minParticipants: eventDetails.minparticipant,
+                        maxParticipants: eventDetails.minparticipant
+                         },
                     })
                   }
                   className="btn-primary px-2 py-1 rounded-md font-semibold text-sm"
