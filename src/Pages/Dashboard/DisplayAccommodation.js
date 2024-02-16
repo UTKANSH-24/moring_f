@@ -13,18 +13,18 @@ const DisplayAccommodation = () => {
         if (verified === '1') {
             const res = await axiosInstance.post(`/accommodation/getVerifiedAccommodationList/${accommodationType}`);
             setAccommodationDetails(res.data.data);
-            console.log('res', res.data.data);
+            // console.log('res', res.data.data);
         } else {
             const res = await axiosInstance.post(`/accommodation/getUnverifiedAccommodationList/${accommodationType}`);
             setAccommodationDetails(res.data.data);
-            console.log('res un', res.data.data);
+            // console.log('res un', res.data.data);
         }
     }
 
     useEffect(() => {
         (async () => {
             await getAccommodationDetails();
-            console.log('okj', accommodationDetails);
+            // console.log('okj', accommodationDetails);
         })();
 
     }, []);
@@ -40,7 +40,7 @@ const DisplayAccommodation = () => {
         if (res.data.success) {
             await getAccommodationDetails();
         }
-        console.log(res.data.message);
+        // console.log(res.data.message);
 
     };
 

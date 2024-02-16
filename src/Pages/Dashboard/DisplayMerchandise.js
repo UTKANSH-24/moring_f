@@ -9,24 +9,24 @@ const DisplayMerchandise = () => {
     const [orderDetails, setOrderDetails] = useState([]);
     const { clothId, verified } = useParams();
 
-    console.log('clothId', clothId, 'verified', verified);
+    // console.log('clothId', clothId, 'verified', verified);
 
     const getOrderDetails = async () => {
         if (verified === '1') {
             const res = await axiosInstance.post(`/merchandise/getVerifiedPaymentList/${clothId}`);
             setOrderDetails(res.data.data);
-            console.log('res', res.data.data);
+            // console.log('res', res.data.data);
         } else {
             const res = await axiosInstance.post(`/merchandise/getUnverifiedPaymentList/${clothId}`);
             setOrderDetails(res.data.data);
-            console.log('res un', res.data.data);
+            // console.log('res un', res.data.data);
         }
     }
 
     useEffect(() => {
         (async () => {
             await getOrderDetails();
-            console.log('okj', orderDetails);
+            // console.log('okj', orderDetails);
         })();
 
     }, []);
@@ -39,11 +39,11 @@ const DisplayMerchandise = () => {
             orderId: orderDetails[currentOrder]._id,
             status: newState,
         });
-        console.log(res.data);
+        // console.log(res.data);
         if (res.data.success) {
             await getOrderDetails();
         }
-        console.log(res.data.message);
+        // console.log(res.data.message);
 
     };
 

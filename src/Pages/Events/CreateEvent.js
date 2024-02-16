@@ -50,7 +50,7 @@ const CreateEvent = () => {
     // for creating a new Event
     if (initialEventData.newEvent) {
       //   checking for the empty fields
-      console.log("new form data",userInput);
+      // console.log("new form data",userInput);
       if (
         !userInput.title ||
         !userInput.club ||

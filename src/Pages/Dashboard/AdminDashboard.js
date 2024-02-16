@@ -17,8 +17,8 @@ const AdminDashboard = () => {
 
   // getting the courses data from redux toolkit store
   const myEvents = useSelector((state) => state.event.eventsData);
-  console.log("Admin Dashboard");
-  console.log(myEvents);
+  // console.log("Admin Dashboard");
+  // console.log(myEvents);
 
   // function to handle the course delete
   const handleEventDelete = async (id) => {

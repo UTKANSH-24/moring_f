@@ -80,10 +80,10 @@ function AccomodationRegistrationForm() {
             });
             if (Object.keys(errors).length === 0) {
                 try {
-                    console.log("formData", formData);
+                    // console.log("formData", formData);
                     const url = `accommodation/registerAccommodation`
                     const response = await axiosInstance.post(url, formData);
-                    console.log("response", response);
+                    // console.log("response", response);
                     if (response?.data.success) {
                         setFormData({
                             // teamName: '',

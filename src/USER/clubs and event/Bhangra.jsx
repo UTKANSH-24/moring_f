@@ -15,7 +15,7 @@ const BhangraClub = () => {
     
 
     const handleClick = (event) => {
-        console.log(event.target.name);
+        // console.log(event.target.name);
         if (sessionStorage.getItem('loginToken') === null) {
             window.location = '../signin.html';
         } else {

@@ -10,7 +10,7 @@ import '../css/style.css';
 import '../css/div_comming_css.css'
 export default function Animation() {
     const handleClick = (event) => {
-        console.log(event.target.name);
+        // console.log(event.target.name);
         if (sessionStorage.getItem("loginToken") === null) {
             window.location = "../signin.html";
         } else {
