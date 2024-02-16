@@ -6,8 +6,11 @@ import FallingText from '../Backgroundtext/FallingText';
 import Gallery from '../clubs and event/Gallery';
 // import Navbar from '../navbar/Navbar';
 // import Schedule from '../schedule/Horizontaltab';
+
 import Pronightmainpage from '../Pro-Night/Pronightmainpage';
 import LabTabs from '../schedule/Horizontaltab';
+// import VerticalTabs from '../schedule/Schedule1';
+// import VerticalTabs2 from '../schedule/Schedule2';
 const Homepage = () => {
 
     return (
@@ -16,6 +19,8 @@ const Homepage = () => {
             <FallingText />
 
             <AboutUsSection />
+            {/* <VerticalTabs/> */}
+            {/* <VerticalTabs2/> */}
             {/* <Schedule/> */}
             <Gallery />
             <LabTabs/>
