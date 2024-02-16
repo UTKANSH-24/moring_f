@@ -21,7 +21,7 @@ import Displaytcacoordinator from "./Pages/Dashboard/Displaytcacoordinator";
 import RequireAuth from "./Components/Auth/RequireAuth";
 import NotRequireAuth from "./Components/Auth/NotRequireAuth";
 import Denied from "./Pages/Denied";
-import AccomodationDashboard from "./Pages/Dashboard/AccommodationDashboard";
+import AccommodationDashboard from "./Pages/Dashboard/AccommodationDashboard";
 import DisplayMerchandise from "./Pages/Dashboard/DisplayMerchandise";
 // userside
 import TeamMembers from "./USER/members/member";
@@ -92,7 +92,7 @@ const App = () => {
 
         <Route element={<RequireAuth allowedRoles={["ADMIN"]} />}>
           {/* <Route path="/admin/dashboard" element={<AdminDashboard />} /> */}
-          <Route path="/admin/accomodation" element={<AccomodationDashboard />} />
+          <Route path="/admin/accommodation" element={<AccommodationDashboard />} />
           <Route path="/admin/merchandise" element={<MerchandiseDashboard />} />
           <Route path="/event/AddParticipant" element={<AddParticipant />} />
           <Route path="/event/addclubcoordinator" element={<Addclubcoordinator />} />
