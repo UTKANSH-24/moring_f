@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import Layout from "../../Layout/Layout";
+
 import { BsCollectionPlayFill, BsTrash } from "react-icons/bs";
 import { MdOutlineModeEdit ,MdGppBad,MdGppGood} from "react-icons/md";
 import { useNavigate } from "react-router-dom";
@@ -14,19 +16,26 @@ const AccomodationDashboard = () => {
 
   
 
+  // getting the courses data from redux toolkit store
+  const myCourses = useSelector((state) => state.event.eventsData);
 
+  // function to handle the course delete
   const handleCourseDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete the course?")) {
       const res = await dispatch(deleteEvent(id));
 
+      // fetching the new updated data for the course
       console.log(res);
+      // if (success) {
         await dispatch(getAllEvent());
+      // }
     }
   };
 
   useEffect(() => {
     (async () => {
       await dispatch(getAllEvent());
+      // await dispatch(getPaymentRecord());
     })();
   }, []);
 
@@ -37,14 +46,17 @@ const AccomodationDashboard = () => {
           Accomodation Dashboard
         </h1>
 
+        {/* creating the records card and chart for sales and user details */}
        
 
+        {/* CRUD courses section */}
         <div className="mx-[10%] w-[80%] self-center flex flex-col items-center justify-center gap-10 mb-10">
           <div className="flex w-full items-center justify-between">
             <h1 className="text-center text-3xl font-semibold">
             Accomodation Overview
             </h1>
 
+            {/* add course card */}
             <button
               onClick={() => {
                 navigate("/course/create", {
@@ -73,9 +85,13 @@ const AccomodationDashboard = () => {
                 <th>S No.</th>
                 <th>Accomodation Name</th>
                 <th>Type</th>
+                {/* <th>Instructor</th> */}
                 <th>Total Bookings</th>
+                {/* <th>Course Description</th> */}
                 <th>View</th>
                 <th>Accomodation<br></br>Coordinator</th>
+                {/* <th>Tca<br></br>Coordinator</th> */}
+                {/* <th>Faculty<br></br>Coordinator</th> */}
                 <th>Verified <br></br>Booking</th>
                 <th>Unverified <br></br>Booking</th>
 
@@ -84,6 +100,7 @@ const AccomodationDashboard = () => {
 
             <tbody>
               {myCourses?.map((element, index) => {
+                // console.log("dashboard data");console.log(element);
                 return (
 
                   <tr key={element?._id}>
