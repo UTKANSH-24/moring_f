@@ -189,12 +189,20 @@ const authSlice = createSlice({
     builder
       // for user login
       .addCase(login.fulfilled, (state, action) => {
-        localStorage.setItem("data", JSON.stringify(action?.payload?.user));
-        localStorage.setItem("isLoggedIn", true);
-        localStorage.setItem("role", action?.payload?.user?.role);
-        state.isLoggedIn = true;
-        state.data = action?.payload?.user;
-        state.role = action?.payload?.user?.role;
+        console.error("Login:", action);
+        if (action?.payload?.success) {
+
+          localStorage.setItem("data", JSON.stringify(action?.payload?.user));
+          localStorage.setItem("isLoggedIn", true);
+          localStorage.setItem("role", action?.payload?.user?.role);
+          state.isLoggedIn = true;
+          state.data = action?.payload?.user;
+          state.role = action?.payload?.user?.role;
+        } else {
+          // Handle unsuccessful login (optional)
+          // You may want to show an error message or take other actions here
+          console.error("Login failed:", action);
+        }
       })
       // for user logout
       .addCase(logout.fulfilled, (state) => {
