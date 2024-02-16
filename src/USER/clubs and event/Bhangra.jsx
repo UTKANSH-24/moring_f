@@ -8,19 +8,26 @@ import '../css/fontawesome-all.min.css';
 import '../css/swiper.min.css';
 import '../css/style.css';
 import '../css/div_comming_css.css';
-import { useNavigate } from 'react-router-dom';
 
 const BhangraClub = () => {
-    const navigate = useNavigate();
+
     const handleClick = (event) => {
         console.log(event.target.name);
-        navigate('/event/registerinevent/65c7bfb95309f968dc2fa03b')
-        // if (sessionStorage.getItem('loginToken') === null) {
-        //     window.location = '../signin.html'; '65be65322f87ed322837e2ee'
-        // } else {
-        //     window.location = `../paidEventRegister.html?code=${event.target.id}`;
-        // }
+        if (sessionStorage.getItem('loginToken') === null) {
+            window.location = '../signin.html';
+        } else {
+            window.location = `../paidEventRegister.html?code=${event.target.id}`;
+        }
     };
+
+
+    // useEffect(() => {
+    //     document.getElementById('bh0').addEventListener('click', handleClick);
+
+    //     return () => {
+    //         document.getElementById('bh0').removeEventListener('click', handleClick);
+    //     };
+    // }, []);
 
     return (
         <div>
@@ -88,7 +95,7 @@ const BhangraClub = () => {
                                                         </div>
 
                                                     </div>
-                                                    <button name="Folk Lore" id="bh0" class="btn confer-btn" onClick={handleClick}>Register </button>
+                                                    <a name="Folk Lore" id="bh0" class="btn confer-btn" onCanPlay={handleClick}>Register </a>
 
                                                 </div>
                                             </div>

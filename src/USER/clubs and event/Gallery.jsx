@@ -18,7 +18,7 @@ export default function Gallery() {
 
     const location = useLocation();
     let margin = "90px 0px 0px 0px";
-
+    
     useEffect(() => {
         const next = document.querySelector('.next-gallery');
         const prev = document.querySelector('.prev-gallery');
@@ -45,7 +45,7 @@ export default function Gallery() {
 
     return (
         <div>
-            {(location.pathname === '/Gallery') && <div style={{ height: '5rem' }}></div>}
+            {(location.pathname ==='/Gallery')&&<div style={{ height: '5rem' }}></div>}
             <h2 className="titl" style={{ textAlign: 'center', margin: `${margin}`, fontSize: '3.6rem', zIndex: 100 }}>
                 Gallery
             </h2>
