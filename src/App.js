@@ -99,7 +99,7 @@ const App = () => {
           <Route path="/event/displaytcacoordinator" element={<Displaytcacoordinator />} />
           <Route path="/event/registeraccomodation/:planId" element={<AccomodationRegistrationForm />} />
         </Route>
-        <Route path="/event/registerinevent/:eventId" element={<EventRegistrationForm />} />
+        <Route path="/event/registerinevent" element={<EventRegistrationForm />} />
 
 
 

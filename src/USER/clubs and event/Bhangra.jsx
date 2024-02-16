@@ -8,8 +8,11 @@ import '../css/fontawesome-all.min.css';
 import '../css/swiper.min.css';
 import '../css/style.css';
 import '../css/div_comming_css.css';
+import { useNavigate } from 'react-router-dom';
 
 const BhangraClub = () => {
+    const navigate = useNavigate();
+    
 
     const handleClick = (event) => {
         console.log(event.target.name);
@@ -21,14 +24,7 @@ const BhangraClub = () => {
     };
 
 
-    // useEffect(() => {
-    //     document.getElementById('bh0').addEventListener('click', handleClick);
-
-    //     return () => {
-    //         document.getElementById('bh0').removeEventListener('click', handleClick);
-    //     };
-    // }, []);
-
+    
     return (
         <div>
 
