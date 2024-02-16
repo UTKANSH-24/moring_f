@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import '../css/gallery.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft,faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { useLocation } from 'react-router-dom';
 
 
 export default function Gallery() {
-    
+
     const galleryItems = [
         'https://i.ibb.co/qCkd9jS/img1.jpg',
         'https://i.ibb.co/jrRb11q/img2.jpg',
@@ -15,6 +16,8 @@ export default function Gallery() {
         'https://i.ibb.co/RNkk6L0/img6.jpg'
     ];
 
+    const location = useLocation();
+    let margin = "90px 0px 0px 0px";
 
     useEffect(() => {
         const next = document.querySelector('.next-gallery');
@@ -42,10 +45,11 @@ export default function Gallery() {
 
     return (
         <div>
-            {/* <h2 className="titl" style={{ textAlign: 'center', margin: '90px 0px 30px 0', fontSize: '5rem', zIndex: 100 }}>
+            {(location.pathname === '/Gallery') && <div style={{ height: '5rem' }}></div>}
+            <h2 className="titl" style={{ textAlign: 'center', margin: `${margin}`, fontSize: '3.6rem', zIndex: 100 }}>
                 Gallery
             </h2>
-            <br /> */}
+            <br />
             <section className="galleryC">
                 <div className="gallery-sec">
                     <div className="gallery_container">
@@ -62,7 +66,7 @@ export default function Gallery() {
                                 <FontAwesomeIcon icon={faArrowLeft} size="10x" style={{ color: 'black' }} />
                             </button>
                             <button className="next-gallery" >
-                            <FontAwesomeIcon icon={faArrowRight} size="10x" style={{ color: 'black' }} />
+                                <FontAwesomeIcon icon={faArrowRight} size="10x" style={{ color: 'black' }} />
                             </button>
                         </div>
                     </div>

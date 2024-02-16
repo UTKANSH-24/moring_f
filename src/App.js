@@ -146,7 +146,7 @@ const App = () => {
         <Route path="/Clubevents/Sanskriti" element={< Sanskriti />} />
         <Route path="/Gallery" element={< Gallery />} />
         {/* <Route path="/schedule" element={< Schedule />} /> */}
-        <Route path="/megaevent" element={< Pronightmainpage />} />
+        <Route path="/megaevent" element={< Pronight />} />
 
 
 

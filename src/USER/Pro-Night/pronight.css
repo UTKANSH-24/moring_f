@@ -17,6 +17,41 @@
     overflow-clip-margin: content-box;
     overflow: clip;
 }
+.revelbutton{
+    opacity: 0.5;
+    z-index: 500;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 70;
+    font-size: 5.5vw;
+    position: absolute;
+    color: rgb(11, 11, 11);
+    top: 65%;
+    left: 35%;
+    width: 30%;
+    height:20vh;
+    border-radius: 20px;
+  
+    display: flex;
+    justify-content: center;
+  
+}
+.pronighthome{
+    opacity: 0.5;
+    z-index: 500;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 5.5vw;
+    position: absolute;
+    color: rgb(228, 225, 225);
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(3);
+    mix-blend-mode: color-dodge;
+    display: flex;
+    justify-content: center;
+    transition: all ease 1.2s;
+
+}
 
 .pronight_title_pro {
     opacity: 1;
@@ -66,7 +101,7 @@
 }
 
 .pronight_card-title-p {
-    font-size: 4vw;
+    font-size: 3rem;
     color: rgb(216, 215, 215);
     margin-left: 3%;
 }
@@ -148,4 +183,48 @@
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
+}
+
+
+@media (max-width: 947px) {
+   
+
+
+    .revelbutton{
+        /* opacity: 0.5;
+        z-index: 500;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 70;
+        font-size: 5.5vw;
+        position: absolute;
+        color: rgb(11, 11, 11); */
+        top: 57%;
+        left: 35%;
+        width: 30%;
+        height:5vh;
+        border-radius: 20px;
+      
+        display: flex;
+        justify-content: center;
+      
+    }
+    .pronighthome{
+        
+        /* opacity: 0.5;
+      
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        font-size: 5.5vw;
+        position: absolute;
+        color: rgb(228, 225, 225); */
+        top: 55%;
+        left: 50%;
+        /* transform: translate(-50%, -50%) scale(3);
+        mix-blend-mode: color-dodge; */
+        /* display: flex;
+        justify-content: center;
+        transition: all ease 1.2s; */
+    
+    }
+    
 }

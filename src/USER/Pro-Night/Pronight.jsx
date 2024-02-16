@@ -45,8 +45,8 @@ export default function Pronight() {
                         Your browser does not support the video tag.
                     </video>
                     <h1 className="pronight_title_pro">ProNight</h1>
-                    <div className="pronight_card" style={{ width: '18rem' }}>
-                        <img className="card-img-top" src="./pronight_section/star image.jpg" alt="Card image cap" />
+                    <div className="pronight_card" style={{ width: '20rem' }}>
+                        {/* <img className="card-img-top" src="./pronight_section/star image.jpg" alt="Card image cap" /> */}
                         <div className="card-body">
                             <h5 className="pronight_card-title-p">TO BE REVEALED</h5>
                         </div>

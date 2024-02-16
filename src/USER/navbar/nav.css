@@ -19,8 +19,8 @@ body {
 /* all similar content styling codes */
 
 .max-widthnav {
-    max-width: 1300px;
-    padding-left: 80px;
+    /* max-width: 1300px; */
+    padding-left:1rem;
     margin: auto;
 }
 
@@ -31,12 +31,12 @@ body {
     z-index: 999;
     /* padding: 30px 0; */
     font-family: 'Ubuntu', sans-serif;
-    transition: all 0.3s ease;
+    transition: all 0.3s￼ ￼ ￼Profile ￼Logout ￼
 }
 
 .navbarnav.sticky {
     padding: 15px 0;
-    background: rgb(5, 91, 110);
+    background: rgb(115, 124, 175);
 }
 
 .navbarnav .max-widthnav {
@@ -47,12 +47,12 @@ body {
 
 .navbarnav .logo a {
     color: #fff;
-    font-size: 35px;
+    font-size: 2rem;
     font-weight: 600;
 }
 
 .navbarnav .logo a span {
-    color: rgb(5, 91, 110);
+    color: rgb(115, 124, 175);
     transition: all 0.3s ease;
 }
 
@@ -79,7 +79,7 @@ body {
 }
 
 .mainlogo {
-    width: 80px;
+    width: 9rem;
 }
 
 /* menu btn styling */
@@ -94,7 +94,7 @@ body {
     position: fixed;
     height: 45px;
     width: 42px;
-    background: rgb(5, 91, 110);
+    background: rgb(16, 20, 46);
     ;
     right: 30px;
     bottom: 10px;
