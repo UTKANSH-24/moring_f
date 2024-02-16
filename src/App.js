@@ -21,7 +21,7 @@ import Displaytcacoordinator from "./Pages/Dashboard/Displaytcacoordinator";
 import RequireAuth from "./Components/Auth/RequireAuth";
 import NotRequireAuth from "./Components/Auth/NotRequireAuth";
 import Denied from "./Pages/Denied";
-import AccomodationDashboard from "./Pages/Dashboard/AccomodationDashboard";
+import AccomodationDashboard from "./Pages/Dashboard/AccommodationDashboard";
 import DisplayMerchandise from "./Pages/Dashboard/DisplayMerchandise";
 // userside
 import TeamMembers from "./USER/members/member";
@@ -58,6 +58,7 @@ import Pronight from "./USER/Pro-Night/Pronight";
 // import Schedule from "./USER/Schedule/Schedule";
 import Pronightmainpage from "./USER/Pro-Night/Pronightmainpage";
 import RLC from "./USER/clubs and event/RLC";
+import DisplayAccommodation from "./Pages/Dashboard/DisplayAccommodation";
 // userside end
 
 const App = () => {
@@ -99,6 +100,8 @@ const App = () => {
           <Route path="/event/createevent" element={<CreateEvent />} />
 
           <Route path="/admin/merchandise/verification/:clothId/:verified" element={<DisplayMerchandise />} />
+          <Route path="/admin/accommodation/verification/:accommodationType/:verified" element={<DisplayAccommodation />} />
+
 
         </Route>
 
