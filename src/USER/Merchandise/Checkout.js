@@ -4,9 +4,12 @@ import QRPopup from '../../Pages/QRCode';
 import toast from 'react-hot-toast';
 import axiosInstance from '../../Helper/axiosInstance';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // Import Link from react-router-dom
+
 
 const MerchandiseForm = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     const [checkoutDisabled, setCheckoutDisabled] = useState(true);
     const [formData, setFormData] = useState({
         nameOnCloth: '',
@@ -59,11 +62,11 @@ const MerchandiseForm = () => {
             const url = '/merchandise/registerTshirt';
             const res = await axiosInstance.post(url, formData);
             if (res?.data.success) {
+
                 toast.success(res.data.message);
                 setFormData({
                     nameOnCloth: '',
                     applicantName: '',
-                    clothId: '',
                     quantity: '',
                     sizeOfCloth: '',
                     hostelName: '',
@@ -73,6 +76,9 @@ const MerchandiseForm = () => {
                     wtpNumber: '',
                     email: '',
                 });
+                navigate(`/merchandise`);
+
+
             } else {
                 toast.error(res.data.message);
             }
@@ -85,6 +91,7 @@ const MerchandiseForm = () => {
 
 
     return (
+        
         <div className="containercontact">
             <div className="left-section">
                 <form id="personal-form" onChange={handleInputChange}>
@@ -124,16 +131,18 @@ const MerchandiseForm = () => {
                             Payable amount: ₹{formData.quantity * 350}
                         </div>
                         <p id="tshirt-message"></p>
+                        <button style={{alignItems:'center'}} id="checkout-button" onClick={() => setPopup(true)} >
+                            <h3 style={{textAlign:'center'}}>Make Payment</h3>
+                        </button>
                         <label htmlFor="reference">Enter the reference number of payment</label>
                         <input type="text" id="reference" name="paymentReferenceNumber" onChange={handleChange} value={formData.paymentReferenceNumber} required />
                     </form>
+
                     {popup && <QRPopup setPopup={setPopup} />}
 
                 </div>
-                <div className="lower-section" style={{marginTop:'100px'}}>
-                    <button id="checkout-button" onClick={() => setPopup(true)} >
-                        <h3>Payment</h3>
-                    </button><br></br>
+                <div className="lower-section" style={{ marginTop: '75px' }}>
+
                     <button id="checkout-button" onClick={handleCheckoutButton} disabled={checkoutDisabled}>
                         <h3>Submit</h3>
                     </button>

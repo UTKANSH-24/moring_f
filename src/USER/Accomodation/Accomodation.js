@@ -36,7 +36,7 @@ const AccomodationPage = () => {
           </ul>
           <hr />
           <p className="features"><b>Note: </b>Food Will Cost Extra.</p>
-          <a href="#" className="cta_btn" onClick={() => handleClick(1)}>Buy Now</a>
+          <a className="cta_btn" onClick={() => handleClick(1)}>Buy Now</a>
         </div>
 
         {/* Repeat the card component for each card */}
@@ -52,7 +52,7 @@ const AccomodationPage = () => {
           </ul>
           <hr />
           <p className="features"><b>Note: </b>Food Will Cost Extra.</p>
-          <a href="#" className="cta_btn" onClick={() => handleClick(2)}>Buy Now</a>
+          <a  className="cta_btn" onClick={() => handleClick(2)}>Buy Now</a>
         </div>
 
         <div className="cardss">
@@ -66,7 +66,7 @@ const AccomodationPage = () => {
           </ul>
           <hr />
           <p className="features"><b>Note: </b>Food Will Cost Extra.</p>
-          <a href="#" className="cta_btn" onClick={() => handleClick(3)}>Buy Now</a>
+          <a  className="cta_btn" onClick={() => handleClick(3)}>Buy Now</a>
         </div>
       </div>
     </div>

@@ -97,7 +97,7 @@ const App = () => {
           <Route path="/event/displayUnverifiedparticipants" element={<DisplayUnverifiedParticipants />} />
           <Route path="/event/displayclubcoordinator" element={<Displayclubcoordinator />} />
           <Route path="/event/displaytcacoordinator" element={<Displaytcacoordinator />} />
-          <Route path="/event/registeraccomodation/:palnId" element={<AccomodationRegistrationForm />} />
+          <Route path="/event/registeraccomodation/:planId" element={<AccomodationRegistrationForm />} />
         </Route>
         <Route path="/event/registerinevent/:eventId" element={<EventRegistrationForm />} />
 
