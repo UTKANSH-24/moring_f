@@ -63,12 +63,12 @@
  .cover:before {
    content: '';
    position: absolute;
-   border: 5px solid rgba(255, 255, 255, .5);
+   border: 4px solid rgba(255, 255, 255, .5);
    box-shadow: 0 0 12px rgba(0, 0, 0, .3);
-   top: 20px;
-   left: 20px;
-   right: 20px;
-   bottom: 20px;
+   top: .6rem;
+   left: .6rem;
+   right: .6rem;
+   bottom: .6rem;
    z-index: 2;
    transition: ease all 2.3s;
    transform-style: preserve-3d;

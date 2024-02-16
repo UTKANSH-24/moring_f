@@ -35,7 +35,7 @@ html {
 }
 
 .navbarnav.sticky {
-    padding: 15px 0;
+    /* padding: 15px 0; */
     background: rgb(115, 124, 175);
 }
 
@@ -88,6 +88,8 @@ html {
     font-size: 23px;
     cursor: pointer;
     display: none;
+    /* margin-top: .3rem; */
+    margin: auto;
 }
 
 .scroll-up-btn {
