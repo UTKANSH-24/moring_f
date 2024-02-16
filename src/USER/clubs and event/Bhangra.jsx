@@ -47,7 +47,7 @@ const BhangraClub = () => {
                                 <ul className="nav nav-tabs wow fadeInUp" data-wow-delay="300ms" id="conferScheduleTab" role="tablist">
                                     <li className="nav-item">
                                         <a className="nav-link active" id="tab-one" data-toggle="tab" href="#step-one" role="tab"
-                                            aria-controls="step-one" aria-expanded="true">Folklore </a>
+                                            aria-controls="step-one" aria-expanded="true">BHANGRA FIESTA </a>
                                     </li>
                                 </ul>
                             </div>
@@ -62,9 +62,9 @@ const BhangraClub = () => {
                                                     <div className="single-schedule-tumb-info d-flex align-items-center">
                                                         {/* <!-- Single Schedule Info --> */}
                                                         <div className="single-schedule-info">
-                                                            <h3> Folklore </h3>
+                                                            <h3> BHANGRA FIESTA </h3>
                                                             <p>
-                                                                One of the main events of Utkansh. Folklore is the event that brings participation in the form of folk dances. The folk of our regions bring us close to our roots and give us the feeling of belongingness and identity.<br /><br />
+                                                                One of the main events of Utkansh. BHANGRA FIESTA is the event that brings participation in the form of folk dances. The folk of our regions bring us close to our roots and give us the feeling of belongingness and identity.<br /><br />
                                                             </p>
                                                             <h6 style={{ color: 'white' }}>Rules:</h6>
                                                             <p>
@@ -95,7 +95,7 @@ const BhangraClub = () => {
                                                         </div>
 
                                                     </div>
-                                                    <a name="Folk Lore" id="bh0" class="btn confer-btn" onCanPlay={handleClick}>Register </a>
+                                                    <a name="Folk Lore" id="bh0" className="btn confer-btn" onCanPlay={handleClick}>Register </a>
 
                                                 </div>
                                             </div>

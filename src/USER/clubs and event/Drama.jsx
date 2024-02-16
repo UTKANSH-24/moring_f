@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import all stylesheets
@@ -28,11 +28,11 @@ const Drama = () => {
 
     return (
         <div>
-            
 
-           
+
+
             <section className="our-schedule-area">
-            <h1 style={{ marginTop: '', paddingBottom: '' }} className="text-center">Dramatics Club NITJ</h1> 
+                <h1 style={{ marginTop: '', paddingBottom: '' }} className="text-center">Dramatics Club NITJ</h1>
 
                 <div className="container">
                     <div className="row">
@@ -95,7 +95,7 @@ const Drama = () => {
 
                                     {/* Nav Item */}
                                     <li className="nav-item"
-                                        // style={{ paddingTop: '10px' }}
+                                    // style={{ paddingTop: '10px' }}
                                     >
                                         <a
                                             aria-controls="step-four"
@@ -109,12 +109,12 @@ const Drama = () => {
                                             onClick={() => handleTabClick('step-four')}
 
                                         >
-                                            MIMICA
+                                            MIME
                                         </a>
                                     </li>
 
                                     <li className="nav-item"
-                                        // style={{ paddingTop: '10px' }}
+                                    // style={{ paddingTop: '10px' }}
                                     >
                                         <a
                                             aria-controls="step-five"
@@ -129,6 +129,25 @@ const Drama = () => {
 
                                         >
                                             Vidhushak- Comedy Stage Play
+                                        </a>
+                                    </li>
+
+                                    <li className="nav-item"
+                                    // style={{ paddingTop: '10px' }}
+                                    >
+                                        <a
+                                            aria-controls="step-six"
+                                            aria-expanded="true"
+                                            className={`nav-link ${activeTab === 'step-six' ? 'active' : ''}`}
+
+                                            data-toggle="tab"
+                                            href="#step-six"
+                                            id="tab-7"
+                                            role="tab"
+                                            onClick={() => handleTabClick('step-six')}
+
+                                        >
+                                            IMPROV
                                         </a>
                                     </li>
                                 </ul>
@@ -341,7 +360,7 @@ const Drama = () => {
                                                         {/* Single Schedule Thumb */}
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3> MIMICA </h3>
+                                                            <h3> MIME </h3>
                                                             <p>
                                                                 “The art of mime encompasses all the feelings of the soul.” Mime is a form of physical theater that uses body language and gestures to tell a story or convey a message without the use of words. A mime artist might use facial expressions, hand gestures, and body movements to convey different emotions or actions. For example, they might pretend to be stuck in a box, or lift an invisible weight.<br /><br />
                                                             </p>
@@ -372,7 +391,7 @@ const Drama = () => {
                                                     {/* Single Schedule Info */}
 
                                                     {/* Schedule Btn */}
-                                                    <a className="btn confer-btn" id="dr3" name="MIMICA" onClick={handleClick}>Register </a>
+                                                    <a className="btn confer-btn" id="dr3" name="MIME" onClick={handleClick}>Register </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -380,7 +399,7 @@ const Drama = () => {
                                 </div>
                                 }
 
-                                {activeTab === 'step-five' && <div aria-labelledby="monday-tab" className="tab-pane fade show active" id="step-four" role="tabpanel">
+                                {activeTab === 'step-five' && <div aria-labelledby="monday-tab" className="tab-pane fade show active" id="step-five" role="tabpanel">
                                     {/* Single Tab Content */}
                                     <div className="single-tab-content">
                                         <div className="row">
@@ -393,7 +412,7 @@ const Drama = () => {
                                                         {/* Single Schedule Thumb */}
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3> MIMICA </h3>
+                                                            <h3> MIME </h3>
                                                             <p>
                                                                 “The art of mime encompasses all the feelings of the soul.” Mime is a form of physical theater that uses body language and gestures to tell a story or convey a message without the use of words. A mime artist might use facial expressions, hand gestures, and body movements to convey different emotions or actions. For example, they might pretend to be stuck in a box, or lift an invisible weight.<br /><br />
                                                             </p>
@@ -424,12 +443,75 @@ const Drama = () => {
                                                     {/* Single Schedule Info */}
 
                                                     {/* Schedule Btn */}
-                                                    <a className="btn confer-btn" id="dr3" name="MIMICA">Register </a>
+                                                    <a className="btn confer-btn" id="dr3" name="MIME">Register </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                }
+                                {activeTab === 'step-six' &&
+                                    <div aria-labelledby="tuesday-tab" className="tab-pane fade show active" id="step-six" role="tabpanel">
+                                        {/* Single Tab Content */}
+                                        <div className="single-tab-content">
+                                            <div className="row">
+                                                <div className="col-12">
+                                                    {/* Single Schedule Area */}
+                                                    <div className="single-schedule-area single-page d-flex flex-wrap justify-content-between align-items-center wow fadeInUp"
+                                                        data-wow-delay="300ms">
+                                                        {/* Single Schedule Thumb and Info */}
+                                                        <div className="single-schedule-tumb-info align-items-center">
+
+                                                            {/* Single Schedule Info */}
+                                                            <div className="single-schedule-info">
+                                                                <h3>IMPROVy</h3>
+                                                                <p>
+                                                                    Life is a theater set in which there are but few practicable entrances.A stage play is a form of live theater performance where actors and actresses perform in front of a live audience on a stage. It's not only about acting, script, dialogues, and lights rather, it's about living that character on stage that brings life to the audience.<br /><br />
+                                                                </p>
+                                                                <h6 style={{ color: 'white' }}>Rules:</h6>
+                                                                <p>
+                                                                    1. Participants will have to submit a pdf file containing the following things in advance: name of college, list of participants, Script.<br />
+                                                                    2. Time limit for the play would be 60 minutes with a 2% penalty for every extra minute. The minimum time duration for the play is 20 minutes. The time duration includes performance time and stage setting time. The given time duration is from the empty stage to the empty stage.<br />
+                                                                    3. Play could be in English, Hindi or Bi-lingual, or a Musical Drama.<br />
+                                                                    4. Use of flammable substances such as candles, matches or cigarettes or any alcoholic product during performance on stage is not allowed and will result in disqualification.<br />
+                                                                    5. One team can have a maximum of 15 Actors and a minimum of 4 actors.<br />
+                                                                    6. A team can have four backstage/props managers, one light in charge, one sound in-charge and a round-up artist (if any they have to be registered).<br />
+                                                                    7. Also provide the name of the Director, (who may or may not be an actor in the play itself), since there is an award for the "Best Director".<br />
+                                                                    8. The performance can be an original or an adaptation. There are no constraints regarding that. Inappropriate content, religious blasphemy and vulgarity/obscenity will NOT be tolerated.<br />
+                                                                    9. Play should be restricted to the Stage area only (If done so, penalty can be imposed). <br />
+                                                                    10. Microphones and backstage mikes for narration, lights, and a laptop to play sounds will be provided.<br />
+                                                                    11. Recorded vocals are not allowed, only instrumental music is allowed. 12. The teams are expected to bring their own music on CD or pen drive for the play.<br />
+                                                                    13. No team is allowed to spoil the stage (will lead to a penalty ranging from 10% to 40% to be decided by the judges).<br />
+                                                                    14. All clothes and props are to be arranged by the team. The organizing committee is responsible for the infrastructural facilities only and shall not be responsible for the security of items left behind in green rooms or on stage.<br />
+                                                                    15. The participating teams are requested to ensure that their presentation is in keeping with the dignity of the fest.<br />
+                                                                    16. In any case, the judge's decision will be final.<br /><br />
+                                                                    <b style={{ color: 'white' }}>Judging Criteria:</b><br />
+                                                                    • Content - 40% <br />
+                                                                    • Acting/Expression- 30% <br />
+                                                                    • Direction - 20% <br />
+                                                                    • Miscellaneous Effects - 10%<br /><br />
+                                                                </p>
+                                                                <span style={{ color: 'white' }}><b>Prize Pool: INR 21,000/-</b></span><br /><br />
+                                                                <p style={{ color: 'white' }}>
+                                                                    Date: 25<sup>th</sup> March<br />
+                                                                    <span style={{ color: 'white' }}>Reach 1 day prior to your event.
+                                                                    </span><br /><br />
+                                                                    <span style={{ color: 'white' }}>
+
+                                                                        Entry Fee: 1500/- per team(for external participant)<br />
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                        0/- per student(for NITJ student)<br />
+                                                                    </span>
+                                                                    <br />
+                                                                </p>
+                                                            </div>
+                                                            <a className="btn confer-btn" id="dr1" name="Rangmanch - stage play" onClick={handleClick}>Register</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 }
                             </div>
                         </div>
@@ -437,25 +519,7 @@ const Drama = () => {
                 </div>
             </section>
             <div className="d-flex justify-content-around mb-3">
-                {/* Contact information */}
             </div>
-
-            {/* Include other scripts as needed */}
-            {/* <script src="../js/jquery.min.js"></script>
-            <script src="../js/bootstrap.min.js"></script>
-            <script src="../js/confer.bundle.js"></script>
-            <script src="../js/active.js"></script>
-            <script src="../js/jquery-2.1.1.js"></script>
-            <script src="../js/velocity.min.js"></script>
-            <script src="../js/main.js"></script>
-            <script type='text/javascript' src='../js/jquery.js'></script>
-            <script type='text/javascript' src='../js/masonry.pkgd.min.js'></script>
-            <script type='text/javascript' src='../js/jquery.collapsible.min.js'></script>
-            <script type='text/javascript' src='../js/swiper.min.js'></script>
-            <script type='text/javascript' src='../js/jquery.countdown.min.js'></script>
-            <script type='text/javascript' src='../js/circle-progress.min.js'></script>
-            <script type='text/javascript' src='../js/jquery.countTo.min.js'></script>
-            <script type='text/javascript' src='../js/custom.js'></script> */}
         </div>
 
 

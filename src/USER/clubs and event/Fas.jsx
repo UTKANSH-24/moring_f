@@ -680,10 +680,10 @@ export default function Fas() {
             </section>
             <div className="container">
                 <div className=" row col-lg-12  col-sm-3">
-                    {/* <div class="p-5"><h4>Rupali Rani</h4>  <h5>+917004757889</h5></div>
-    <div class="p-5"><h4>Ankur Gupta</h4>  <h5>+918872385497</h5></div>
-    <div class="p-5"><h4>Ayushi Verma</h4>  <h5>+918427229811</h5></div>
-    <div class="p-5"><h4>Sandeep Verma</h4>  <h5>+918872956665</h5></div> */}
+                    {/* <div className="p-5"><h4>Rupali Rani</h4>  <h5>+917004757889</h5></div>
+    <div className="p-5"><h4>Ankur Gupta</h4>  <h5>+918872385497</h5></div>
+    <div className="p-5"><h4>Ayushi Verma</h4>  <h5>+918427229811</h5></div>
+    <div className="p-5"><h4>Sandeep Verma</h4>  <h5>+918872956665</h5></div> */}
                 </div>
             </div>
             {/* Our Schedule Area End */}

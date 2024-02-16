@@ -15,9 +15,10 @@ export default function LabTabs() {
   };
 
   return (
-    <div><h2 className="titl" style={{ textAlign: 'center', margin: '90px 0px 30px 0', fontSize: '3.6rem', zIndex: 100 }}>
-      Schedule
-    </h2>
+    <div>
+      <h2 className="titl" style={{ textAlign: 'center', margin: '90px 0px 30px 0', fontSize: '3.6rem', zIndex: 100 }}>
+        Schedule
+      </h2>
       <Box sx={{ width: '80%', margin: 'auto', typography: 'body1', backgroundColor: '' }}>
         <TabContext value={value}>
           <Box sx={{}}>

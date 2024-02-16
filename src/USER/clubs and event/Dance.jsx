@@ -138,9 +138,9 @@ const Dance = () => {
                                                             </div>
                                                         </div>
                                                         {/* Schedule Btn */}
-                                                        {/* <a name="BEAT THE STREET - Solo Face Off" id="da0" class="btn confer-btn">Register </a> */}
+                                                        {/* <a name="BEAT THE STREET - Solo Face Off" id="da0" className="btn confer-btn">Register </a> */}
                                                         <p><br />On Spot Registration!</p>
-                                                        {/* <a name="Face-Off" id="da0" class="btn confer-btn">Register </a> */}
+                                                        {/* <a name="Face-Off" id="da0" className="btn confer-btn">Register </a> */}
                                                     </div>
                                                 </div>
 

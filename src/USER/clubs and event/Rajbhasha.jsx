@@ -268,7 +268,7 @@ export default function Rajbhasha() {
                                                     </div>
                                                     {/* Single Schedule Info */}
                                                     {/* Schedule Btn */}
-                                                    {/* <a name="Pragyansh" id="ra3" class="btn confer-btn">Register </a> */}
+                                                    {/* <a name="Pragyansh" id="ra3" className="btn confer-btn">Register </a> */}
                                                 </div>
                                             </div>
                                             {/* More Schedule Btn */}
@@ -307,7 +307,7 @@ export default function Rajbhasha() {
                                                     {/* Single Schedule Info */}
                                                     {/* Schedule Btn */}
                                                     {/* <a name="Phir Bhi Dil Hai Hindustani" id="ra5"
-                                     class="btn confer-btn">Register </a> */}
+                                     className="btn confer-btn">Register </a> */}
                                                 </div>
                                             </div>
                                         </div>
@@ -344,7 +344,7 @@ export default function Rajbhasha() {
                                                     </div>
                                                     {/* Single Schedule Info */}
                                                     {/* Schedule Btn */}
-                                                    {/* <a name="Kavya Kala" id="ra7" class="btn confer-btn">Register </a> */}
+                                                    {/* <a name="Kavya Kala" id="ra7" className="btn confer-btn">Register </a> */}
                                                 </div>
                                             </div>
                                         </div>
@@ -357,8 +357,8 @@ export default function Rajbhasha() {
             </section>
             {/* Our Schedule Area End */}
             <div className="d-flex justify-content-around mb-3">
-                {/* <div class="p-2"><h4>Rahul kumar Ranjan</h4>  <h5>+916280349542</h5></div>
-    <div class="p-2"><h4>Sombir Singh</h4>  <h5>+916284192596</h5></div> */}
+                {/* <div className="p-2"><h4>Rahul kumar Ranjan</h4>  <h5>+916280349542</h5></div>
+    <div className="p-2"><h4>Sombir Singh</h4>  <h5>+916284192596</h5></div> */}
             </div>
             {/* **** All JS Files ***** */}
             {/* jQuery 2.2.4 */}

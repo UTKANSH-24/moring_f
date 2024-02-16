@@ -204,7 +204,7 @@ export default function PhotoClub() {
                                                         </div>
                                                     </div>
                                                     {/* Schedule Btn */}
-                                                    {/* <a name="Treasure Hunt" id="ne4" class="btn confer-btn">Register </a> */}
+                                                    {/* <a name="Treasure Hunt" id="ne4" className="btn confer-btn">Register </a> */}
                                                 </div>
                                                 {/* Single Schedule Area */}
                                             </div>
@@ -248,7 +248,7 @@ export default function PhotoClub() {
                                                     </div>
                                                     {/* Single Schedule Info */}
                                                     {/* Schedule Btn */}
-                                                    {/* <a name="Photo Manipulation" id="ne3" class="btn confer-btn">Register </a> */}
+                                                    {/* <a name="Photo Manipulation" id="ne3" className="btn confer-btn">Register </a> */}
                                                 </div>
                                             </div>
                                             {/* More Schedule Btn */}
@@ -301,7 +301,7 @@ export default function PhotoClub() {
                                                     </div>
                                                     {/* Single Schedule Info */}
                                                     {/* Schedule Btn */}
-                                                    {/* <a name="Weekend Diaries" id="ne2" class="btn confer-btn">Register </a> */}
+                                                    {/* <a name="Weekend Diaries" id="ne2" className="btn confer-btn">Register </a> */}
                                                 </div>
                                             </div>
                                         </div>
@@ -314,8 +314,8 @@ export default function PhotoClub() {
             </section>
             {/* Our Schedule Area End */}
             <div className="d-flex justify-content-around mb-3">
-                {/* <div class="p-2"><h4>Dilip Kumar</h4>  <h5>+918872382503</h5></div>
-    <div class="p-2"><h4>Jalam Rathore</h4>  <h5>+918107149470</h5></div> */}
+                {/* <div className="p-2"><h4>Dilip Kumar</h4>  <h5>+918872382503</h5></div>
+    <div className="p-2"><h4>Jalam Rathore</h4>  <h5>+918107149470</h5></div> */}
             </div>
             {/* **** All JS Files ***** */}
             {/* jQuery 2.2.4 */}

@@ -120,7 +120,7 @@ export default function Movie() {
                                                         </div>
                                                     </div>
                                                     {/* Schedule Btn */}
-                                                    {/* <a name="Mad Ads" id="movie2" class="btn confer-btn">Register </a> */}
+                                                    {/* <a name="Mad Ads" id="movie2" className="btn confer-btn">Register </a> */}
                                                 </div>
                                                 {/* Single Schedule Area */}
                                             </div>
@@ -135,8 +135,8 @@ export default function Movie() {
             </section>
             {/* Our Schedule Area End */}
             <div className="d-flex justify-content-around mb-3">
-                {/* <div class="p-2"><h4>Bhargav Krishna</h4>  <h5>+919642124125</h5></div>
-    <div class="p-2"><h4>Abhishek</h4>  <h5>+918309030749</h5></div> */}
+                {/* <div className="p-2"><h4>Bhargav Krishna</h4>  <h5>+919642124125</h5></div>
+    <div className="p-2"><h4>Abhishek</h4>  <h5>+918309030749</h5></div> */}
             </div>
             {/* **** All JS Files ***** */}
             {/* jQuery 2.2.4 */}

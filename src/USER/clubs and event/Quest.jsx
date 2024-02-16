@@ -187,8 +187,8 @@ export default function Quest() {
             </section>
             {/* Our Schedule Area End */}
             <div className="d-flex justify-content-around mb-3">
-                {/* <div class="p-2"><h4>Chikku Kumar</h4>  <h5>+919534567582</h5></div>
-    <div class="p-2"><h4>Adarsh Agarwal</h4>  <h5>+918299706635</h5></div> */}
+                {/* <div className="p-2"><h4>Chikku Kumar</h4>  <h5>+919534567582</h5></div>
+    <div className="p-2"><h4>Adarsh Agarwal</h4>  <h5>+918299706635</h5></div> */}
             </div>
             {/* **** All JS Files ***** */}
             {/* jQuery 2.2.4 */}
