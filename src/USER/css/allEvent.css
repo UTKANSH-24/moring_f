@@ -1,0 +1,241 @@
+ @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
+
+    body {
+      font-family: 'Oswald', sans-serif;
+      background-color: #212121;
+    }
+
+    section {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      gap: 20px;
+
+      
+    }
+@media  screen and (max-width:1000px) {
+  .row {
+      display: grid;
+      grid-template-columns: 1fr ;
+      justify-content: center;
+      align-items: center;
+      /* flex-wrap: wrap; */
+    }
+}
+    /* .col-md-4,
+    .col-sm-6,
+    .col-xs-12 {
+      flex: 1;
+      margin: 10px;
+
+    } */
+
+    .card {
+      position: relative;
+      height: 400px;
+      width: 100%;
+      margin: 10px;
+      transition: ease all 2.3s;
+      perspective: 1200px;
+    }
+
+    .card:hover .cover {
+      transform: rotateX(0deg) rotateY(-180deg);
+    }
+
+    .cover {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      transform-style: preserve-3d;
+      transition: ease all 2.3s;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin: 10px;
+    }
+
+    .cover:before {
+      content: '';
+      position: absolute;
+      border: 5px solid rgba(255, 255, 255, .5);
+      box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      z-index: 2;
+      transition: ease all 2.3s;
+      transform-style: preserve-3d;
+      transform: translateZ(0px);
+    }
+
+    .cover:after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      z-index: 2;
+      transition: ease all 1.3s;
+      background: rgba(0, 0, 0, .4);
+    }
+
+    .cover.item-bhangra {
+      background-image: url('https://drive.google.com/thumbnail?id=1a1gVpGpfcECj3yu7uKTh1yutnaGZIkWc');
+    }
+
+    .cover.item-dance {
+      background-image: url('https://drive.google.com/thumbnail?id=1I9WVLPN92ezmBXRpWRwNVLkeaO7NQOLD');
+    }
+
+    /* https://drive.google.com/file/d/1I9WVLPN92ezmBXRpWRwNVLkeaO7NQOLD/view?usp=sharing */
+
+    .cover.item-fas {
+      background-image: url('https://drive.google.com/thumbnail?id=1FTOLBOKxsMVFrNNZY-1wM1p_y1zFBRtD');
+    }
+
+    /* https://drive.google.com/file/d/1FTOLBOKxsMVFrNNZY-1wM1p_y1zFBRtD/view?usp=sharing */
+
+    .cover.item-ladc {
+      background-image: url('https://drive.google.com/thumbnail?id=14W-5TyGjC9O5XaBdIdiekN_e9pN_wGSk');
+    }
+
+    /* https://drive.google.com/file/d/14W-5TyGjC9O5XaBdIdiekN_e9pN_wGSk/view?usp=sharing */
+
+
+    .cover.item-movie {
+      background-image: url('https://drive.google.com/thumbnail?id=1PetftWeXPlpFL7rjntV0uqPQcCwZWAHh');
+    }
+
+    /* https://drive.google.com/file/d/1PetftWeXPlpFL7rjntV0uqPQcCwZWAHh/view?usp=sharing */
+
+
+    .cover.item-drama {
+      background-image: url('https://drive.google.com/thumbnail?id=1eJb7U0KxH18hJ1YRLFflZkUJuCnaSyC3');
+    }
+
+    /* https://drive.google.com/file/d/1eJb7U0KxH18hJ1YRLFflZkUJuCnaSyC3/view?usp=sharing */
+
+
+
+    .cover.item-music {
+      background-image: url('https://drive.google.com/thumbnail?id=1L8A-OHvHjYu06D1tqzKVbsEkRPie0AVg');
+    }
+
+    /* https://drive.google.com/file/d/1L8A-OHvHjYu06D1tqzKVbsEkRPie0AVg/view?usp=sharing */
+
+    .cover.item-panache {
+      background-image: url('https://drive.google.com/thumbnail?id=1aqfelOYJnogqbLQT8TndcGO6ds_8laIv');
+    }
+
+    /* https://drive.google.com/file/d/1aqfelOYJnogqbLQT8TndcGO6ds_8laIv/view?usp=sharing */
+
+
+    .cover.item-netra {
+      background-image: url('https://drive.google.com/thumbnail?id=13abG1cMwbmbpen-s_-PbbyKZuQDCYbl7');
+    }
+
+    /* https://drive.google.com/file/d/13abG1cMwbmbpen-s_-PbbyKZuQDCYbl7/view?usp=sharing */
+
+
+    .cover.item-quest {
+      background-image: url('https://drive.google.com/thumbnail?id=1noMK7KMBomESz-RetoOpVCKJr291LbOg');
+    }
+
+    /* https://drive.google.com/file/d/1noMK7KMBomESz-RetoOpVCKJr291LbOg/view?usp=sharing */
+
+
+    .cover.item-rajbhasha {
+      background-image: url('https://drive.google.com/thumbnail?id=1xFX8l7l11SgZ8x9oWhPeXi39ILU-ajT3');
+    }
+
+    /* https://drive.google.com/file/d/1xFX8l7l11SgZ8x9oWhPeXi39ILU-ajT3/view?usp=sharing */
+
+    .cover.item-sanskriti {
+      background-image: url('https://drive.google.com/thumbnail?id=1TAtULfMwBgCZUZiXxYQQwsTAVPNNlxNX');
+    }
+
+    /* https://drive.google.com/file/d/1TAtULfMwBgCZUZiXxYQQwsTAVPNNlxNX/view?usp=sharing */
+
+
+    .cover.item-rlc {
+      background-image: url('https://drive.google.com/thumbnail?id=1n5jc2lZn7x_k6LlXVvCwUWeV18FnOCi-');
+    }
+
+    /* https://drive.google.com/file/d/1n5jc2lZn7x_k6LlXVvCwUWeV18FnOCi-/view?usp=sharing */
+
+
+    .cover.item-animation {
+      background-image: url('https://drive.google.com/thumbnail?id=1KNee24af2fWyWOyqqJatna1XYmyKbMEK');
+    }
+
+    /* https://drive.google.com/file/d/1KNee24af2fWyWOyqqJatna1XYmyKbMEK/view?usp=sharing */
+
+
+
+    /* https://drive.google.com/file/d/1PetftWeXPlpFL7rjntV0uqPQcCwZWAHh/view?usp=sharing --film making*/
+    .cover h1 {
+      font-weight: 600;
+      position: absolute;
+      bottom: 55px;
+      left: 50px;
+      color: white;
+      transform-style: preserve-3d;
+      transition: ease all 2.3s;
+      z-index: 3;
+      font-size: 3em;
+      transform: translateZ(0px);
+    }
+
+    .cover .price {
+      font-weight: 200;
+      position: absolute;
+      top: 55px;
+      right: 50px;
+      color: white;
+      transform-style: preserve-3d;
+      transition: ease all 2.3s;
+      z-index: 4;
+      font-size: 2em;
+      transform: translateZ(0px);
+    }
+
+    .card-back {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: #0b0f08;
+      transform-style: preserve-3d;
+      transition: ease all 2.3s;
+      transform: translateZ(-1px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-back a {
+      transform-style: preserve-3d;
+      transition: ease transform 2.3s, ease background .5s;
+      transform: translateZ(-1px) rotatey(-180deg);
+      background: transparent;
+      border: 1px solid white;
+      font-weight: 200;
+      font-size: 1.3em;
+      color: white;
+      padding: 14px 32px;
+      outline: none;
+      text-decoration: none;
+    }
+
+    .card-back a:hover {
+      background-color: white;
+      color: #0b0f08;
+    }

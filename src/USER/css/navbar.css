@@ -1,0 +1,78 @@
+/* -------------------------------- 
+Primary style
+-------------------------------- */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*::after, *::before {
+  content: '';
+}
+
+a {
+  color: #1e6074;
+  text-decoration: none;
+}
+
+/* -------------------------------- 
+Main components 
+-------------------------------- */
+
+.cd-nav-trigger {
+  position: fixed; /* Make the nav trigger sticky */
+  display: inline-block;
+  margin-top: 35px;
+}
+
+.cd-logo {
+  top: 28px;
+  left: 5%;
+  width: max-content;
+  position: relative;
+  z-index: 102;
+  display: block;
+}
+
+.cd-logo img {
+  display: block;
+  width: 10em;
+}
+
+@media screen and (min-width: 320px) and (max-width: 414px) {
+  .cd-logo img {
+    width: 6em;
+  }
+}
+
+.cd-nav-trigger {
+  top: 18px;
+  right: 5%;
+  height: 44px;
+  width: 44px;
+  z-index: 105;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.cd-primary-nav {
+  position: fixed; /* Make the primary navigation sticky */
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 30px 5%;
+  z-index: 103;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  visibility: hidden;
+  opacity: 100;
+  -webkit-transition: visibility 0s, opacity 0.3s;
+  -moz-transition: visibility 0s, opacity 0.3s;
+  transition: visibility 0s, opacity 0.3s;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

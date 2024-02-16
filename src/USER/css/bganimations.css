@@ -1,0 +1,16 @@
+body{
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url("https://utkansh2020.firebaseapp.com/css/winter.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+#canvas {
+    width: 100%;
+    height: 100vh;
+
+}

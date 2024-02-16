@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.card4545 {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(153, 150, 150, 0.713);
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 1.5px rgb(186, 182, 182);
+    border-left: solid 1.5px rgb(186, 182, 182);
+    backdrop-filter: blur(05px);
+}
+
+.card4545 h3 {
+    position: relative;
+    bottom: -290px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.card4545 h4 {
+    position: relative;
+    bottom: -300px;
+    text-align: center;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(300px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card4545:hover span {
+    filter: blur(12px);
+}
+
+.card4545:hover .content {
+    transform: translateY(10px);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.content h2 {
+    position: absolute;
+    top: -110px;
+    right: -10px;
+    font-size: 8em;
+    color: #645c5c;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.content a {
+    cursor: pointer;
+}
+
+.content div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card4545 span {
+    display: flex;
+    width: 150px;
+    height: 120px;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 61px;
+}
+
+.card4545 span img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.header {
+    position: absolute;
+    top: 10px;
+    font-weight: 500;
+    background: linear-gradient(to right, white, grey);
+}
+
+.container1 {
+    position: relative;
+    top: 100px;
+    margin-bottom: 100px;
+}
+
+.header:hover {
+    cursor: pointer;
+    background: linear-gradient(grey, yellow);
+}

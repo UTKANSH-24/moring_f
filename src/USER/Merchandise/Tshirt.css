@@ -1,0 +1,30 @@
+.ram{
+
+    display: flex;
+    flex-direction: row;
+ flex-wrap: wrap;
+     justify-content: center;
+    text-align:center;
+}
+.outer{
+
+    padding-top: 8%;
+    /* padding-bottom: 3%; */
+}
+.Merchandise{
+    text-align: center;
+}
+@media (max-width: 947px){
+    .row232{
+
+     
+        flex-direction: column;
+    
+    }
+    .outer{
+
+        padding-top: 18%;
+        /* padding-bottom: 3%; */
+    }
+
+}
