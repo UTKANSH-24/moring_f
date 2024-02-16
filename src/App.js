@@ -1,20 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
-import EventList from "./Pages/Events/EventList";
 import NotFound from "./Pages/NotFound";
-import HomePage from "./Pages/Homepage";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
-import Checkout from "./Pages/Payment/Checkout";
-import CheckoutSuccess from "./Pages/Payment/CheckoutSuccess";
-import CheckoutFail from "./Pages/Payment/CheckoutFail";
 import ForgetPassword from "./Pages/Password/ForgetPassword";
 import ResetPassword from "./Pages/Password/ResetPassword";
 import AdminDashboard from "./Pages/Dashboard/AdminDashboard";
 import MerchandiseDashboard from "./Pages/Dashboard/MerchandiseDashboard";
-import EventDescription from "./Pages/Events/EventDescription";
 import Profile from "./Pages/User/Profile";
 import ChangePassword from "./Pages/Password/ChangePassword";
 import EditProfile from "./Pages/User/EditProfile";
@@ -72,10 +64,6 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/Dashboard" element={<HomePage />} />
-        <Route path="/events" element={<EventList />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
         <Route path="/denied" element={<Denied />} />
         <Route path="/forgetpassword" element={<ForgetPassword />} />
         <Route path="/reset-password/:resetToken" element={<ResetPassword />} />
@@ -87,10 +75,6 @@ const App = () => {
 
         <Route element={<RequireAuth allowedRoles={["USER", "ADMIN", "COORDINATOR"]} />}>
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
-          <Route path="/event/description" element={<EventDescription />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/checkout/success" element={<CheckoutSuccess />} />
-          <Route path="/checkout/fail" element={<CheckoutFail />} />
           <Route path="/changepassword" element={<ChangePassword />} />
           <Route path="/user/profile" element={<Profile />} />
           <Route path="/user/editprofile" element={<EditProfile />} />
