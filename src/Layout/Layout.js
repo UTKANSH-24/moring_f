@@ -48,7 +48,7 @@ const Layout = ({ children }) => {
             <div className="hidden-div">
               <li><Link style={{ textDecoration: 'none' }} to="/" >Home</Link></li>
               <li><Link style={{ textDecoration: 'none' }} to="/Gallery" >Gallery</Link></li>
-              <li><Link style={{ textDecoration: 'none' }} to="/clubsandevent" >Clubs and Events</Link></li>
+              <li><Link style={{ textDecoration: 'none' }} to="/clubsandevent" >Events</Link></li>
               <li><Link style={{ textDecoration: 'none' }} to="/megaevent" >Mega Events</Link></li>
               <li><Link style={{ textDecoration: 'none' }} to="/merchandise" >Merchandise</Link></li>
               <li><Link style={{ textDecoration: 'none' }} to="/accomodationPage" >Accommodation</Link></li>

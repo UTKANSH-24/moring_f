@@ -16,60 +16,67 @@ const AccomodationPage = () => {
     });
   }, []);
 
- const handleClick = (planId) => {
-  console.log("planId", planId);
-  setPlanno(planId);
-  navigate(`/event/registeraccomodation/${planId}`); 
-}
+  const handleClick = (planId) => {
+    console.log("planId", planId);
+    setPlanno(planId);
+    navigate(`/event/registeraccomodation/${planId}`);
+  }
 
   return (
-    <div className="containeraco">
-      <div className="grid">
-        <div className="cardss">
-          <h2 className="card_title">Basic</h2>
-          <p className="pricing">₹ 20<span className="small">/per day</span></p>
-          <hr />
-          <ul className="features">
-            <li>24*7 Wi-Fi</li>
-            <li>Water Hot and Cold</li>
-            <li>Combined Rooms</li>
-          </ul>
-          <hr />
-          <p className="features"><b>Note: </b>Food Will Cost Extra.</p>
-          <a className="cta_btn" onClick={() => handleClick(1)}>Buy Now</a>
-        </div>
+    <div>
+      <div style={{minHeight:'100px'}}></div>
+      <h2 className="titl" style={{ textAlign: 'center',  fontSize: '3.6rem', zIndex: 100 }}>
+        Accomodation
+      </h2>
+      <div className="containeraco">
+        <div className="grid">
+          <div className="cardss">
+            <h2 className="card_title">Basic</h2>
+            <p className="pricing">₹ 20<span className="small">/per day</span></p>
+            <hr />
+            <ul className="features">
+              <li>24*7 Wi-Fi</li>
+              <li>Water Hot and Cold</li>
+              <li>Combined Rooms</li>
+            </ul>
+            <hr />
+            <p className="features"><b>Note: </b>Food Will Cost Extra.</p>
+            <a className="cta_btn" onClick={() => handleClick(1)}>Buy Now</a>
+          </div>
 
-        {/* Repeat the card component for each card */}
+          {/* Repeat the card component for each card */}
 
-        <div className="cardss">
-          <h2 className="card_title">Basic</h2>
-          <p className="pricing">₹ 20<span className="small">/per day</span></p>
-          <hr />
-          <ul className="features">
-            <li>24*7 Wi-Fi</li>
-            <li>Water Hot and Cold</li>
-            <li>Combined Rooms</li>
-          </ul>
-          <hr />
-          <p className="features"><b>Note: </b>Food Will Cost Extra.</p>
-          <a  className="cta_btn" onClick={() => handleClick(2)}>Buy Now</a>
-        </div>
+          <div className="cardss">
+            <h2 className="card_title">Basic</h2>
+            <p className="pricing">₹ 20<span className="small">/per day</span></p>
+            <hr />
+            <ul className="features">
+              <li>24*7 Wi-Fi</li>
+              <li>Water Hot and Cold</li>
+              <li>Combined Rooms</li>
+            </ul>
+            <hr />
+            <p className="features"><b>Note: </b>Food Will Cost Extra.</p>
+            <a className="cta_btn" onClick={() => handleClick(2)}>Buy Now</a>
+          </div>
 
-        <div className="cardss">
-          <h2 className="card_title">Basic</h2>
-          <p className="pricing">₹ 20<span className="small">/per day</span></p>
-          <hr />
-          <ul className="features">
-            <li>24*7 Wi-Fi</li>
-            <li>Water Hot and Cold</li>
-            <li>Combined Rooms</li>
-          </ul>
-          <hr />
-          <p className="features"><b>Note: </b>Food Will Cost Extra.</p>
-          <a  className="cta_btn" onClick={() => handleClick(3)}>Buy Now</a>
+          <div className="cardss">
+            <h2 className="card_title">Basic</h2>
+            <p className="pricing">₹ 20<span className="small">/per day</span></p>
+            <hr />
+            <ul className="features">
+              <li>24*7 Wi-Fi</li>
+              <li>Water Hot and Cold</li>
+              <li>Combined Rooms</li>
+            </ul>
+            <hr />
+            <p className="features"><b>Note: </b>Food Will Cost Extra.</p>
+            <a className="cta_btn" onClick={() => handleClick(3)}>Buy Now</a>
+          </div>
         </div>
       </div>
     </div>
+
   );
 };
 
