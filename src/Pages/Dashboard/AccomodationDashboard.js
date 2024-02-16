@@ -1,87 +1,18 @@
 import React, { useEffect } from "react";
-import Layout from "../../Layout/Layout";
-import {
-  Chart as ChartJS,
-  ArcElement,
-  Tooltip,
-  Legend,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-} from "chart.js";
-import { Pie, Bar } from "react-chartjs-2";
-import { FaUsers } from "react-icons/fa";
-import { GiMoneyStack } from "react-icons/gi";
-import { FcSalesPerformance } from "react-icons/fc";
 import { BsCollectionPlayFill, BsTrash } from "react-icons/bs";
 import { MdOutlineModeEdit ,MdGppBad,MdGppGood} from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteEvent, getAllEvent } from "../../Redux/eventSlice";
-import { getStatsData } from "../../Redux/statSlice";
-import { getPaymentRecord } from "../../Redux/razorpaySlice";
 
-ChartJS.register(
-  ArcElement,
-  Tooltip,
-  Legend,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title
-);
 
 const AccomodationDashboard = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { allUsersCount, subscribedUsersCount } = useSelector(
-    (state) => state.stat
-  );
-  const { allPayments, finalMonths, monthlySalesRecord } = useSelector(
-    (state) => state.razorpay
-  );
 
-  const userData = {
-    labels: ["Registered User", "Enrolled User"],
-    datasets: [
-      {
-        label: "User Details",
-        data: [allUsersCount, subscribedUsersCount],
-        backgroundColor: ["yellow", "green"],
-        borderColor: ["yellow", "green"],
-        borderWidth: 1,
-      },
-    ],
-  };
 
-  const salesData = {
-    labels: [
-      "January",
-      "Febraury",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ],
-    fontColor: "white",
-    datasets: [
-      {
-        label: "Sales / Month",
-        data: monthlySalesRecord,
-        backgroundColor: ["rgb(255, 99, 132)"],
-        borderColor: ["white"],
-        borderWidth: 2,
-      },
-    ],
-  };
+  
 
   // getting the courses data from redux toolkit store
   const myCourses = useSelector((state) => state.event.eventsData);
@@ -102,7 +33,6 @@ const AccomodationDashboard = () => {
   useEffect(() => {
     (async () => {
       await dispatch(getAllEvent());
-      await dispatch(getStatsData());
       // await dispatch(getPaymentRecord());
     })();
   }, []);

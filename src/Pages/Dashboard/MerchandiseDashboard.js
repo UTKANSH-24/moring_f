@@ -1,92 +1,20 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../../Layout/Layout";
-import {
-  Chart as ChartJS,
-  ArcElement,
-  Tooltip,
-  Legend,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-} from "chart.js";
-import { Pie, Bar } from "react-chartjs-2";
-import { FaUsers } from "react-icons/fa";
-import { GiMoneyStack } from "react-icons/gi";
-import { FcSalesPerformance } from "react-icons/fc";
-import { BsCollectionPlayFill, BsTrash } from "react-icons/bs";
+
+
 import { MdOutlineModeEdit, MdGppGood, MdGppBad } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-// import { deleteCourse } from "../../Redux/courseSlice";
-// import { getAllMerchandise } from "../../Redux/merchandiseSlice.js";
-import { getStatsData } from "../../Redux/statSlice";
-// import { getPaymentRecord } from "../../Redux/razorpaySlice";
-import axiosInstance from "../../Helper/axiosInstance";
 
-ChartJS.register(
-  ArcElement,
-  Tooltip,
-  Legend,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title
-);
+import axiosInstance from "../../Helper/axiosInstance";
 
 const MerchandiseDashboard = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { allUsersCount, subscribedUsersCount } = useSelector(
-    (state) => state.stat
-  );
-  const { allPayments, finalMonths, monthlySalesRecord } = useSelector(
-    (state) => state.razorpay
-  );
+ 
+  
 
-  const userData = {
-    labels: ["Registered User", "Enrolled User"],
-    datasets: [
-      {
-        label: "User Details",
-        data: [allUsersCount, subscribedUsersCount],
-        backgroundColor: ["yellow", "green"],
-        borderColor: ["yellow", "green"],
-        borderWidth: 1,
-      },
-    ],
-  };
-
-  const salesData = {
-    labels: [
-      "January",
-      "Febraury",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ],
-    fontColor: "white",
-    datasets: [
-      {
-        label: "Sales / Month",
-        data: monthlySalesRecord,
-        backgroundColor: ["rgb(255, 99, 132)"],
-        borderColor: ["white"],
-        borderWidth: 2,
-      },
-    ],
-  };
-
-  // getting the courses data from redux toolkit store
-  // const allOrders = useSelector((state) => state.merchandise.merchandiseData);
+  
   const [allOrders, setAllOrders] = useState([]);
 
   // let cloths = [];
@@ -140,7 +68,6 @@ const MerchandiseDashboard = () => {
   useEffect(() => {
     (async () => {
       // await dispatch(getAllMerchandise());
-      dispatch(getStatsData());
       // await dispatch(getPaymentRecord());
       await getOrderData();
     })();

@@ -121,7 +121,7 @@ const EditProfile = () => {
           </div>
 
           <Link to={"/user/profile"}>
-            <p className="link text-accent cursor-pointer flex items-center justify-center w-full gap-2">
+            <p className=" text-accent cursor-pointer flex items-center justify-center w-full gap-2">
               <AiOutlineArrowLeft /> Back to Profile
             </p>
           </Link>
