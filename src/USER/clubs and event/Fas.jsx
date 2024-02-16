@@ -16,9 +16,7 @@ export default function Fas() {
 
 
     const [activeTab, setActiveTab] = useState('step-one');
-    // const [minparticipant, setMinparticipant] = useState(1);
-    // const [maxParticipant, setmaxParticipant] = useState(3);
-    // const [eventid, setEventid] = useState('65b7b89581bbded4d9d763a2');
+   
 
     const [eventdetails, setEventdetails] = useState({
         eventId: '65b7b89581bbded4d9d763a2',
@@ -70,21 +68,21 @@ export default function Fas() {
                                         <a
                                             onClick={() => handleTabClick('step-one')}
 
-                                            className={`nav-link ${activeTab === 'step-one' ? 'active' : ''}`} id="tab-onr" data-toggle="tab" href="#step-one" role="tab" aria-controls="step-one" aria-expanded="true">ART EXHIBITION</a>
+                                            className={`nav-link ${activeTab === 'step-one' ? 'active' : ''}`} id="tab-onr" data-toggle="tab"  role="tab" aria-controls="step-one" aria-expanded="true">ART EXHIBITION</a>
                                     </li>
 
                                     <li className="nav-item">
                                         <a
                                             onClick={() => handleTabClick('step-two')}
 
-                                            className={`nav-link ${activeTab === 'step-two' ? 'active' : ''}`} id="tab-two" data-toggle="tab" href="#step-two" role="tab" aria-controls="step-two" aria-expanded="true">DO-ART</a>
+                                            className={`nav-link ${activeTab === 'step-two' ? 'active' : ''}`} id="tab-two" data-toggle="tab"  role="tab" aria-controls="step-two" aria-expanded="true">DO-ART</a>
                                     </li>
 
                                     <li className="nav-item">
                                         <a
                                             onClick={() => handleTabClick('step-three')}
 
-                                            className={`nav-link ${activeTab === 'step-three' ? 'active' : ''}`} id="tab-three" data-toggle="tab" href="#step-three" role="tab" aria-controls="step-three" aria-expanded="true">CINEART ODYSSEY</a>
+                                            className={`nav-link ${activeTab === 'step-three' ? 'active' : ''}`} id="tab-three" data-toggle="tab"  role="tab" aria-controls="step-three" aria-expanded="true">CINEART ODYSSEY</a>
                                     </li>
 
                                     <li className="nav-item">
@@ -92,7 +90,7 @@ export default function Fas() {
                                             onClick={() => handleTabClick('step-four')}
 
                                             className={`nav-link ${activeTab === 'step-four' ? 'active' : ''}`}
-                                            id="tab-four" data-toggle="tab" href="#step-four" role="tab" aria-controls="step-four" aria-expanded="true">LETTART</a>
+                                            id="tab-four" data-toggle="tab"  role="tab" aria-controls="step-four" aria-expanded="true">LETTART</a>
                                     </li>
                                     {/* Nav Item */}
                                     <li className="nav-item">
