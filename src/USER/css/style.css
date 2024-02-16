@@ -13,7 +13,8 @@ body {
     font-size: 15px;
     font-weight: normal;
     color: hsl(0, 0%, 90%);
-    background-color: black;
+    background-color: transparent;
+
     overflow-y: scroll;
 }
 .register {

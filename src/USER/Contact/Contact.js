@@ -49,8 +49,8 @@ const ContactSection = () => {
   const location = useLocation();
 
   return (
-    <div>{(location.pathname === '/Contacts') && <div style={{ minHeight: '5rem' }}></div>}
-      <section style={{ backgroundColor: 'aliceblue', padding: '30px 0px 30px' }}>
+    <div style={{zIndex:'3'}}>{(location.pathname === '/Contacts') && <div style={{ minHeight: '5rem' }}></div>}
+      <section style={{ backgroundColor: 'aliceblue', padding: '30px 0px 30px', zIndex:'1'}}>
         <div className="contact" id="contact">
           <div className="max-width">
             <h2 className="title" style={{ textAlign: 'center', color: '#070707', marginBottom: '30px' }}>Contact Us</h2>
