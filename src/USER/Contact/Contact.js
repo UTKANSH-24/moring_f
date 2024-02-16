@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faMapMarkerAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 import axiosInstance from '../../Helper/axiosInstance';
 import toast from 'react-hot-toast';
+import { useLocation } from 'react-router-dom';
 
 const ContactSection = () => {
 
@@ -45,8 +46,10 @@ const ContactSection = () => {
       toast.error('Connection Error');
     }
   }
+  const location = useLocation();
 
   return (
+    <div>{(location.pathname === '/Contacts') && <div style={{ minHeight: '5rem' }}></div>}
     <section style={{ backgroundColor: 'aliceblue', padding: '30px 0px 30px' }}>
       <div className="contact" id="contact">
         <div className="max-width">
@@ -110,7 +113,9 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </div>
+
   );
 };
 
