@@ -6,9 +6,9 @@ import { useNavigate } from "react-router-dom";
 // Import all stylesheets
 
 import '../css/event.css';
-import '../css/bootstrap.min.css'; 
-import '../css/fontawesome-all.min.css'; 
-import '../css/swiper.min.css'; 
+import '../css/bootstrap.min.css';
+import '../css/fontawesome-all.min.css';
+import '../css/swiper.min.css';
 import '../css/style.css';
 import '../css/div_comming_css.css'
 export default function Fas() {
@@ -19,52 +19,52 @@ export default function Fas() {
     // const [minparticipant, setMinparticipant] = useState(1);
     // const [maxParticipant, setmaxParticipant] = useState(3);
     // const [eventid, setEventid] = useState('65b7b89581bbded4d9d763a2');
-   
-      const [eventdetails, setEventdetails] = useState({
+
+    const [eventdetails, setEventdetails] = useState({
         eventId: '65b7b89581bbded4d9d763a2',
-        minParticipants:1,
-        maxParticipants:2
-        
-      });
-    
+        minParticipants: 1,
+        maxParticipants: 2
+
+    });
+
 
     const handleTabClick = (tabId) => {
-        console.log("tabId",tabId);
+        console.log("tabId", tabId);
         setActiveTab(tabId);
-        if(tabId=="step-one"){
+        if (tabId == "step-one") {
             console.log("step-one");
             setEventdetails({
                 eventId: '65b7b89581bbded4d9d763a2',
-                minParticipants:1,
-                maxParticipants:2
-              });
+                minParticipants: 1,
+                maxParticipants: 2
+            });
         }
-        if(tabId=="step-two"){
+        if (tabId == "step-two") {
             console.log("step-two");
             setEventdetails({
                 eventId: '65b7b89581bbded4d9d763a2',
-                minParticipants:1,
-                maxParticipants:2
-              });
+                minParticipants: 1,
+                maxParticipants: 2
+            });
         }
 
     };
     const handleClick = () => {
-       console.log("clicked",eventdetails);
-       navigate("/event/registerinevent", { state: { ...eventdetails } });
+        console.log("clicked", eventdetails);
+        navigate("/event/registerinevent", { state: { ...eventdetails } });
     };
 
     return (
         <div>
 
             <section className="our-schedule-area">
-                 <h1 style={{ marginTop: '', paddingBottom: '' }} className="text-center">FAS</h1>
-          
+                <h1 style={{ marginTop: '', paddingBottom: '' }} className="text-center">FAS</h1>
+
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
                             <div className="schedule-tab">
-                              
+
                                 <ul className="nav nav-tabs wow fadeInUp" data-wow-delay="300ms" id="conferScheduleTab" role="tablist">
                                     <li className="nav-item">
                                         <a
@@ -72,21 +72,21 @@ export default function Fas() {
 
                                             className={`nav-link ${activeTab === 'step-one' ? 'active' : ''}`} id="tab-onr" data-toggle="tab" href="#step-one" role="tab" aria-controls="step-one" aria-expanded="true">ART EXHIBITION</a>
                                     </li>
-                            
+
                                     <li className="nav-item">
                                         <a
                                             onClick={() => handleTabClick('step-two')}
 
                                             className={`nav-link ${activeTab === 'step-two' ? 'active' : ''}`} id="tab-two" data-toggle="tab" href="#step-two" role="tab" aria-controls="step-two" aria-expanded="true">DO-ART</a>
                                     </li>
-                               
+
                                     <li className="nav-item">
                                         <a
                                             onClick={() => handleTabClick('step-three')}
 
-                                            className={`nav-link ${activeTab === 'step-three' ? 'active' : ''}`} id="tab-three" data-toggle="tab" href="#step-three" role="tab" aria-controls="step-three" aria-expanded="true">PHONEY CASES</a>
+                                            className={`nav-link ${activeTab === 'step-three' ? 'active' : ''}`} id="tab-three" data-toggle="tab" href="#step-three" role="tab" aria-controls="step-three" aria-expanded="true">CINEART ODYSSEY</a>
                                     </li>
-                                  
+
                                     <li className="nav-item">
                                         <a
                                             onClick={() => handleTabClick('step-four')}
@@ -99,13 +99,13 @@ export default function Fas() {
                                         <a
                                             onClick={() => handleTabClick('step-five')}
 
-                                            className={`nav-link ${activeTab === 'step-five' ? 'active' : ''}`} id="tab-five" data-toggle="tab" href="#step-five" role="tab" aria-controls="step-five" aria-expanded="true">RANDOM ART CHALLENGE</a>
+                                            className={`nav-link ${activeTab === 'step-five' ? 'active' : ''}`} id="tab-five" data-toggle="tab" href="#step-five" role="tab" aria-controls="step-five" aria-expanded="true">RELAY ART CHALLENGE</a>
                                     </li>
                                     <li className="nav-item" style={{ paddingTop: '10px' }}>
                                         <a
                                             onClick={() => handleTabClick('step-six')}
 
-                                            className={`nav-link ${activeTab === 'step-six' ? 'active' : ''}`} id="tab-6" data-toggle="tab" href="#step-6" role="tab" aria-controls="step-6" aria-expanded="true">EVERY LEAF'S STORY</a>
+                                            className={`nav-link ${activeTab === 'step-six' ? 'active' : ''}`} id="tab-6" data-toggle="tab" href="#step-6" role="tab" aria-controls="step-6" aria-expanded="true">PEBBLE PAINTING EXTRAVAGANZA</a>
                                     </li>
                                     <li className="nav-item" style={{ paddingTop: '10px' }}>
                                         <a
@@ -117,7 +117,7 @@ export default function Fas() {
                                         <a
                                             onClick={() => handleTabClick('step-eight')}
 
-                                            className={`nav-link ${activeTab === 'step-eight' ? 'active' : ''}`} id="tab-9" data-toggle="tab" href="#step-8" role="tab" aria-controls="step-9" aria-expanded="true">MADHUKALA</a>
+                                            className={`nav-link ${activeTab === 'step-eight' ? 'active' : ''}`} id="tab-9" data-toggle="tab" href="#step-8" role="tab" aria-controls="step-9" aria-expanded="true">ART BEYOND SIGHT</a>
                                     </li>
                                     <li className="nav-item" style={{ paddingTop: '10px' }}>
                                         <a
@@ -129,14 +129,9 @@ export default function Fas() {
                                         <a
                                             onClick={() => handleTabClick('step-ten')}
 
-                                            className={`nav-link ${activeTab === 'step-ten' ? 'active' : ''}`} id="tab-11" data-toggle="tab" href="#step-10" role="tab" aria-controls="step-11" aria-expanded="true">EMOTICONS</a>
+                                            className={`nav-link ${activeTab === 'step-ten' ? 'active' : ''}`} id="tab-11" data-toggle="tab" href="#step-10" role="tab" aria-controls="step-11" aria-expanded="true">DOODLE DELIGHT</a>
                                     </li>
-                                    <li className="nav-item" style={{ paddingTop: '10px' }}>
-                                        <a
-                                            onClick={() => handleTabClick('step-eleven')}
 
-                                            className={`nav-link ${activeTab === 'step-eleven' ? 'active' : ''}`} id="tab-12" data-toggle="tab" href="#step-11" role="tab" aria-controls="step-12" aria-expanded="true">POPPIN SKETCHING</a>
-                                    </li>
                                 </ul>
                             </div>
                             {/* Tab Content */}
@@ -248,7 +243,7 @@ export default function Fas() {
                                                         {/* Single Schedule Thumb */}
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3> PHONEY CASES </h3>
+                                                            <h3> CINEART ODYSSEY </h3>
                                                             <p>We are sure you wanna paint your own phone case! Isn't that COOL?
                                                                 With an added theme of freestyle art. Each student will be
                                                                 provided with a mobile case that they can paint freely in their
@@ -346,8 +341,8 @@ export default function Fas() {
                                                         {/* Single Schedule Thumb */}
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3> RANDOM ART CHALLENGE </h3>
-                                                            <p>UTKANSH’23 brings to you RANDOM ART CHALLENGE, an art event to
+                                                            <h3> RELAY ART CHALLENGE </h3>
+                                                            <p>UTKANSH’23 brings to you RELAY ART CHALLENGE, an art event to
                                                                 showcase your creativity and artistic talent. Participants would
                                                                 choose a chit and draw the specified item.
                                                             </p><br />
@@ -394,7 +389,7 @@ export default function Fas() {
                                                         {/* Single Schedule Thumb */}
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3> EVERY LEAF'S STORY </h3>
+                                                            <h3> PEBBLE PAINTING EXTRAVAGANZA </h3>
                                                             <p>In this event, participants will create art or draw by their
                                                                 choice on a given leaf.
                                                             </p><br />
@@ -422,7 +417,7 @@ export default function Fas() {
                                                     </div>
                                                     {/* Single Schedule Info */}
                                                     {/* Schedule Btn */}
-                                                    <a name="EVERY LEAF'S STORY" id="fas5" className="btn confer-btn" onClick={handleClick}>Register </a>
+                                                    <a name="PEBBLE PAINTING EXTRAVAGANZA" id="fas5" className="btn confer-btn" onClick={handleClick}>Register </a>
                                                 </div>
                                             </div>
                                             {/* More Schedule Btn */}
@@ -486,7 +481,7 @@ export default function Fas() {
                                                         {/* Single Schedule Thumb */}
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3> MADHUKALA </h3>
+                                                            <h3> ART BEYOND SIGHT </h3>
                                                             <p>Madhubani folk art, also known as Mithila painting, is a
                                                                 traditional art form that originated in the Mithila region of
                                                                 Bihar, India. Madhubani art is known for its intricate and
@@ -517,7 +512,7 @@ export default function Fas() {
                                                     </div>
                                                     {/* Single Schedule Info */}
                                                     {/* Schedule Btn */}
-                                                    <a name="MADHUKALA" id="fas7" className="btn confer-btn" onClick={handleClick}>Register </a>
+                                                    <a name="ART BEYOND SIGHT" id="fas7" className="btn confer-btn" onClick={handleClick}>Register </a>
                                                 </div>
                                             </div>
                                             {/* More Schedule Btn */}
@@ -583,7 +578,7 @@ export default function Fas() {
                                                         {/* Single Schedule Thumb */}
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3> EMOTICONS </h3>
+                                                            <h3> DOODLE DELIGHT </h3>
                                                             <p>This will require students to design their emoji. The art needs
                                                                 to reflect their expression through painting facial emotions,
                                                                 places, types of animals, etc.
@@ -616,57 +611,7 @@ export default function Fas() {
                                                     </div>
                                                     {/* Single Schedule Info */}
                                                     {/* Schedule Btn */}
-                                                    <a name="EMOTICONS" id="fas9" className="btn confer-btn" onClick={handleClick}>Register </a>
-                                                </div>
-                                            </div>
-                                            {/* More Schedule Btn */}
-                                        </div>
-                                    </div>
-                                </div>}
-                                {activeTab === 'step-eleven' && <div className="tab-pane fade show active" id="step-11" role="tabpanel" aria-labelledby="friday-tab">
-                                    {/* Single Tab Content */}
-                                    <div className="single-tab-content">
-                                        <div className="row">
-                                            <div className="col-12">
-                                                {/* Single Schedule Area */}
-                                                <div className="single-schedule-area single-page d-flex flex-wrap justify-content-between align-items-center wow fadeInUp" data-wow-delay="300ms">
-                                                    {/* Single Schedule Thumb and Info */}
-                                                    <div className="single-schedule-tumb-info d-flex align-items-center">
-                                                        {/* Single Schedule Thumb */}
-                                                        {/* Single Schedule Info */}
-                                                        <div className="single-schedule-info">
-                                                            <h3> POPPIN-SKETCHING </h3>
-                                                            <p>This event requires participants to sketch any entity, including
-                                                                inanimate objects, humans, animals, etc in an order that it
-                                                                appears to be 3-D or popping out of the page.
-                                                            </p><br />
-                                                            <h6 style={{ color: 'white' }}>Rules:</h6>
-                                                            <p>
-                                                                <b>
-                                                                    <font size={4}> Event rules and guidelines</font>
-                                                                </b><br />
-                                                                <br />Time limit: 90 minutes
-                                                                <br />Team size: 1-2 members<br /><br />
-                                                                <br />1. The paper sheet will be provided.
-                                                                <br />2. Sketch pencil, Eraser, Sharpener, and Ruler will be
-                                                                provided.
-                                                                <br />3. This event requires participants to sketch any entity,
-                                                                including inanimate objects, humans, animals, etc, in an order
-                                                                that it appears to be 3-D or popping out of the page.
-                                                            </p>
-                                                            <br /><br />
-                                                            <span style={{ color: 'white' }}><b>Prize Pool: 3,000/-
-                                                                INR</b></span><br /><br />
-                                                            <span style={{ color: 'white' }}>Date: 26<sup>th</sup> March.</span><br />
-                                                            <span style={{ color: 'white' }}>Entry Fee: FREE </span> <br /><br />
-                                                            {/* <span style="color:white">Venue: SB3 </span> <br> */}
-                                                            <span style={{ color: 'white' }}>Reach 1 day prior to your event.
-                                                            </span><br /><br />
-                                                        </div>
-                                                    </div>
-                                                    {/* Single Schedule Info */}
-                                                    {/* Schedule Btn */}
-                                                    <a name="POPPIN-SKETCHING" id="fas10" className="btn confer-btn" onClick={handleClick}>Register </a>
+                                                    <a name="DOODLE DELIGHT" id="fas9" className="btn confer-btn" onClick={handleClick}>Register </a>
                                                 </div>
                                             </div>
                                             {/* More Schedule Btn */}
@@ -680,20 +625,8 @@ export default function Fas() {
             </section>
             <div className="container">
                 <div className=" row col-lg-12  col-sm-3">
-                    {/* <div className="p-5"><h4>Rupali Rani</h4>  <h5>+917004757889</h5></div>
-    <div className="p-5"><h4>Ankur Gupta</h4>  <h5>+918872385497</h5></div>
-    <div className="p-5"><h4>Ayushi Verma</h4>  <h5>+918427229811</h5></div>
-    <div className="p-5"><h4>Sandeep Verma</h4>  <h5>+918872956665</h5></div> */}
                 </div>
             </div>
-            {/* Our Schedule Area End */}
-            {/* **** All JS Files ***** */}
-            {/* jQuery 2.2.4 */}
-            {/* Bootstrap */}
-            {/* All Plugins */}
-            {/* Active */}
-            {/* NAvbar jQuery */}
-            {/* Resource jQuery */}
         </div>
     );
 }

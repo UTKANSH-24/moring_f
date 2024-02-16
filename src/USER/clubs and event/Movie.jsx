@@ -26,10 +26,10 @@ export default function Movie() {
     return (
         <div>
 
-           {/* Our Schedule Area Start */}
+            {/* Our Schedule Area Start */}
             <section className="our-schedule-area">
-            <h1 style={{ marginTop: '', paddingBottom: '' }} className="text-center">NITJ Movie Club (Deja Vu)</h1>
-           
+                <h1 style={{ marginTop: '', paddingBottom: '' }} className="text-center">NITJ Movie Club (Deja Vu)</h1>
+
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
@@ -46,6 +46,12 @@ export default function Movie() {
                                         <a onClick={() => handleTabClick('step-2')}
 
                                             className={`nav-link ${activeTab === 'step-2' ? 'active' : ''}`} id="tab-two" data-toggle="tab" href="#step-two" role="tab" aria-controls="step-two" aria-expanded="true">MAD-ADS </a>
+                                    </li>
+
+                                    <li className="nav-item">
+                                        <a onClick={() => handleTabClick('step-3')}
+
+                                            className={`nav-link ${activeTab === 'step-3' ? 'active' : ''}`} id="tab-three" data-toggle="tab" href="#step-three" role="tab" aria-controls="step-three" aria-expanded="true">CREATIVE CHAOS</a>
                                     </li>
                                 </ul>
                             </div>
@@ -128,6 +134,44 @@ export default function Movie() {
                                         </div>
                                     </div>
                                 </div>}
+
+                                {activeTab === 'step-3' && <div className="tab-pane fade show active" id="step-three" role="tabpanel" aria-labelledby="wednesday-tab">
+                                    {/* Single Tab Content */}
+                                    <div className="single-tab-content">
+                                        <div className="row">
+                                            <div className="col-12">
+                                                {/* Single Schedule Area */}
+                                                <div className="single-schedule-area single-page d-flex flex-wrap justify-content-between align-items-center wow fadeInUp" data-wow-delay="300ms">
+                                                    {/* Single Schedule Thumb and Info */}
+                                                    <div className="single-schedule-tumb-info d-flex align-items-center">
+                                                        {/* Single Schedule Thumb */}
+                                                        {/* Single Schedule Info */}
+                                                        <div className="single-schedule-info">
+                                                            <h3>CREATIVE CHAOS</h3>
+                                                            <h6 style={{ color: 'white' }}>Rules:</h6>
+                                                            <h5>This event is for NIT JALANDHAR students only.</h5>
+                                                            <p>This is an advertisement making competition where the participants
+                                                                are
+                                                                required to create an ad of a product showcasing their creativity
+                                                                and must be
+                                                                convincing enough for a customer.<br />
+                                                                1. No plagiarism allowed,No harm to the nature<br />
+                                                                2. Final Ad created must be less than 1 minute.<br />
+                                                                3. Must not offend religious believes.<br />
+                                                                4. Must not be discriminating on any basis.<br />
+                                                                5. Should be funny.</p>
+                                                            {/* <p style="color:white"> Date: XX<sup>st</sup> March<br> Venue: SB1 <br>Time: XX:XX AM to XX:XX PM</p> */}
+                                                        </div>
+                                                    </div>
+                                                    {/* Schedule Btn */}
+                                                    {/* <a name="Mad Ads" id="movie2" className="btn confer-btn">Register </a> */}
+                                                </div>
+                                                {/* Single Schedule Area */}
+                                            </div>
+                                            {/* More Schedule Btn */}
+                                        </div>
+                                    </div>
+                                </div>}
                             </div>
                         </div>
                     </div>
@@ -135,16 +179,8 @@ export default function Movie() {
             </section>
             {/* Our Schedule Area End */}
             <div className="d-flex justify-content-around mb-3">
-                {/* <div className="p-2"><h4>Bhargav Krishna</h4>  <h5>+919642124125</h5></div>
-    <div className="p-2"><h4>Abhishek</h4>  <h5>+918309030749</h5></div> */}
             </div>
-            {/* **** All JS Files ***** */}
-            {/* jQuery 2.2.4 */}
-            {/* Bootstrap */}
-            {/* All Plugins */}
-            {/* Active */}
-            {/* NAvbar jQuery */}
-            {/* Resource jQuery */}
+
         </div>
 
     )

@@ -8,7 +8,7 @@ import '../css/fontawesome-all.min.css'; // FontAwesome CSS
 import '../css/swiper.min.css'; // Swiper CSS (Note: this import might differ)
 import '../css/style.css';
 import '../css/div_comming_css.css'
-export default function Rajbhasha() {
+export default function RLC() {
     const handleClick = (event) => {
         console.log(event.target.name);
         if (sessionStorage.getItem("loginToken") === null) {
@@ -27,7 +27,7 @@ export default function Rajbhasha() {
         <div>
            {/* Our Schedule Area Start */}
             <section className="our-schedule-area">
-            <h1 style={{ marginTop: '', paddingBottom: '' }} className="text-center">Rajbhasha Samiti</h1>
+            <h1 style={{ marginTop: '', paddingBottom: '' }} className="text-center">Regional Language Club</h1>
             
                 <div className="container">
                     <div className="row">
@@ -38,16 +38,16 @@ export default function Rajbhasha() {
                                     <li className="nav-item">
                                         <a onClick={() => handleTabClick('step-1')}
 
-                                            className={`nav-link ${activeTab === 'step-1' ? 'active' : ''}`} id="tab-onr" data-toggle="tab" href="#step-one" role="tab" aria-controls="step-one" aria-expanded="true"> MEHFIL </a>
+                                            className={`nav-link ${activeTab === 'step-1' ? 'active' : ''}`} id="tab-onr" data-toggle="tab" href="#step-one" role="tab" aria-controls="step-one" aria-expanded="true"> FOLK SINGING </a>
                                     </li>
                                     {/* Nav Item */}
                                     <li className="nav-item">
                                         <a onClick={() => handleTabClick('step-2')}
 
-                                            className={`nav-link ${activeTab === 'step-2' ? 'active' : ''}`} id="tab-two" data-toggle="tab" href="#step-two" role="tab" aria-controls="step-two" aria-expanded="true">PRAGHYANSH </a>
+                                            className={`nav-link ${activeTab === 'step-2' ? 'active' : ''}`} id="tab-two" data-toggle="tab" href="#step-two" role="tab" aria-controls="step-two" aria-expanded="true">MUSHAIRA </a>
                                     </li>
-                                    {/* Nav Item */}
-                                    <li className="nav-item">
+
+                                    {/* <li className="nav-item">
                                         <a onClick={() => handleTabClick('step-3')}
 
                                             className={`nav-link ${activeTab === 'step-3' ? 'active' : ''}`} id="tab-three" data-toggle="tab" href="#step-three" role="tab" aria-controls="step-three" aria-expanded="true">PATROKAR BABU</a>
@@ -61,7 +61,7 @@ export default function Rajbhasha() {
                                         <a onClick={() => handleTabClick('step-5')}
 
                                             className={`nav-link ${activeTab === 'step-5' ? 'active' : ''}`} id="tab-five" data-toggle="tab" href="#step-five" role="tab" aria-controls="step-three" aria-expanded="true">JASHN-E-UTKANSH</a>
-                                    </li>
+                                    </li> */}
                                     {/* <li className="nav-item">
                                         <a onClick={() => handleTabClick('step-6')}
 
@@ -83,7 +83,7 @@ export default function Rajbhasha() {
                                                         {/* Single Schedule Thumb */}
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3> MEHFIL </h3>
+                                                            <h3> FOLK SINGING </h3>
                                                             <p>This event is basically an open mic event in which each of the
                                                                 participants will have to recite their self-written content. The
                                                                 content must be in Hindi. It will lay down the benefits for new
@@ -141,7 +141,7 @@ export default function Rajbhasha() {
                                                         {/* Single Schedule Thumb */}
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3> PRAGHYANSH </h3>
+                                                            <h3> MUSHAIRA </h3>
                                                             <p>This event is an extempore in which the participants will be
                                                                 given any random topic. Each participant will have to speak on
                                                                 the topic given to him in Hindi. The time limit will be told

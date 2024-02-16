@@ -39,13 +39,13 @@ export default function Quest() {
                                     <li className="nav-item">
                                         <a onClick={() => handleTabClick('step-1')}
 
-                                            className={`nav-link ${activeTab === 'step-1' ? 'active' : ''}`} id="tab-onr" data-toggle="tab" href="#step-one" role="tab" aria-controls="step-one" aria-expanded="true"> THE QUEST SAGA </a>
+                                            className={`nav-link ${activeTab === 'step-1' ? 'active' : ''}`} id="tab-onr" data-toggle="tab" href="#step-one" role="tab" aria-controls="step-one" aria-expanded="true"> COGNITO </a>
                                     </li>
                                     {/* Nav Item */}
                                     <li className="nav-item">
                                         <a onClick={() => handleTabClick('step-2')}
 
-                                            className={`nav-link ${activeTab === 'step-2' ? 'active' : ''}`} id="tab-two" data-toggle="tab" href="#step-two" role="tab" aria-controls="step-two" aria-expanded="true">POPCON </a>
+                                            className={`nav-link ${activeTab === 'step-2' ? 'active' : ''}`} id="tab-two" data-toggle="tab" href="#step-two" role="tab" aria-controls="step-two" aria-expanded="true">MONEY GPT </a>
                                     </li>
                                 </ul>
                             </div>
@@ -63,7 +63,7 @@ export default function Quest() {
                                                         {/* Single Schedule Thumb */}
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3>THE QUEST SAGA </h3><br />
+                                                            <h3>COGNITO </h3><br />
                                                             <p>The Quizzing Booth is the ultimate General Quiz for the
                                                                 inquisitive minds to answer the questions about anything under
                                                                 the sun or even beyond. With questions ranging from History,
@@ -108,7 +108,7 @@ export default function Quest() {
                                                     </div>
                                                     {/* Single Schedule Info */}
                                                     {/* Schedule Btn */}
-                                                    <a className="btn confer-btn" id="qst0" name="THE QUEST SAGA">Register
+                                                    <a className="btn confer-btn" id="qst0" name="COGNITO">Register
                                                     </a>
                                                 </div>
                                             </div>
@@ -127,8 +127,8 @@ export default function Quest() {
                                                     <div className="single-schedule-tumb-info align-items-center">
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3>POPCON</h3><br />
-                                                            <p>PopCon is the Pop-Culture quiz for the screen-lovers out there.
+                                                            <h3>MONEY GPT</h3><br />
+                                                            <p>MONEY GPT is the Pop-Culture quiz for the screen-lovers out there.
                                                                 From Memes to Reels,Netflix to Doordarshan, Oscars to Filmfare,
                                                                 Anime to MCU and much more, you will be tested and twisted by
                                                                 the mind-tickling questions. </p><br />
@@ -169,7 +169,7 @@ export default function Quest() {
                                                                 <br />
                                                             </p>
                                                         </div>
-                                                        <a className="btn confer-btn" id="qst1" name="POPCON">Register
+                                                        <a className="btn confer-btn" id="qst1" name="MONEY GPT">Register
                                                         </a>
                                                     </div>
                                                     {/* Single Schedule Info */}

@@ -53,6 +53,7 @@ import PhotoClub from "./USER/clubs and event/PhotoClub";
 import Quest from "./USER/clubs and event/Quest";
 import Rajbhasha from "./USER/clubs and event/Rajbhasha";
 import Sanskriti from "./USER/clubs and event/Sanskriti";
+import Animation from "./USER/clubs and event/Animation";
 
 import Drama from "./USER/clubs and event/Drama";
 import Gallery from "./USER/clubs and event/Gallery";
@@ -64,6 +65,7 @@ import AccomodationRegistrationForm from "./Pages/Dashboard/AccomodationRegistra
 import Pronight from "./USER/Pro-Night/Pronight";
 // import Schedule from "./USER/Schedule/Schedule";
 import Pronightmainpage from "./USER/Pro-Night/Pronightmainpage";
+import RLC from "./USER/clubs and event/RLC";
 // userside end
 
 const App = () => {
@@ -135,6 +137,8 @@ const App = () => {
         <Route path="/Clubevents/Drama" element={<Drama />} />
         <Route path="/Clubevents/Fas" element={<Fas />} />
         <Route path="/Clubevents/Ladc" element={<Ladc />} />
+        <Route path="/Clubevents/Animation" element={<Animation />} />
+        <Route path="/Clubevents/RLC" element={<RLC />} />
 
         <Route path="/Clubevents/Movie" element={< Movie />} />
 

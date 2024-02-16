@@ -39,22 +39,22 @@ export default function Ladc() {
                                     <li className="nav-item">
                                         <a onClick={() => handleTabClick('step-1')}
 
-                                            className={`nav-link ${activeTab === 'step-1' ? 'active' : ''}`} id="tab-onr" data-toggle="tab" href="#step-one" role="tab" aria-controls="step-one" aria-expanded="true"> FLASH FICTION </a>
+                                            className={`nav-link ${activeTab === 'step-1' ? 'active' : ''}`} id="tab-onr" data-toggle="tab" href="#step-one" role="tab" aria-controls="step-one" aria-expanded="true"> HAIKU </a>
                                     </li>
                                     {/* Nav Item */}
                                     <li className="nav-item">
                                         <a onClick={() => handleTabClick('step-2')}
 
-                                            className={`nav-link ${activeTab === 'step-2' ? 'active' : ''}`} id="tab-two" data-toggle="tab" href="#step-two" role="tab" aria-controls="step-two" aria-expanded="true">BLACKOUT POETRY </a>
+                                            className={`nav-link ${activeTab === 'step-2' ? 'active' : ''}`} id="tab-two" data-toggle="tab" href="#step-two" role="tab" aria-controls="step-two" aria-expanded="true">OPEN MIC </a>
                                     </li>
                                     {/* Nav Item */}
                                     <li className="nav-item">
                                         <a onClick={() => handleTabClick('step-3')}
 
-                                            className={`nav-link ${activeTab === 'step-3' ? 'active' : ''}`} id="tab-three" data-toggle="tab" href="#step-three" role="tab" aria-controls="step-three" aria-expanded="true">JUST A MINUTE</a>
+                                            className={`nav-link ${activeTab === 'step-3' ? 'active' : ''}`} id="tab-three" data-toggle="tab" href="#step-three" role="tab" aria-controls="step-three" aria-expanded="true">DEBATE LEAGUE</a>
                                     </li>
                                     {/* Nav Item */}
-                                    <li className="nav-item">
+                                    {/* <li className="nav-item">
                                         <a onClick={() => handleTabClick('step-4')}
 
                                             className={`nav-link ${activeTab === 'step-4' ? 'active' : ''}`} id="tab-four" data-toggle="tab" href="#step-four" role="tab" aria-controls="step-four" aria-expanded="true">JUDGY</a>
@@ -68,7 +68,7 @@ export default function Ladc() {
                                         <a onClick={() => handleTabClick('step-6')}
 
                                             className={`nav-link ${activeTab === 'step-6' ? 'active' : ''}`} id="tab-four" data-toggle="tab" href="#step-six" role="tab" aria-controls="step-four" aria-expanded="true">CARPE DIEM</a>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </div>
                             {/* Tab Content */}
@@ -85,10 +85,10 @@ export default function Ladc() {
                                                         {/* Single Schedule Thumb */}
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3>FLASH FICTION </h3>
+                                                            <h3>HAIKU </h3>
                                                             <p>
                                                                 Oratorio is a series of mini events all revolving around
-                                                                literature, oration and pure fun. In FLASH FICTION the
+                                                                literature, oration and pure fun. In HAIKU the
                                                                 participants are given a random sentence to begin with and they
                                                                 have to build a whole story around it. It makes for a witty,
                                                                 sharp, and fun games.<br /><br />
@@ -115,7 +115,7 @@ export default function Ladc() {
                                                     </div>
                                                     {/* Single Schedule Info */}
                                                     {/* Schedule Btn */}
-                                                    <a className="btn confer-btn" id="ladc0" name="FLASH FICTION"  onclick={handleClick}>Register
+                                                    <a className="btn confer-btn" id="ladc0" name="HAIKU"  onclick={handleClick}>Register
                                                     </a>
                                                 </div>
                                             </div>
@@ -135,10 +135,10 @@ export default function Ladc() {
                                                     <div className="single-schedule-tumb-info align-items-center">
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3>BLACKOUT POETRY</h3>
+                                                            <h3>OPEN MIC</h3>
                                                             <p>
                                                                 Oratorio is a series of mini events all revolving around
-                                                                literature, oration, and pure fun. In Blackout Poetry a page
+                                                                literature, oration, and pure fun. In OPEN MIC a page
                                                                 from a book is taken and given to each participant.
                                                                 Their task is to blackout a few words from this page and form a
                                                                 poem out of the remaining words. A tricky and mindful challenge
@@ -164,7 +164,7 @@ export default function Ladc() {
                                                                 <br />
                                                             </p>
                                                         </div>
-                                                        <a className="btn confer-btn" id="ladc1" name="Blackout poetry" onclick={handleClick}>Register
+                                                        <a className="btn confer-btn" id="ladc1" name="OPEN MIC" onclick={handleClick}>Register
                                                         </a>
                                                     </div>
                                                     {/* Single Schedule Info */}
@@ -188,10 +188,10 @@ export default function Ladc() {
                                                         {/* Single Schedule Thumb */}
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3>JUST A MINUTE </h3>
+                                                            <h3>DEBATE LEAGUE </h3>
                                                             <p>
                                                                 Oratorio is a series of mini-events all revolving around
-                                                                literature, oration, and pure fun. In JUST A MINUTE every
+                                                                literature, oration, and pure fun. In DEBATE LEAGUE every
                                                                 contestant will have a panel before them. They have to convince
                                                                 the panel as to why their favorite book is worth a read!
                                                                 Convince your way into the panel's heart!
@@ -217,7 +217,7 @@ export default function Ladc() {
                                                         </div>
                                                     </div>
                                                     {/* Schedule Btn */}
-                                                    <a className="btn confer-btn" id="ladc2" name="just a minute" onclick={handleClick}>Register </a>
+                                                    <a className="btn confer-btn" id="ladc2" name="DEBATE LEAGUE" onclick={handleClick}>Register </a>
                                                 </div>
                                                 {/* Single Schedule Area */}
                                             </div>

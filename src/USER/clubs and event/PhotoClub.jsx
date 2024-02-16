@@ -53,21 +53,15 @@ export default function PhotoClub() {
                                     <li className="nav-item">
                                         <a onClick={() => handleTabClick('step-3')}
 
-                                            className={`nav-link ${activeTab === 'step-3' ? 'active' : ''}`} id="tab-three" data-toggle="tab" href="#step-three" role="tab" aria-controls="step-three" aria-expanded="true">TREASURE HUNT
+                                            className={`nav-link ${activeTab === 'step-3' ? 'active' : ''}`} id="tab-three" data-toggle="tab" href="#step-three" role="tab" aria-controls="step-three" aria-expanded="true">SNAP TREASURE
                                         </a>
                                     </li>
                                     {/* Nav Item */}
-                                    <li className="nav-item">
-                                        <a onClick={() => handleTabClick('step-4')}
-
-                                            className={`nav-link ${activeTab === 'step-4' ? 'active' : ''}`} id="tab-four" data-toggle="tab" href="#step-four" role="tab" aria-controls="step-four" aria-expanded="true">PHOTO MANIPULATION
-                                        </a>
-                                    </li>
-                                    {/* Nav Item */}
+                           
                                     <li className="nav-item ">
                                         <a onClick={() => handleTabClick('step-5')}
 
-                                            className={`nav-link ${activeTab === 'step-5' ? 'active' : ''}`} id="tab-five" data-toggle="tab" href="#step-five" role="tab" aria-controls="step-five" aria-expanded="true"> WEEKEND DIARIES
+                                            className={`nav-link ${activeTab === 'step-5' ? 'active' : ''}`} id="tab-five" data-toggle="tab" href="#step-five" role="tab" aria-controls="step-five" aria-expanded="true"> Weekend Dairy (CINEPULSE)
                                         </a>
                                     </li>
                                 </ul>
@@ -174,7 +168,7 @@ export default function PhotoClub() {
                                                         {/* Single Schedule Thumb */}
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3>Treasure Hunt</h3>
+                                                            <h3>SNAP TREASURE</h3>
                                                             <h6 style={{ color: 'white' }}>Rules:</h6>
                                                             <p>
                                                                 <b> RULES:</b><br />
@@ -204,7 +198,7 @@ export default function PhotoClub() {
                                                         </div>
                                                     </div>
                                                     {/* Schedule Btn */}
-                                                    {/* <a name="Treasure Hunt" id="ne4" className="btn confer-btn">Register </a> */}
+                                                    {/* <a name="SNAP TREASURE" id="ne4" className="btn confer-btn">Register </a> */}
                                                 </div>
                                                 {/* Single Schedule Area */}
                                             </div>
@@ -267,7 +261,7 @@ export default function PhotoClub() {
                                                         {/* Single Schedule Thumb */}
                                                         {/* Single Schedule Info */}
                                                         <div className="single-schedule-info">
-                                                            <h3>WEEKEND DIARIES </h3>
+                                                            <h3>Weekend Dairy (CINEPULSE) </h3>
                                                             <h6 style={{ color: 'white' }}>Rules:</h6>
                                                             <p>
                                                                 "There is only you and your camera. The limitations in your
@@ -301,7 +295,7 @@ export default function PhotoClub() {
                                                     </div>
                                                     {/* Single Schedule Info */}
                                                     {/* Schedule Btn */}
-                                                    {/* <a name="Weekend Diaries" id="ne2" className="btn confer-btn">Register </a> */}
+                                                    {/* <a name="Weekend Dairy (CINEPULSE)" id="ne2" className="btn confer-btn">Register </a> */}
                                                 </div>
                                             </div>
                                         </div>
