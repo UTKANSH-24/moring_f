@@ -12,11 +12,9 @@ const TeamMembers = () => {
 
     return (
         <div>
-            <div className="header">
-                <h1>TEAM UTKANSH 2024</h1>
-                <nav></nav>
-            </div>
+           
             <div className="container1">
+            <h2 className='teamheading' style={{textAlign:'center',}}>Members</h2>
                 <div className="cont">
                     <div className="card4545 card1">
                         <h3>Lovish Garg</h3>

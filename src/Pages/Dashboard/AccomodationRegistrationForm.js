@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
 import QRPopup from '../QRCode';
-import { useLocation, useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { addEventParticipants } from "../../Redux/participantsSlice";
 import axiosInstance from '../../Helper/axiosInstance';
 
 function AccomodationRegistrationForm() {
-    const location = useLocation();
+   
     const dispatch = useDispatch();
     const { planId } = useParams();
     const [formData, setFormData] = useState({
@@ -22,16 +22,6 @@ function AccomodationRegistrationForm() {
     const [formErrors, setFormErrors] = useState({});
     const [popup, setPopup] = useState(false);
 
-    useEffect(() => {
-        if (location.state) {
-            setFormData(prevState => ({
-                ...prevState,
-                accommodationType: location.state
-            }));
-            // Store the eventId in localStorage
-            localStorage.setItem('eventId', location.state);
-        }
-    }, [location.state]); // Add location.state to the dependency array
 
     const handleChange = (e, index) => {
         const { name, value } = e.target;
@@ -116,7 +106,7 @@ function AccomodationRegistrationForm() {
     };
 
     return (
-        <div className="container">
+        <div className="container" style={{paddingTop:'100px'}}>
             <div className="row">
                 <div className="col-sm-8 col-md-9 col-lg-12 mx-auto">
                     <div className="card card-signin my-5" id="user_container">

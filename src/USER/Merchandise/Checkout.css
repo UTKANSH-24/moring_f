@@ -3,24 +3,25 @@
    
 
 
-    .containercontact {
+     .containercontact {
       display: flex;
-      /* flex-direction: column; */
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-    }
+      flex-direction:row;
+      /* height: 100vh; */
+      padding-top: 100px;
+     
+     
+    } 
 
     .left-section {
       width: 50%;
       padding: 20px;
-      height: 100vh;
+      /* height: 100vh; */
     }
 
     .right-section {
       width: 50%;
       padding: 20px;
-      height: 100vh;
+      /* height: 100vh; */
     }
 
     .upper-section {
@@ -38,7 +39,8 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-      background-color: rgba(236, 236, 232, 0.315);
+      
+      /* background-color: rgba(236, 236, 232, 0.315); */
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       padding: 20px;
@@ -46,7 +48,7 @@
 
     label {
       font-weight: bold;
-      color: rgba(71, 71, 71, 0.79);
+      color:white;
     }
 
     input,
