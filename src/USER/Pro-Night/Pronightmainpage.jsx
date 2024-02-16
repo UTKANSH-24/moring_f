@@ -17,10 +17,12 @@ class ProNightSection extends React.Component {
                 <h2 className="titl" style={{ textAlign: 'center', margin: '90px 0px 30px 0', fontSize: '3.6rem', zIndex: 100 }}>
                     Pro Night
                 </h2>
+                <div className='containerpro'>
                 <video src={videoFile} className="pro_video" loop autoPlay muted />
                 {/* <h1 className="pronighthome">ProNight</h1> */}
+               
                 <button className='revelbutton' onClick={this.handleClick}>Reveal</button>
-                {/* </div> */}
+                {/* </div> */}</div>
             </>
         );
     }

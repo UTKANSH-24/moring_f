@@ -17,25 +17,29 @@
     overflow-clip-margin: content-box;
     overflow: clip;
 }
-.revelbutton{
-    opacity: 0.5;
-    z-index: 500;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 70;
-    font-size: 5.5vw;
+
+.revelbutton {
     position: absolute;
-    color: rgb(11, 11, 11);
-    top: 65%;
-    left: 35%;
+    top: 50%;
     width: 30%;
-    height:20vh;
+    left:35%;
+    height: 30vh;
+    text-align: center;
+    font-size: 18px;
     border-radius: 20px;
-  
-    display: flex;
-    justify-content: center;
-  
+    background-color: rgb(164, 161, 161);
+    color: black;
+    font-size: 70px;
+    /* color: black; */
+
 }
-.pronighthome{
+
+.containerpro {
+    position: relative;
+}
+
+
+.pronighthome {
     opacity: 0.5;
     z-index: 500;
     font-family: 'Times New Roman', Times, serif;
@@ -187,10 +191,10 @@
 
 
 @media (max-width: 947px) {
-   
 
 
-    .revelbutton{
+
+    .revelbutton {
         /* opacity: 0.5;
         z-index: 500;
         font-family: 'Times New Roman', Times, serif;
@@ -201,15 +205,16 @@
         top: 57%;
         left: 35%;
         width: 30%;
-        height:5vh;
+        height: 5vh;
         border-radius: 20px;
-      
+
         display: flex;
         justify-content: center;
-      
+
     }
-    .pronighthome{
-        
+
+    .pronighthome {
+
         /* opacity: 0.5;
       
         font-family: 'Times New Roman', Times, serif;
@@ -224,7 +229,7 @@
         /* display: flex;
         justify-content: center;
         transition: all ease 1.2s; */
-    
+
     }
-    
+
 }
