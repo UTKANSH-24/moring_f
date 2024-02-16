@@ -50,69 +50,69 @@ const ContactSection = () => {
 
   return (
     <div>{(location.pathname === '/Contacts') && <div style={{ minHeight: '5rem' }}></div>}
-    <section style={{ backgroundColor: 'aliceblue', padding: '30px 0px 30px' }}>
-      <div className="contact" id="contact">
-        <div className="max-width">
-          <h2 className="title" style={{ textAlign: 'center', color: '#070707', marginBottom: '30px' }}>Contact Us</h2>
+      <section style={{ backgroundColor: 'aliceblue', padding: '30px 0px 30px' }}>
+        <div className="contact" id="contact">
+          <div className="max-width">
+            <h2 className="title" style={{ textAlign: 'center', color: '#070707', marginBottom: '30px' }}>Contact Us</h2>
 
-          <div className="contact-content">
-            <div className="column left">
-              <div className="text">Get in Touch</div>
-              <div className="icons">
-                <div className="row">
+            <div className="contact-content">
+              <div className="column left">
+                <div className="text">Get in Touch</div>
+                <div className="icons">
+                  <div className="row">
 
 
 
-                  <FontAwesomeIcon icon={faUser} />
-                  <div className="info">
-                    <div className="head">Name</div>
-                    <div className="sub-title">Abhishek Kumar</div>
+                    <FontAwesomeIcon icon={faUser} />
+                    <div className="info">
+                      <div className="head">Name</div>
+                      <div className="sub-title">Abhishek Kumar</div>
+                    </div>
                   </div>
-                </div>
-                <div className="row">
-                  <FontAwesomeIcon icon={faMapMarkerAlt} />
-                  <div className="info">
-                    <div className="head">Address</div>
-                    <div className="sub-title">Samastipur Bihar</div>
+                  <div className="row">
+                    <FontAwesomeIcon icon={faMapMarkerAlt} />
+                    <div className="info">
+                      <div className="head">Address</div>
+                      <div className="sub-title">Samastipur Bihar</div>
+                    </div>
                   </div>
-                </div>
-                <div className="row">
-                  <FontAwesomeIcon icon={faEnvelope} />
-                  <div className="info">
-                    <div className="head">Email</div>
-                    <div className="sub-title">abhishek110803@gmail.com</div>
+                  <div className="row">
+                    <FontAwesomeIcon icon={faEnvelope} />
+                    <div className="info">
+                      <div className="head">Email</div>
+                      <div className="sub-title">abhishek110803@gmail.com</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
 
-            <div className="column right">
-              <div className="text">Message me</div>
-              <form className='contactform' onSubmit={handleSubmit}>
-                <div className="fields">
-                  <div className="field namee">
-                    <input type="text" placeholder="Name" name='name' className='textarae' required onChange={handleChange} value={formData.name} />
+              <div className="column right">
+                <div className="text">Message me</div>
+                <form className='contactform' onSubmit={handleSubmit}>
+                  <div className="fields">
+                    <div className="field namee">
+                      <input type="text" placeholder="Name" name='name' className='textarae' required onChange={handleChange} value={formData.name} />
+                    </div>
+
+                    <div className="field email">
+                      <input type="email" placeholder="Email" name='email' className='textarae' required onChange={handleChange} value={formData.email} />
+                    </div>
                   </div>
-
-                  <div className="field email">
-                    <input type="email" placeholder="Email" name='email' className='textarae' required onChange={handleChange} value={formData.email} />
+                  <div className="field">
+                    <input type="text" placeholder="Subject" name='subject' className='textarae' required onChange={handleChange} value={formData.subject} />
                   </div>
-                </div>
-                <div className="field">
-                  <input type="text" placeholder="Subject" name='subject' className='textarae' required onChange={handleChange} value={formData.subject} />
-                </div>
-                <div className="field textarea textarat">
-                  <textarea cols="30" rows="10" placeholder="Message.." name='message' className='textarae' required onChange={handleChange} value={formData.message} ></textarea>
-                </div>
-                <div className="button-area">
-                  <button type="submit">Send message</button>
-                </div>
-              </form>
+                  <div className="field textarea textarat">
+                    <textarea cols="30" rows="10" placeholder="Message.." name='message' className='textarae' required onChange={handleChange} value={formData.message} ></textarea>
+                  </div>
+                  <div className="button-area">
+                    <button type="submit">Send message</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </section>
     </div>
 

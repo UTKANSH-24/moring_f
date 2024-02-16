@@ -71,7 +71,7 @@
     }
 
     .error {
-      color: red;
+      /* color: red; */
       font-style: italic;
     }
 

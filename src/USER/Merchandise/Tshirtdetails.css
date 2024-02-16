@@ -10,7 +10,7 @@
     margin-right: 50px;
     margin-left: 50px;
     backdrop-filter: white(100%);
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
 .small-tshirt-group{

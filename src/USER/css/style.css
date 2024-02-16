@@ -154,7 +154,7 @@ text-decoration: none !important;
     font-size:4rem;
     background: -webkit-linear-gradient(left,#FFFFFF, #FFFFFF);
     /*border: 5px solid relax;*/
-    color:black;
+    /* color:black; */
     /*text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);*/
     border-color: white;
     -webkit-background-clip: text;

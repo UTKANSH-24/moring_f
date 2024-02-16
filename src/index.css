@@ -3,7 +3,7 @@
 @tailwind utilities;
 .drawer-toggle~.drawer-side>.drawer-overlay+* {
    z-index: 10;
-   /* grid-column-start: 1; */
+   grid-column-start: -1;
    grid-row-start: 1;
    --tw-translate-x: 100%;
    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
