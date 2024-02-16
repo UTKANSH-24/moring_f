@@ -26,7 +26,7 @@ const ContactSection = () => {
     console.log(formData);
 
     try {
-      const url = `/contact`
+      const url = '/contact'
       const res = await axiosInstance.post(url, formData);
       console.log(res.data);
       if (res?.data?.success) {
