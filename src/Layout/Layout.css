@@ -10,3 +10,15 @@
         /* Display the div when screen size is less than or equal to 947px */
     }
 }
+
+.drawer {
+    /* Change the positioning to start from the right side */
+    right: 0;
+    /* Adjust as needed */
+}
+
+.drawer-side {
+    /* Adjust the alignment to start from the right side */
+    right: 0;
+    /* Adjust as needed */
+}

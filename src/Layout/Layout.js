@@ -36,8 +36,8 @@ const Layout = ({ children }) => {
       <div className="drawer absolute z-50 right-0 w-fit">
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
-          <label htmlFor="my-drawer" className="cursor-pointer relative">
-            <FontAwesomeIcon icon={faBars} onClick={changeWidth} style={{ marginRight: '23px', marginTop: '28px' }} />
+          <label htmlFor="my-drawer" className="cursor-pointer relative" onClick={changeWidth} style={{padding:'5px'}}>
+            <FontAwesomeIcon icon={faBars}  style={{ marginRight: '18px', marginTop: '23px' }} />
           </label>
         </div>
 
