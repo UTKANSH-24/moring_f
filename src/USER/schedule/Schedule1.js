@@ -56,7 +56,7 @@ export default function VerticalTabs() {
 
     return (
         <Box
-            sx={{ flexGrow: 1, width: '100%', margin: 'auto', bgcolor: 'black', display: 'flex', height: 450 }}
+            sx={{ flexGrow: 1,width:'100%', margin: '', bgcolor: 'black', display: 'flex', height: 450 }}
         >
             <Tabs
                 orientation="vertical"
@@ -74,7 +74,7 @@ export default function VerticalTabs() {
                 <Tab sx={{ margin: '5px', color: 'white' }} label="Item Six" {...a11yProps(5)} />
                 <Tab sx={{ margin: '5px', color: 'white' }} label="Item Seven" {...a11yProps(6)} />
             </Tabs>
-            <TabPanel sx={{ overFlow:'hidden' }} value={value} index={0} background="https://unsplash.it/1920/500?image=11">
+            <TabPanel  value={value} index={0} background="">
                 <div className='each'>
 
                     <div> 
