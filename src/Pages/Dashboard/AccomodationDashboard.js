@@ -16,15 +16,13 @@ const AccomodationDashboard = () => {
 
   
 
-  // getting the courses data from redux toolkit store
   const myCourses = useSelector((state) => state.event.eventsData);
 
-  // function to handle the course delete
   const handleCourseDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete the course?")) {
       const res = await dispatch(deleteEvent(id));
 
-      // fetching the new updated data for the course
+     
       console.log(res);
       // if (success) {
         await dispatch(getAllEvent());

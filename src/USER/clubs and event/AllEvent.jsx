@@ -10,7 +10,7 @@ function ClubCard({ clubName, link }) {
                     <h1>{clubName}</h1>
                     <div className="card1234-back">
                         <Link to={`${link}`}>
-                            View
+                            View Events
                         </Link>
                     </div>
                 </div>
