@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
 import QRPopup from '../QRCode';
 import {  useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { addEventParticipants } from "../../Redux/participantsSlice";
 import axiosInstance from '../../Helper/axiosInstance';
 
 function AccomodationRegistrationForm() {
+    const navigate = useNavigate();
    
     const dispatch = useDispatch();
     const { planId } = useParams();
@@ -79,7 +81,7 @@ function AccomodationRegistrationForm() {
             if (Object.keys(errors).length === 0) {
                 try {
                     console.log("formData", formData);
-                    const url = `/registerAccommodation`
+                    const url = `accommodation/registerAccommodation`
                     const response = await axiosInstance.post(url, formData);
                     console.log("response", response);
                     if (response?.data.success) {
@@ -87,10 +89,12 @@ function AccomodationRegistrationForm() {
                             // teamName: '',
                             college: '',
                             paymentReferenceNumber: '',
-                            numberOfPersons: '',
-                            numberOfDays: '',
+                            numberOfPersons: 1,
+                            numberOfDays: 1,
                             persons: [{ participantName: '', participantEmail: '', participantPhone: '' }],
                         });
+                        toast.success('Request Submitted.')
+                        navigate(`/accomodationPage`);
                         setFormErrors({});
                     } else {
                         toast.error(response?.data.message);
