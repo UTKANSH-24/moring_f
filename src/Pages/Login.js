@@ -91,7 +91,7 @@ const Login = () => {
             onClick={() =>
               setLoginData({ email: "test@gmail.com", password: "Test@123" })
             }
-            className="text-center link text-accent cursor-pointer"
+            className="text-center  text-accent cursor-pointer"
           >
             Guest Login
           </div>
@@ -104,14 +104,14 @@ const Login = () => {
           </button>
 
           <Link to={"/forgetpassword"}>
-            <p className="text-center link text-accent cursor-pointer">
+            <p className="text-center  text-accent cursor-pointer">
               Forget Password
             </p>
           </Link>
 
           <p className="text-center">
             Don't have an account ?{" "}
-            <Link to={"/signup"} className="link text-accent cursor-pointer">
+            <Link to={"/signup"} className=" text-accent cursor-pointer">
               Create Account
             </Link>
           </p>

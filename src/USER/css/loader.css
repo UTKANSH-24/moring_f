@@ -17,8 +17,7 @@
 	--trans-dur: 0.3s;
 	font-size: calc(16px + (20 - 16) * (100vw - 320px) / (1280 - 320));
 }
-body {
-/* 	background-color: var(--bg); */
+/* body {
 	color: var(--fg);
 	font: 1em/1.5 "Varela Round", sans-serif;
 	height: 100vh;
@@ -27,7 +26,7 @@ body {
 	transition:
 		background-color var(--trans-dur),
 		color var(--trans-dur);
-}
+} */
 main {
 	padding: 1.5em 0;
 }
