@@ -38,9 +38,9 @@ export const getEventParticipants = createAsyncThunk(
 
   
       toast.promise(res, {
-        loading: "Fetching the lectures...",
-        success: "Lectures fetched successfully",
-        error: "Failed to fetch lectures",
+        loading: "Fetching the participants...",
+        success: "Participants fetched successfully",
+        error: "Failed to fetch participants",
       });
 
       const response = await res;
@@ -63,9 +63,9 @@ export const addEventParticipants = createAsyncThunk(
       const res = axiosInstance.post(`/event/lecture/${data.id}`, data);
 
       toast.promise(res, {
-        loading: "Adding the lecture...",
-        success: "Lecture added successfully",
-        error: "Failed to add lectureghfghfghjgh",
+        loading: "Registering the participant...",
+        success: "Registered successfully",
+        error: "Failed to Register in the event",
       });
 
       const response = await res;
@@ -90,9 +90,9 @@ export const addclubcoordinator = createAsyncThunk(
       const res = axiosInstance.post(`/event/clubcoordinator/${data.id}`, data);
     
       toast.promise(res, {
-        loading: "Adding the lecture...",
-        success: "Lecture added successfully",
-        error: "Failed to add lectureghfghfghjgh",
+        loading: "Adding the club coordinator...",
+        success: "Club coordinator added successfully",
+        error: "Failed to add club coordinator",
       });
 
       const response = await res;
@@ -116,9 +116,9 @@ export const deleteEventParticipants = createAsyncThunk(
       );
 
       toast.promise(res, {
-        loading: "Deleting the lecture...",
-        success: "Lecture deleted successfully",
-        error: "Failed to delete lecture",
+        loading: "Deleting the participant...",
+        success: "Participant deleted successfully",
+        error: "Failed to delete participant",
       });
 
       const response = await res;
@@ -138,9 +138,9 @@ export const changeparticipantsverification = createAsyncThunk(
       );
 
       toast.promise(res, {
-        loading: "Deleting the lecture...",
-        success: "Lecture deleted successfully",
-        error: "Failed to delete lecture",
+        loading: "Verifying the participant...",
+        success: "Participant Verified",
+        error: "Failed to verify participant",
       });
 
       const response = await res;

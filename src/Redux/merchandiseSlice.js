@@ -12,9 +12,9 @@ export const getAllMerchandise = createAsyncThunk("/course/get", async () => {
         const res = axiosInstance.get("/event");
 
         toast.promise(res, {
-            loading: "Loading courses data...",
-            success: "Courses loaded successfully",
-            error: "Failed to get courses",
+            loading: "Loading merchandise data...",
+            success: "Merchandise data loaded successfully",
+            error: "Failed to get merchandise data",
         });
 
         const response = await res;
