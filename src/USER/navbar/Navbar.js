@@ -4,7 +4,7 @@ import './nav.css';
 import logoImage from './Group 59.svg'; // Import SVG image
 import Layout from '../../Layout/Layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp,faUser } from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -56,6 +56,7 @@ const Navbar = () => {
                     <li><Link to="/FacultyCoordinators" className="menu-btn">Faculty Coordinator </Link></li>
                     <li><Link to="/Developers" className="menu-btn">Developers</Link></li>
                     <li><Link to="/Contacts" className="menu-btn">Contact us</Link></li>
+                    <li><FontAwesomeIcon icon={faUser} style={{marginRight:'15px', marginTop:'5px'}}/></li>
                 
                 </ul>
                 <div className="menu-btn" style={{ marginLeft: '20px' }} onClick={toggleMenu}>
