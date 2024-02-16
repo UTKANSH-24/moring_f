@@ -12,14 +12,14 @@ export const getAllEvent = createAsyncThunk("/course/get", async () => {
     const res = axiosInstance.get("/event");
 
     toast.promise(res, {
-      loading: "Loading courses data...",
-      success: "Courses loaded successfully",
-      error: "Failed to get courses",
+      loading: "Loading events data...",
+      success: "Events loaded successfully",
+      error: "Failed to get events",
     });
 
     const response = await res;
-    console.log("course-slice");
-    console.log(response);
+    // console.log("cou-slice");
+    // console.log(response);
 
     return response.data.events;
   } catch (error) {
@@ -33,9 +33,9 @@ export const getAllAccomodation = createAsyncThunk("/course/get", async () => {
     const res = axiosInstance.get("/event");
 
     toast.promise(res, {
-      loading: "Loading courses data...",
-      success: "Courses loaded successfully",
-      error: "Failed to get courses",
+      loading: "Loading accomodation data...",
+      success: "Accomodation loaded successfully",
+      error: "Failed to get accomodation",
     });
 
     const response = await res;
@@ -45,14 +45,16 @@ export const getAllAccomodation = createAsyncThunk("/course/get", async () => {
     toast.error(error?.response?.data?.message);
   }
 });
+
+
 export const getAllMerchansie = createAsyncThunk("/course/get", async () => {
   try {
     const res = axiosInstance.get("/event");
 
     toast.promise(res, {
-      loading: "Loading courses data...",
-      success: "Courses loaded successfully",
-      error: "Failed to get courses",
+      loading: "Loading merchandise data...",
+      success: "Merchandise loaded successfully",
+      error: "Failed to get merchandise data",
     });
 
     const response = await res;
@@ -70,9 +72,9 @@ export const createNewEvent = createAsyncThunk(
     try {
       const res = axiosInstance.post("/event", data);
       toast.promise(res, {
-        loading: "Creating the course...",
-        success: "Course created successfully",
-        error: "Failed to create course",
+        loading: "Creating the event...",
+        success: "Event created successfully",
+        error: "Failed to create event",
       });
 
       const response = await res;
@@ -89,9 +91,9 @@ export const deleteEvent = createAsyncThunk("/course/delete", async (id) => {
     const res = axiosInstance.delete(`event/eventee/${id}`);
 
     toast.promise(res, {
-      loading: "Deleting the course...",
-      success: "Courses deleted successfully",
-      error: "Failed to delete course",
+      loading: "Deleting the event...",
+      success: "Event deleted successfully",
+      error: "Failed to delete event",
     });
 
     const response = await res;
@@ -125,9 +127,9 @@ export const updateEvent = createAsyncThunk("/course/update", async (data) => {
     });
 
     toast.promise(res, {
-      loading: "Updating the course...",
-      success: "Course updated successfully",
-      error: "Failed to update course",
+      loading: "Updating the event...",
+      success: "Event updated successfully",
+      error: "Failed to update event",
     });
 
     const response = await res;

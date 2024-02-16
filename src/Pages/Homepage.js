@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
-    <Layout>
+    <>
       <div className="pt-10 text-white flex items-center justify-center gap-10 mx-16 h-[90vh]">
         {/* for platform details */}
         <div className="w-1/2 space-y-6">
@@ -37,7 +37,7 @@ const Homepage = () => {
           <img src={homePageMainImage} alt="home page image" />
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 
