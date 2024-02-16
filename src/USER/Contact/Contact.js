@@ -26,7 +26,7 @@ const ContactSection = () => {
     console.log(formData);
 
     try {
-      const url = `/contact`
+      const url = '/contact'
       const res = await axiosInstance.post(url, formData);
       console.log(res.data);
       if (res?.data?.success) {
@@ -84,17 +84,7 @@ const ContactSection = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< Updated upstream
             </div>
-=======
-              <div className="column right">
-                <div className="text">Message me</div>
-                <form  className='contactform'>
-                  <div className="fields">
-                    <div className="field namee">
-                      <input type="text" placeholder="Name" className='textarae' required />
-                    </div>
->>>>>>> Stashed changes
 
 
             <div className="column right">
