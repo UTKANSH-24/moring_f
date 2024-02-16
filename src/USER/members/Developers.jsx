@@ -5,8 +5,8 @@ import VanillaTilt from './Vanillatilt.js'; // Import the default export from Va
 const Developers = () => {
     useEffect(() => {
         VanillaTilt.init(document.querySelectorAll(".card4545"), {
-            max: 25,
-            speed: 400
+            max: 7,
+            speed: 1000
         });
     }, []);
 

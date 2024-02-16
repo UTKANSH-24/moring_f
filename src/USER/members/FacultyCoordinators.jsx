@@ -3,12 +3,12 @@ import './member.css';
 import VanillaTilt from './Vanillatilt.js'; // Import the default export from VanillaTilt.js
 
 const FacultyCoordinators = () => {
-    useEffect(() => {
-        VanillaTilt.init(document.querySelectorAll(".card4545"), {
-            max: 11,
-            speed: 1200
-        });
-    }, []);
+    // useEffect(() => {
+    //     VanillaTilt.init(document.querySelectorAll(".card4545"), {
+    //         max: 11,
+    //         speed: 1200
+    //     });
+    // }, []);
 
     return (
         <div>

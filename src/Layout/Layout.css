@@ -1,0 +1,12 @@
+.hidden-div {
+    display: none;
+    /* Hidden by default */
+}
+
+/* Media query for screen sizes less than or equal to 947px */
+@media (max-width: 947px) {
+    .hidden-div {
+        display: block;
+        /* Display the div when screen size is less than or equal to 947px */
+    }
+}

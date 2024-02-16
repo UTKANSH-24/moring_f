@@ -1,144 +1,118 @@
-import React, { useState } from "react";
-import { FiMenu } from "react-icons/fi";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AiFillCloseCircle } from "react-icons/ai";
-// import Footer from "../Components/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../Redux/authSlice";
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-
+import './Layout.css'
 const Layout = ({ children }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // for checking user logged in or not
   const isLoggedIn = useSelector((state) => state?.auth?.isLoggedIn);
 
-  // for dispaying the options, according to user role
   const role = useSelector((state) => state?.auth?.role);
 
-  // function to hide the drawer on close button click
   const hideDrawer = () => {
     const element = document.getElementsByClassName("drawer-toggle");
     element[0].checked = false;
-
-    // collapsing the drawer-side width to zero
     const drawerSide = document.getElementsByClassName("drawer-side");
     drawerSide[0].style.width = 0;
   };
 
-  // function for changing the drawer width on menu button click
   const changeWidth = () => {
     const drawerSide = document.getElementsByClassName("drawer-side");
     drawerSide[0].style.width = "auto";
   };
 
-  // function to handle logout
   const handleLogout = async (event) => {
     event.preventDefault();
-
-    // calling logout action
-    const res = await dispatch(logout());
-
-    // redirect to home page if true
+    const res = dispatch(logout());
     if (res?.payload?.success) navigate("/");
   };
 
   return (
     <div className="min-h-[90vh]">
-      {/* adding the daisy ui drawer */}
-      <div className="drawer absolute z-50 left-0 w-fit">
+      <div className="drawer absolute z-50 right-0 w-fit">
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
           <label htmlFor="my-drawer" className="cursor-pointer relative">
-            {/* <FiMenu
-              onClick={changeWidth}
-              size={"32px"} style={{ Top: '100px' }}
-              className="font-bold text-white m-4"
-            /> */}
-             <FontAwesomeIcon icon={faBars} onClick={changeWidth}/>
+            <FontAwesomeIcon icon={faBars} onClick={changeWidth} style={{ marginRight: '23px', marginTop: '28px' }} />
           </label>
         </div>
 
         <div className="drawer-side w-0">
           <label htmlFor="my-drawer" className="drawer-overlay"></label>
-          
+
           <ul className="menu p-4 w-48 sm:w-80 bg-base-100 text-base-content relative">
-            {/* close button for drawer */}
+            <div className="hidden-div">
+              <li><Link style={{ textDecoration: 'none' }} to="/" >Home</Link></li>
+              <li><Link style={{ textDecoration: 'none' }} to="/Gallery" >Gallery</Link></li>
+              <li><Link style={{ textDecoration: 'none' }} to="/clubsandevent" >Clubs and Events</Link></li>
+              <li><Link style={{ textDecoration: 'none' }} to="/megaevent" >Mega Events</Link></li>
+              <li><Link style={{ textDecoration: 'none' }} to="/merchandise" >Merchandise</Link></li>
+              <li><Link style={{ textDecoration: 'none' }} to="/accomodationPage" >Accommodation</Link></li>
+              <li><Link style={{ textDecoration: 'none' }} to="/TeamMembers" >Team Members</Link></li>
+              <li><Link style={{ textDecoration: 'none' }} to="/FacultyCoordinators" >Faculty Coordinator </Link></li>
+              <li><Link style={{ textDecoration: 'none' }} to="/Developers" >Developers</Link></li>
+              <li><Link style={{ textDecoration: 'none' }} to="/Contacts" >Contact us</Link></li>
+
+            </div>
+
             <li className="w-fit absolute right-2 z-50">
               <button onClick={hideDrawer}>
-                {/* <AiFillCloseCircle size={24} /> */}
                 <FontAwesomeIcon icon={faTimes} />
               </button>
             </li>
 
-            <li>
-              <Link to={"/"}>Home</Link>
-            </li>
-
-            {/* displaying dashboard, if user is logged in */}
             {isLoggedIn && role === "ADMIN" && (
               <li>
-                <Link to={"/admin/dashboard"}>Events Dashboard</Link>
+                <Link style={{ textDecoration: 'none' }} to={"/admin/dashboard"}>Events Dashboard</Link>
               </li>
             )}
-             {isLoggedIn && role === "ADMIN" && (
+            {isLoggedIn && role === "ADMIN" && (
               <li>
-                <Link to={"/admin/merchandise"}>Merchandise Dashboard</Link>
+                <Link style={{ textDecoration: 'none' }} to={"/admin/merchandise"}>Merchandise Dashboard</Link>
               </li>
             )}
-             {isLoggedIn && role === "ADMIN" && (
+            {isLoggedIn && role === "ADMIN" && (
               <li>
-                <Link to={"/admin/accomodation"}>Accomodation Dashboard</Link>
+                <Link style={{ textDecoration: 'none' }} to={"/admin/accomodation"}>Accomodation Dashboard</Link>
               </li>
             )}
 
 
-             {isLoggedIn && role === "COORDINATOR" && (
+            {isLoggedIn && role === "COORDINATOR" && (
               <li>
-                <Link to={"/admin/dashboard"}>COORDINATOR Dashboard</Link>
+                <Link style={{ textDecoration: 'none' }} to={"/admin/dashboard"}>COORDINATOR Dashboard</Link>
               </li>
             )}
-
-           
-
-            {/* creating the bottom part of drawer */}
-            {/* if user is not logged in */}
-            {!isLoggedIn && (
-              <li className="absolute bottom-4 w-[90%]">
-                <div className="w-full flex items-center justify-center">
-                  <button className="btn-primary px-4 py-1 font-semibold rounded-md w-full">
-                    <Link to={"/login"}>Login</Link>
-                  </button>
-                  <button className="btn-secondary px-4 py-1 font-semibold rounded-md w-full">
-                    <Link to={"/signup"}>Signup</Link>
-                  </button>
-                </div>
-              </li>
-            )}
-
-            {/* if user is logged in */}
             {isLoggedIn && (
-              <li className="absolute bottom-4 w-[90%]">
-                <div className="w-full flex items-center justify-center">
-                  <button className="btn-primary px-4 py-1 font-semibold rounded-md w-full">
-                    <Link to={"/user/profile"}>Profile</Link>
-                  </button>
-                  <button className="btn-secondary px-4 py-1 font-semibold rounded-md w-full">
-                    <Link onClick={handleLogout}>Logout</Link>
-                  </button>
-                </div>
+              <li>
+                <Link style={{ textDecoration: 'none' }} to={"/user/profile"}>Profile</Link>
               </li>
             )}
+
+            <li className="absolute bottom-4 w-[90%] flex flex-wrap justify-center">
+              {!isLoggedIn ? (
+                <>
+                  <button className="btn btn-green">
+                    <Link style={{ textDecoration: 'none' }} to={"/login"}>Login / Signup</Link>
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button className="btn btn-red">
+                    <Link style={{ textDecoration: 'none' }} onClick={handleLogout}>Logout</Link>
+                  </button>
+                </>
+              )}
+            </li>
           </ul>
         </div>
       </div>
 
       {children}
-
-     
     </div>
   );
 };

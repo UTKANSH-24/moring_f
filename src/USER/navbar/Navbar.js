@@ -4,7 +4,7 @@ import './nav.css';
 import logoImage from './Group 59.svg'; // Import SVG image
 import Layout from '../../Layout/Layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp,faUser } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp, faUser } from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,6 +12,11 @@ const Navbar = () => {
     const [isSticky, setSticky] = useState(false);
     const [showScrollBtn, setShowScrollBtn] = useState(false);
     const [isMenuActive, setMenuActive] = useState(false);
+
+    const [userOption, setUserOption] = useState(false);
+    const handleClick = () => {
+        setUserOption(pre => !pre);
+    }
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -34,18 +39,18 @@ const Navbar = () => {
     };
 
     return (<>
-       
-      
-       <Layout/>
+
+
+        <Layout />
         <nav className={isSticky ? 'navbarnav sticky' : 'navbarnav'}>
-       
+
             <div className="max-widthnav">
-           
+
                 <div className="logo">
                     <img className="mainlogo" src={logoImage} alt="Logo" />
                 </div>
 
-                <ul className={isMenuActive ? 'menu lafda active' : 'menu lafda'}>
+                <ul className={isMenuActive ? 'menu lafda active' : 'menu lafda'} style={{marginRight:'45px'}}>
                     <li><Link to="/" className="menu-btn">Home</Link></li>
                     <li><Link to="/Gallery" className="menu-btn">Gallery</Link></li>
                     <li><Link to="/clubsandevent" className="menu-btn">Clubs and Events</Link></li>
@@ -56,19 +61,18 @@ const Navbar = () => {
                     <li><Link to="/FacultyCoordinators" className="menu-btn">Faculty Coordinator </Link></li>
                     <li><Link to="/Developers" className="menu-btn">Developers</Link></li>
                     <li><Link to="/Contacts" className="menu-btn">Contact us</Link></li>
-                    <li><FontAwesomeIcon icon={faUser} style={{marginRight:'15px', marginTop:'5px'}}/></li>
-                
                 </ul>
-                <div className="menu-btn" style={{ marginLeft: '20px' }} onClick={toggleMenu}>
-                <FontAwesomeIcon icon={isMenuActive ? faTimes : faBars} />
-                </div>
+                {/* <div className="menu-btn" style={{ marginLeft: '20px' }} onClick={toggleMenu}>
+                    <FontAwesomeIcon icon={isMenuActive ? faTimes : faBars} />
+                </div> */}
             </div>
             <button className={showScrollBtn ? 'scroll-up-btn show' : 'scroll-up-btn'} onClick={scrollToTop}>
-            <FontAwesomeIcon icon={faArrowUp} style={{ marginBottom: '10px' }} />
-           
+                <FontAwesomeIcon icon={faArrowUp} style={{ marginBottom: '10px' }} />
+
             </button>
         </nav>
-        
+        {/* {userOption && <Layout />} */}
+
     </>
     );
 };

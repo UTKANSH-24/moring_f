@@ -27,8 +27,8 @@ export default function Animation() {
 
         {/* Our Schedule Area Start */}
         <section className="our-schedule-area">
-        <h1 style={{ marginTop: '', paddingBottom: '' }} className="text-center">Animation Club</h1>
-       
+            <h1 style={{ marginTop: '', paddingBottom: '' }} className="text-center">Animation Club</h1>
+
             <div className="container">
                 <div className="row">
                     <div className="col-12">

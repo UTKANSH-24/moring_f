@@ -1,4 +1,3 @@
-
 body {
     min-height: 100vh;
     /* background: url("qqq.jpg"); */
@@ -9,4 +8,17 @@ body {
     background-position: fixed;
     font-family: Roboto;
     font-size: 16px;
+}
+
+.homepage {
+    position: relative;
+}
+
+.background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
 }
