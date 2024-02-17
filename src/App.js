@@ -105,7 +105,8 @@ const App = () => {
           <Route path="/event/displaytcacoordinator" element={<Displaytcacoordinator />} />
           <Route path="/event/registeraccomodation/:planId" element={<AccomodationRegistrationForm />} />
           <Route path="/merchandise/tshirtdetails/checkout/:id" element={<MerchandiseForm />} />
-
+          <Route path="/merchandise/myOrders" element={<MyOrders />} />
+          <Route path="/accommodation/myBookings" element={<MyBookings/>}/>
         </Route>
         
 

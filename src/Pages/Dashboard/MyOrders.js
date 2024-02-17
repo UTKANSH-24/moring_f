@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../../Layout/Layout";
 import axiosInstance from "../../Helper/axiosInstance";
+import toast from "react-hot-toast";
 
 
 const MyOrders = () => {
@@ -8,7 +8,12 @@ const MyOrders = () => {
 
     const getOrderData = async () => {
         const res = await axiosInstance.post('/merchandise/getMyOrderList');
-        console.log(res.data.data);
+        if (res.data?.success) {
+            toast.success('All Orders')
+        } else {
+            toast.success('Error in fetch.')
+        }
+        // console.log(res.data.data);
         setAllOrders(res.data.data);
     }
 
@@ -18,7 +23,7 @@ const MyOrders = () => {
         })();
     }, []);
 
-    return (<Layout>
+    return (
         <div className="flex items-center h-[90vh] justify-between py-5 px-5 gap-5 rounded-md shadow-md">
             <div className="mx-[10%] w-[80%] self-center flex flex-col items-center justify-center gap-10 mb-10">
                 <div className="flex w-full items-center justify-between">
@@ -58,7 +63,6 @@ const MyOrders = () => {
                 </table>}
             </div>
         </div>
-    </Layout>
     );
 };
 

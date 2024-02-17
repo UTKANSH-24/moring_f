@@ -88,12 +88,12 @@ const Layout = ({ children }) => {
             )}
             {isLoggedIn && role === "USER" && (
               <li>
-                <Link style={{ textDecoration: 'none' }} to={"/admin/merchandise"}>Merchandise Dashboard</Link>
+                <Link style={{ textDecoration: 'none' }} to={"/merchandise/myOrders"}>My Orders</Link>
               </li>
             )}
             {isLoggedIn && role === "USER" && (
               <li>
-                <Link style={{ textDecoration: 'none' }} to={"/admin/accomodation"}>Accomodation Dashboard</Link>
+                <Link style={{ textDecoration: 'none' }} to={"/accommodation/myBookings"}>My Bookings</Link>
               </li>
             )}
 
