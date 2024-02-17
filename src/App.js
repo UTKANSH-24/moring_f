@@ -5,6 +5,7 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import ForgetPassword from "./Pages/Password/ForgetPassword";
 import ResetPassword from "./Pages/Password/ResetPassword";
+import Verifyaccount from "./Pages/User/Verification";
 import AdminDashboard from "./Pages/Dashboard/AdminDashboard";
 import MerchandiseDashboard from "./Pages/Dashboard/MerchandiseDashboard";
 import Profile from "./Pages/User/Profile";
@@ -67,7 +68,7 @@ const App = () => {
         <Route path="/denied" element={<Denied />} />
         <Route path="/forgetpassword" element={<ForgetPassword />} />
         <Route path="/reset-password/:resetToken" element={<ResetPassword />} />
-
+        <Route path="/verify/:verificationToken" element={<Verifyaccount />} />
         <Route element={<NotRequireAuth />}>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
