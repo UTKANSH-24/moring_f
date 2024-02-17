@@ -61,7 +61,7 @@ function AccomodationRegistrationForm() {
         }
     };
 
-    const registerToEvent = async () => {
+    const registerAccommodation = async () => {
         if (formData.persons.length !== formData.numberOfPersons) { toast.error('Enter the details of all the members.'); }
         else {
             const errors = {};
@@ -185,7 +185,7 @@ function AccomodationRegistrationForm() {
                                         <button className="btn btn-secondary w-100 mb-2" type="button" onClick={deleteLastMember} disabled={formData.persons.length <= 1}>Delete Last Member</button>
                                     </div>
                                     <div className="col-md-4 mb-3">
-                                        <button className="btn btn-danger w-100" type="button" onClick={registerToEvent}>Submit</button>
+                                        <button className="btn btn-danger w-100" type="button" onClick={registerAccommodation}>Submit</button>
                                     </div>
                                 </div>
                             </form>
