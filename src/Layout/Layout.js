@@ -103,18 +103,13 @@ const Layout = ({ children }) => {
                 <Link style={{ textDecoration: 'none' }} to={"/admin/dashboard"}>COORDINATOR Dashboard</Link>
               </li>
             )}
-            {isLoggedIn && (
-              <li>
-                <Link style={{ textDecoration: 'none' }} to={"/user/profile"}>Profile</Link>
-              </li>
-            )}
-
+           
             {
               isLoggedIn &&
               role === 'ADMIN' &&
               (
                 <li>
-                  <Link className="text-decoration-none no-underline" to={"/contact/newQuery"}>New Queries</Link>
+                  <Link style={{ textDecoration: 'none' }} className="text-decoration-none no-underline" to={"/contact/newQuery"}>New Queries</Link>
                 </li>
               )
             }
@@ -125,15 +120,20 @@ const Layout = ({ children }) => {
               role === 'ADMIN' &&
               (
                 <li>
-                  <Link className="text-decoration-none no-underline" to={"/contact/answeredQuery"}>Old Queries</Link>
+                  <Link style={{ textDecoration: 'none' }} className="text-decoration-none no-underline" to={"/contact/answeredQuery"}>Old Queries</Link>
                 </li>
               )
             }
+            {isLoggedIn && (
+              <li>
+                <Link style={{ textDecoration: 'none' }} to={"/user/profile"}>Profile</Link>
+              </li>
+            )}
 
 
 
 
-            <li className="absolute bottom-4 w-[90%] flex flex-wrap justify-center">
+            <li className="bottom-4 w-[90%] flex flex-wrap justify-center bottom-0">
               {!isLoggedIn ? (
                 <>
                   <button className="btn btn-green">
