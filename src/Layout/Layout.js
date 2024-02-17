@@ -109,6 +109,30 @@ const Layout = ({ children }) => {
               </li>
             )}
 
+            {
+              isLoggedIn &&
+              role === 'ADMIN' &&
+              (
+                <li>
+                  <Link className="text-decoration-none no-underline" to={"/contact/newQuery"}>New Queries</Link>
+                </li>
+              )
+            }
+
+            {/* answered */}
+            {
+              isLoggedIn &&
+              role === 'ADMIN' &&
+              (
+                <li>
+                  <Link className="text-decoration-none no-underline" to={"/contact/answeredQuery"}>Old Queries</Link>
+                </li>
+              )
+            }
+
+
+
+
             <li className="absolute bottom-4 w-[90%] flex flex-wrap justify-center">
               {!isLoggedIn ? (
                 <>

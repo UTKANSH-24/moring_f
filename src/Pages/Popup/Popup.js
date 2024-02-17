@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
-import axiosInstance from "E:/UPDATED UTKANSH/moring_f/src/Helper/axiosInstance.js";
 import "./Popup.css";
-import {
- 
-  changeparticipantsverification
-} from "E:/UPDATED UTKANSH/moring_f/src/Redux/participantsSlice.js";
-
-import { useDispatch, useSelector } from "react-redux";
+import { changeparticipantsverification } from "../../Redux/participantsSlice";
+import { useDispatch } from "react-redux";
 
 
 const Popup = ({ usersdata, setPopup }) => {

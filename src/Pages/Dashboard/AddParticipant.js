@@ -3,7 +3,6 @@ import { toast } from "react-hot-toast";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
-import Layout from "../../Layout/Layout";
 import { addEventParticipants } from "../../Redux/participantsSlice";
 
 const AddParticipants = () => {
@@ -66,7 +65,7 @@ const AddParticipants = () => {
   }, []);
   return (
     
-      <div className=" text-white flex flex-col items-center justify-center gap-10 mx-16 min-h-[90vh]">
+    <div className=" text-white flex flex-col items-center justify-center gap-10 mx-16 min-h-[90vh]" style={{ minHeight: '90vh' }}>
         <div className="flex flex-col gap-5 p-2 shadow-[0_0_10px_black] w-96 rounded-lg">
           <header className="flex items-center justify-center relative">
             <button

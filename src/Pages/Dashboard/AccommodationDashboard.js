@@ -52,8 +52,8 @@ const AccommodationDashboard = () => {
 
   return (
 
-    <div className="min-h-[90vh] pt-5 flex flex-col flex-wrap gap-10 text-white">
-      <h1 className="text-center text-3xl font-semibold text-yellow-500">
+    <div className="min-h-[90vh] pt-5 flex flex-col flex-wrap gap-10 text-white" style={{ minHeight: '90vh' }}>
+      <h1 className="text-center text-3xl font-semibold text-yellow-500" style={{ marginTop: '50px' }}>
         Accommodation Dashboard
       </h1>
 

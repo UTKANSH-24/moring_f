@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Layout from "../../Layout/Layout";
 import ExportCSV from "../../ExportCsv/ExportCSV";
 
 import axiosInstance from "../../Helper/axiosInstance";
@@ -66,11 +65,11 @@ const DisplayMerchandise = () => {
 
 
     return (
-        <Layout>
-            <div className="flex flex-col gap-10 items-center justify-center min-h-[90vh] py-10 text-white mx-[5%]">
+        // <Layout>
+        <div className="flex flex-col gap-10 items-center justify-center min-h-[90vh] py-10 text-white mx-[5%]" style={{ minHeight: '90vh' }}>
                 {/* displaying the course name */}
 
-                <h1 className="text-center text-2xl font-semibold text-yellow-500">
+            <h1 className="text-center text-2xl font-semibold text-yellow-500" style={{ marginTop: '50px' }}>
                     Cloth Id : {clothId}
                 </h1>
                 {(orderDetails.length > 0) ? <div className="flex justify-center gap-10 w-full">
@@ -140,7 +139,7 @@ const DisplayMerchandise = () => {
                     <h1 className="text-center text-3xl font-semibold">No Oder Yet.</h1>
                 )}
             </div>
-        </Layout>
+        // </Layout>
     );
 };
 

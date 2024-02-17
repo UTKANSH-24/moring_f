@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import Layout from "../Layout/Layout";
 import { login } from "../Redux/authSlice";
 
 const Login = () => {
@@ -47,7 +46,7 @@ const Login = () => {
   };
 
   return (
-    <Layout>
+    // <Layout>
       <div className="flex items-center justify-center h-[100vh]">
         <form
           onSubmit={handleLogin}
@@ -117,7 +116,7 @@ const Login = () => {
           </p>
         </form>
       </div>
-    </Layout>
+    // </Layout>
   );
 };
 

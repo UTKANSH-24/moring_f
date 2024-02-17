@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Layout from "../../Layout/Layout";
 import { createNewEvent, updateEvent } from "../../Redux/eventSlice";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 

@@ -4,7 +4,7 @@ import './Tshirt.css';
 
 const Merchandise = () => {
     return (
-        <div className='outer'>
+        <div className='outer' style={{minHeight:'90vh'}}>
             <h1 className="Merchandise">Merchandise</h1>
             <div className="ram ">
                 <div className=" column">

@@ -29,7 +29,7 @@ export default function Fas() {
     const handleTabClick = (tabId) => {
         console.log("tabId", tabId);
         setActiveTab(tabId);
-        if (tabId == "step-one") {
+        if (tabId === "step-one") {
             console.log("step-one");
             setEventdetails({
                 eventId: '65b7b89581bbded4d9d763a2',
@@ -37,7 +37,7 @@ export default function Fas() {
                 maxParticipants: 2
             });
         }
-        if (tabId == "step-two") {
+        if (tabId === "step-two") {
             console.log("step-two");
             setEventdetails({
                 eventId: '65b7b89581bbded4d9d763a2',

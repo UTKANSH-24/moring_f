@@ -4,7 +4,6 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { BsPersonCircle } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Layout from "../../Layout/Layout";
 import { getUserData, updateProfile } from "../../Redux/authSlice";
 
 const EditProfile = () => {
@@ -75,7 +74,7 @@ const EditProfile = () => {
   };
 
   return (
-    <Layout>
+    // <Layout>
       <div className="flex items-center justify-center h-[100vh]">
         <form
           onSubmit={handleFormSubmit}
@@ -134,7 +133,7 @@ const EditProfile = () => {
           </button>
         </form>
       </div>
-    </Layout>
+    // </Layout>
   );
 };
 

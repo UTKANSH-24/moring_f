@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
-import Layout from "../../Layout/Layout";
 import {
   deleteEventParticipants,
   getEventParticipants,
@@ -46,10 +45,10 @@ const DisplayParticipants = () => {
   
   return (
     
-      <div className="flex flex-col gap-10 items-center justify-center min-h-[90vh] py-10 text-white mx-[5%]">
+    <div className="flex flex-col gap-10 items-center justify-center min-h-[90vh] py-10 text-white mx-[5%]" style={{ minHeight: '90vh' }}>
         {/* displaying the course name */}
 
-        <h1 className="text-center text-2xl font-semibold text-yellow-500">
+      <h1 className="text-center text-2xl font-semibold text-yellow-500" style={{ marginTop: '50px' }}>
           Event Name : {eventDetails?.title}
         </h1>
 

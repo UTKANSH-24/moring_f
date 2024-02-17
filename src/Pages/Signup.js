@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Link, json, useNavigate } from "react-router-dom";
-import Layout from "../Layout/Layout";
-import { BsPersonCircle } from "react-icons/bs";
 import { toast } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { createAccount } from "../Redux/authSlice";
@@ -113,7 +111,7 @@ const Signup = () => {
   };
 
   return (
-    <Layout>
+    // <Layout>
       <div className="flex items-center justify-center h-[100vh]">
         <form
           onSubmit={createNewAccount}
@@ -209,7 +207,7 @@ const Signup = () => {
           </p>
         </form>
       </div>
-    </Layout>
+    // </Layout>
   );
 };
 

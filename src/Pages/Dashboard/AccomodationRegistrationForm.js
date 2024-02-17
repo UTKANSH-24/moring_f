@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import QRPopup from '../QRCode';
 import {  useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from "react-redux";
-import { addEventParticipants } from "../../Redux/participantsSlice";
+// import { useDispatch } from "react-redux";
 import axiosInstance from '../../Helper/axiosInstance';
 
 function AccomodationRegistrationForm() {
     const navigate = useNavigate();
    
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const { planId } = useParams();
     const [formData, setFormData] = useState({
         accommodationType: planId,
@@ -63,7 +62,7 @@ function AccomodationRegistrationForm() {
     };
 
     const registerToEvent = async () => {
-        if (formData.persons.length != formData.numberOfPersons) { toast.error('Enter the details of all the members.'); }
+        if (formData.persons.length !== formData.numberOfPersons) { toast.error('Enter the details of all the members.'); }
         else {
             const errors = {};
             for (const key in formData) {
@@ -110,7 +109,7 @@ function AccomodationRegistrationForm() {
     };
 
     return (
-        <div className="container" style={{paddingTop:'100px'}}>
+        <div className="container" style={{ paddingTop: '100px' , minHeight: '90vh' }}>
             <div className="row">
                 <div className="col-sm-8 col-md-9 col-lg-12 mx-auto">
                     <div className="card card-signin my-5" id="user_container">

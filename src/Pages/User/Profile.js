@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Layout from "../../Layout/Layout";
 import { getUserData } from "../../Redux/authSlice";
 
 const Profile = () => {
@@ -19,8 +18,8 @@ const Profile = () => {
     dispatch(getUserData());
   }, []);
   return (
-    <Layout>
-      <div className="min-h-[90vh] flex items-center justify-center">
+    // <Layout>
+      <div className="min-h-[90vh] flex items-center justify-center" style={{minHeight:'90vh'}}>
         <div className="my-10 flex flex-col gap-4 rounded-lg p-4 text-white w-80 shadow-[0_0_10px_black]">
           {/* <img
             className="w-40 m-auto rounded-full border border-black"
@@ -76,7 +75,7 @@ const Profile = () => {
           )}
         </div>
       </div>
-    </Layout>
+    // </Layout>
   );
 };
 

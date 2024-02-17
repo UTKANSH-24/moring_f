@@ -110,8 +110,8 @@ function EventRegistrationForm() {
     };
 
     return (
-        <div className="container">
-            <div className="row">
+        <div className="container" style={{ minHeight: '90vh' }}>
+            <div className="row" style={{ marginTop: '50px' }}>
                 <div className="col-sm-8 col-md-9 col-lg-12 mx-auto">
                     <div className="card card-signin my-5" id="user_container">
                         <div className="card-body">

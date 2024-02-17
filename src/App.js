@@ -51,14 +51,13 @@ import Drama from "./USER/clubs and event/Drama";
 import Gallery from "./USER/clubs and event/Gallery";
 import Developers from "./USER/members/Developers";
 import FacultyCoordinators from "./USER/members/FacultyCoordinators";
-// import Registrationform from "./Pages/Dashboard/Registrationform";
 import EventRegistrationForm from "./Pages/Dashboard/EventRegistrationForm";
 import AccomodationRegistrationForm from "./Pages/Dashboard/AccomodationRegistrationForm";
 import Pronight from "./USER/Pro-Night/Pronight";
-// import Schedule from "./USER/Schedule/Schedule";
-import Pronightmainpage from "./USER/Pro-Night/Pronightmainpage";
 import RLC from "./USER/clubs and event/RLC";
 import DisplayAccommodation from "./Pages/Dashboard/DisplayAccommodation";
+import DisplayNewContactUs from "./Pages/Dashboard/DisplayNewContactUs";
+import DisplayAnsweredContactUs from "./Pages/Dashboard/DisplayAnsweredContactUs";
 // userside end
 
 const App = () => {
@@ -101,8 +100,8 @@ const App = () => {
 
           <Route path="/admin/merchandise/verification/:clothId/:verified" element={<DisplayMerchandise />} />
           <Route path="/admin/accommodation/verification/:accommodationType/:verified" element={<DisplayAccommodation />} />
-
-
+          <Route path="/contact/newQuery" element={<DisplayNewContactUs />} />
+          <Route path="/contact/answeredQuery" element={<DisplayAnsweredContactUs />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
