@@ -202,7 +202,10 @@ export const verifyAccount = createAsyncThunk("/user/reset", async (data) => {
     console.log("res",res);
     return res.data;
   } catch (error) {
+
+    // console.log("error",error);
     toast.error(error?.response?.data?.message);
+    return error.response.data;
   }
 });
 
