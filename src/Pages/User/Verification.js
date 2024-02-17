@@ -27,8 +27,9 @@ const Verifyaccount = () => {
 
     
     const res = await dispatch(verifyAccount(data));
-       console.log("verification response",res);
-    if (res.success) {
+       console.log("verification response",res.payload.success);
+
+    if (res.payload.success) {
       navigate("/login");
     }
   };

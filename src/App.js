@@ -59,6 +59,11 @@ import RLC from "./USER/clubs and event/RLC";
 import DisplayAccommodation from "./Pages/Dashboard/DisplayAccommodation";
 import DisplayNewContactUs from "./Pages/Dashboard/DisplayNewContactUs";
 import DisplayAnsweredContactUs from "./Pages/Dashboard/DisplayAnsweredContactUs";
+import MyOrders from "./Pages/Dashboard/MyOrders";
+import MyEvents from "./Pages/Dashboard/MyEvents";
+import MyBookings from "./Pages/Dashboard/MyBookings";
+import Addfacultycoordinator from "./Pages/Dashboard/Addfacultycoordinator";
+import Displayfacultycoordinator from "./Pages/Dashboard/Displayfacultycoordinator";
 // userside end
 
 const App = () => {
@@ -75,13 +80,24 @@ const App = () => {
         </Route>
 
         <Route element={<RequireAuth allowedRoles={["USER", "ADMIN", "COORDINATOR"]} />}>
-        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/changepassword" element={<ChangePassword />} />
           <Route path="/user/profile" element={<Profile />} />
+
+          
+          <Route path="/user/myOrders" element={<MyOrders />} />
+          <Route path="/user/myEvents" element={<MyEvents />} />
+          <Route path="/user/myBookings" element={<MyBookings />} />
+          
           <Route path="/user/editprofile" element={<EditProfile />} />
           <Route path="/event/displayparticipants" element={<DisplayParticipants />} />
           <Route path="/event/displayUnverifiedparticipants" element={<DisplayUnverifiedParticipants />} />
           <Route path="/event/displayclubcoordinator" element={<Displayclubcoordinator />} />
+          <Route path="/event/displayfacultycoordinator" element={<Displayfacultycoordinator />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/Accommodation" element={<AccommodationDashboard />} />
+          {/* <Route path="/admin/merchandise" element={<MerchandiseDashboard />} /> */}
+        
           <Route path="/event/displaytcacoordinator" element={<Displaytcacoordinator />} />
           <Route path="/event/registeraccomodation/:planId" element={<AccomodationRegistrationForm />} />
           <Route path="/merchandise/tshirtdetails/checkout/:id" element={<MerchandiseForm />} />
@@ -99,6 +115,8 @@ const App = () => {
           <Route path="/event/AddParticipant" element={<AddParticipant />} />
           <Route path="/event/addclubcoordinator" element={<Addclubcoordinator />} />
           <Route path="/event/addtcacoordinator" element={<Addtcacoordinator />} />
+          <Route path="/event/addfacultycoordinator" element={<Addfacultycoordinator />} />
+       
           <Route path="/event/createevent" element={<CreateEvent />} />
 
           <Route path="/admin/merchandise/verification/:clothId/:verified" element={<DisplayMerchandise />} />
