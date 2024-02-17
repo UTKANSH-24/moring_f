@@ -2,11 +2,15 @@ import React from 'react';
 import './background.css';
 import'../css/register-button.css';
 import { useNavigate } from 'react-router-dom';
+import {  useSelector } from "react-redux";
 
 const FallingText = () => {
   const navigate = useNavigate();
+  const isLoggedIn = useSelector((state) => state?.auth?.isLoggedIn);
+
   const handleClick = () => {
-    navigate('/login');
+    if (!isLoggedIn) navigate('/login');
+    else navigate('/user/profile');
   }
   return (<div>
     <div className="container56">
