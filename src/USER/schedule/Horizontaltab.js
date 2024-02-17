@@ -41,7 +41,7 @@ export default function LabTabs() {
   return (
     <Container>
       <h2 className="title">Schedule</h2>
-      <Box sx={{ width: '90%', margin: 'auto',paddingTop:'20px',borderRadius:'20px', typography: 'body1', backgroundColor: 'rgb(115, 124, 175)' }}>
+      <Box sx={{ width: '90%', margin: 'auto', paddingTop: '20px', borderRadius: '20px', typography: 'body1', backgroundColor: 'rgb(115, 124, 175)', boxShadow:'0 0 25px 30px rgba(167, 98, 231, 0.5)'}}>
         <TabContext value={value}>
           <Box>
             <ResponsiveTabList onChange={handleChange}>

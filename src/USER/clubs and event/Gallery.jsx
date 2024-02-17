@@ -44,7 +44,7 @@ export default function Gallery() {
     }, []); // Empty dependency array ensures this effect runs only once after the component is mounted
 
     return (
-        <div>
+        <div className='galleryX'>
             {(location.pathname ==='/Gallery')&&<div style={{ height: '5rem' }}></div>}
             <h2 className="titl" style={{ textAlign: 'center', margin: `${margin}`, fontSize: '3.6rem', zIndex: 100 }}>
                 Gallery
