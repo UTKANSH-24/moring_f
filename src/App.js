@@ -84,6 +84,8 @@ const App = () => {
           <Route path="/event/displayclubcoordinator" element={<Displayclubcoordinator />} />
           <Route path="/event/displaytcacoordinator" element={<Displaytcacoordinator />} />
           <Route path="/event/registeraccomodation/:planId" element={<AccomodationRegistrationForm />} />
+          <Route path="/merchandise/tshirtdetails/checkout/:id" element={<MerchandiseForm />} />
+
         </Route>
         <Route path="/event/registerinevent" element={<EventRegistrationForm />} />
 
@@ -114,7 +116,6 @@ const App = () => {
         <Route path="/clubsandevent" element={<AllEvent />} />
         <Route path="/merchandise" element={<Merchandise />} />
         <Route path="/merchandise/tshirtdetails/:id" element={<Tshirtdetails />} />
-        <Route path="/merchandise/tshirtdetails/checkout/:id" element={<MerchandiseForm />} />
         <Route path="/accomodationPage" element={<AccomodationPage />} />
         <Route path="/TeamMembers" element={<TeamMembers />} />
         <Route path="/Developers" element={<Developers />} />

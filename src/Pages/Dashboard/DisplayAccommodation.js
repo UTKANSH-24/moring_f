@@ -5,10 +5,13 @@ import { useParams } from "react-router-dom";
 import axiosInstance from "../../Helper/axiosInstance";
 import ExportCSV from "../../ExportCsv/ExportCSV";
 import toast from "react-hot-toast";
+import PopupRejectionMail from "../PopupRejectionMail";
 
 const DisplayAccommodation = () => {
     const [accommodationDetails, setAccommodationDetails] = useState([]);
     const { accommodationType, verified } = useParams();
+    const [popUp, setPopup] = useState(false);
+
 
     const getAccommodationDetails = async () => {
         if (verified === '1') {
@@ -34,6 +37,9 @@ const DisplayAccommodation = () => {
 
     const handleVerificationStatus = async (newState) => {
 
+        if (newState === false) {
+            setPopup(true);
+        }
         const res = await axiosInstance.post('/accommodation/changeAccommodationVerificationStatus', {
             accommodationId: accommodationDetails[currentOrder]._id,
             status: newState,
@@ -47,6 +53,7 @@ const DisplayAccommodation = () => {
     };
 
     const handleDelete = async () => {
+        console.log(accommodationDetails);
         try {
             const res = await axiosInstance.post('/accommodation/deleteAccommodation', {
                 accommodationId: accommodationDetails[currentOrder]._id
@@ -76,7 +83,6 @@ const DisplayAccommodation = () => {
     //label: Title of column in csv file
     //kay: should use same key, that is in Database(schema).
 
-
     return (
         // <Layout>
         <div className="flex flex-col gap-10 items-center justify-center min-h-[90vh] py-10 text-white mx-[5%]" style={{ minHeight: '100vh' }}>
@@ -85,6 +91,12 @@ const DisplayAccommodation = () => {
             <h1 className="text-center text-2xl font-semibold text-yellow-500" style={{ marginTop: '50px' }}>
                 Accommodation Type : {accommodationType}
             </h1>
+
+            {popUp && <PopupRejectionMail
+                subject={'Accommodation payment rejection'}
+                email={accommodationDetails[currentOrder]?.registrantId.email}
+                setPopup={setPopup} />}
+
             {(accommodationDetails.length > 0) ? <div className="flex justify-center gap-10 w-full">
                 {/* left section for playing the video and displaying course details to admin */}
                 <div className="space-y-5 w-[28rem] p-4 rounded-lg shadow-[0_0_10px_black]">
@@ -113,7 +125,10 @@ const DisplayAccommodation = () => {
                                     Verify
                                 </button>
                                 <button
-                                    onClick={() => handleVerificationStatus(false)}
+                                    onClick={() => {
+                                        setPopup(true);
+                                        handleVerificationStatus(false)
+                                    }}
                                     className="btn-primary px-2 py-1 rounded-md font-semibold text-sm bg-red-500 hover:bg-red-600 text-white"
                                 >
                                     Reject
