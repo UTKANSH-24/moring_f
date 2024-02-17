@@ -39,16 +39,17 @@ const DisplayAccommodation = () => {
 
         if (newState === false) {
             setPopup(true);
+        } else {
+            const res = await axiosInstance.post('/accommodation/changeAccommodationVerificationStatus', {
+                accommodationId: accommodationDetails[currentOrder]._id,
+                status: newState,
+            });
+            if (res?.data.success) {
+                toast.success('Updated');
+                await getAccommodationDetails();
+            }
+            // console.log(res.data.message);
         }
-        const res = await axiosInstance.post('/accommodation/changeAccommodationVerificationStatus', {
-            accommodationId: accommodationDetails[currentOrder]._id,
-            status: newState,
-        });
-        if (res?.data.success) {
-            toast.success('Updated');
-            await getAccommodationDetails();
-        }
-        // console.log(res.data.message);
 
     };
 
