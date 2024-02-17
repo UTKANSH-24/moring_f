@@ -139,7 +139,7 @@ const AdminDashboard = () => {
 
                     <button
                       onClick={() =>
-                        navigate("/event/displayparticipants", {
+                        navigate("/event/displayfacultycoordinator", {
                           state: { ...element },
                         })
                       }
