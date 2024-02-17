@@ -21,7 +21,9 @@ const FallingText = () => {
         <span className="w4">A</span>
         <span className="w5">N</span>
         <span className="w6">S</span>
-        <span className="w7">H</span>
+        <span className="w7">H-</span>
+        <span className="w7">2</span>
+        <span className="w7">4</span>
       </div>
       <div className="tagline">
         <h2>The cultural Kaleidoscope</h2>
