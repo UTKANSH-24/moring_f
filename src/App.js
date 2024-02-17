@@ -83,6 +83,7 @@ const App = () => {
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/changepassword" element={<ChangePassword />} />
           <Route path="/user/profile" element={<Profile />} />
+          <Route path="/event/registerinevent" element={<EventRegistrationForm />} />
 
           
           <Route path="/user/myOrders" element={<MyOrders />} />
@@ -103,7 +104,7 @@ const App = () => {
           <Route path="/merchandise/tshirtdetails/checkout/:id" element={<MerchandiseForm />} />
 
         </Route>
-        <Route path="/event/registerinevent" element={<EventRegistrationForm />} />
+        
 
 
 
