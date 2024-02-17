@@ -133,7 +133,7 @@ const Layout = ({ children }) => {
 
 
 
-            <li className="bottom-4 w-[90%] flex flex-wrap justify-center bottom-0">
+            <li className="absolute bottom-4 w-[90%] flex flex-wrap justify-center bottom-0">
               {!isLoggedIn ? (
                 <>
                   <button className="btn btn-green">
