@@ -12,6 +12,7 @@ import Profile from "./Pages/User/Profile";
 import ChangePassword from "./Pages/Password/ChangePassword";
 import EditProfile from "./Pages/User/EditProfile";
 import CreateEvent from "./Pages/Events/CreateEvent";
+import EventDetails from "./Pages/Events/EventDetails";
 import AddParticipant from "./Pages/Dashboard/AddParticipant";
 import Addclubcoordinator from "./Pages/Dashboard/Addclubcoordinator";
 import Addtcacoordinator from "./Pages/Dashboard/Addtcacoordinator";
@@ -64,6 +65,7 @@ import MyEvents from "./Pages/Dashboard/MyEvents";
 import MyBookings from "./Pages/Dashboard/MyBookings";
 import Addfacultycoordinator from "./Pages/Dashboard/Addfacultycoordinator";
 import Displayfacultycoordinator from "./Pages/Dashboard/Displayfacultycoordinator";
+import UserDashboard from "./Pages/Dashboard/User Dashboard ";
 // userside end
 
 const App = () => {
@@ -80,7 +82,8 @@ const App = () => {
         </Route>
 
         <Route element={<RequireAuth allowedRoles={["USER", "ADMIN", "COORDINATOR"]} />}>
-          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            <Route path="/event/details" element={<EventDetails />} />
+          <Route path="/user/dashboard" element={<UserDashboard />} />
           <Route path="/changepassword" element={<ChangePassword />} />
           <Route path="/user/profile" element={<Profile />} />
           <Route path="/event/registerinevent" element={<EventRegistrationForm />} />

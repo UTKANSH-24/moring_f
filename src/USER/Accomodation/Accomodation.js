@@ -29,7 +29,7 @@ const AccomodationPage = () => {
         Accomodation
       </h2>
       <div className="containeraco">
-        <div className="grid">
+        <div className="gridaco">
           <div className="cardss">
             <h2 className="card_title">Basic</h2>
             <p className="pricing">₹ 20<span className="small">/per day</span></p>

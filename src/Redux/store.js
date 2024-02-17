@@ -4,7 +4,7 @@ import eventSliceReducer from "../Redux/eventSlice";
 import lectureSliceReducer from "./participantsSlice";
 import tcacordinatorSliceReducer from "../Redux/tcacordinatorSliceReducer";
 import facultycordinatorSliceReducer from "../Redux/facultycordinatorSliceReducer";
-
+import clubcordinatorSliceReducer from "../Redux/clubcordinatorSliceReducer";
 const store = configureStore({
   reducer: {
     auth: authSliceReducer,
@@ -12,6 +12,7 @@ const store = configureStore({
     lecture: lectureSliceReducer,
     tcacoordinator:tcacordinatorSliceReducer,
     facultycoordinator:facultycordinatorSliceReducer,
+    clubcoordinator:clubcordinatorSliceReducer,
 
   },
 });

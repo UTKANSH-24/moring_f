@@ -1,0 +1,31 @@
+.Event{
+
+    display: flex;
+    flex-direction: row;
+     /* justify-center h-[100vh]; */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+/* @media (max-width: 947px) {
+    .Event{
+
+        display: flex;
+        flex-direction: column;
+   
+    }
+    
+
+
+   
+    .Child1{
+
+        width: 100%;
+    }
+    .Child2{
+    
+        width: 100%;
+    }
+} */

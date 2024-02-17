@@ -14,7 +14,7 @@
     height: 100%;
 }
 
-.grid {
+.gridaco {
     display: grid;
     grid-template-columns: 25% 25% 25%;
     gap: 5%;
@@ -106,7 +106,7 @@ a.cta_btn:hover {
 }
 
 @media only screen and (max-width: 1024px) {
-    .grid {
+    .gridaco {
         grid-template-columns: 1fr 1fr;
         gap: 2%;
 
@@ -114,7 +114,7 @@ a.cta_btn:hover {
 }
 
 @media only screen and (max-width: 425px) {
-    .grid {
+    .gridaco {
         grid-template-columns: 1fr;
         gap: 2%;
         padding-bottom: 25%;

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
+import Layout from "../../Layout/Layout";
 import {
-  deleteEventParticipants,
-  getEventParticipants,
-} from "../../Redux/participantsSlice";
+
+  getclubcordinator,
+  deleteclubCordinator
+} from "../../Redux/clubcordinatorSliceReducer";
 
 const Displayclubcoordinator = () => {
   const dispatch = useDispatch();
@@ -13,8 +15,8 @@ const Displayclubcoordinator = () => {
   // for getting the data from location of previous component
   const courseDetails = useLocation().state;
   console.log(courseDetails);
-  const { lectures } = useSelector((state) => state.lecture);
-  // console.log(lectures);
+  const { clubcoordinator} = useSelector((state) => state.clubcoordinator);
+  // console.log(tcacoordinators);
 
   const { role } = useSelector((state) => state.auth);
 
@@ -24,22 +26,23 @@ const Displayclubcoordinator = () => {
   // function to handle lecture delete
   const handleLectureDelete = async (courseId, lectureId) => {
     const data = { courseId, lectureId };
-    await dispatch(deleteEventParticipants(data));
-    await dispatch(getEventParticipants(courseDetails._id));
+    await dispatch(deleteclubCordinator(data));
+    await dispatch(getclubcordinator(courseDetails._id));
   };
 
   // fetching the course lecture data
   useEffect(() => {
     (async () => {
-      await dispatch(getEventParticipants(courseDetails._id));
+      await dispatch(getclubcordinator(courseDetails._id));
     })();
   }, []);
-  return (
-    
-    <div className="flex flex-col gap-10 items-center justify-center min-h-[90vh] py-10 text-white mx-[5%]" style={{ minHeight: '90vh' }}>
-        {/* displaying the course name */}
 
-      <h1 className="text-center text-2xl font-semibold text-yellow-500" style={{ marginTop: '50px' }}>
+  return (
+    <Layout>
+      <div className="flex flex-col gap-10 items-center justify-center min-h-[90vh] py-10 text-white mx-[5%]">
+     
+
+        <h1 className="text-center text-2xl font-semibold text-yellow-500">
           Event Name : {courseDetails?.title}
         </h1>
 
@@ -52,7 +55,7 @@ const Displayclubcoordinator = () => {
             <div>
               <h1>
                 <span className="text-yellow-500">Title : </span>
-                {lectures && lectures[currentVideoIndex]?.userid}
+                {clubcoordinator && clubcoordinator[currentVideoIndex]?.userid}
               </h1>
                             
               <p>
@@ -60,17 +63,17 @@ const Displayclubcoordinator = () => {
                 <span className="text-yellow-500 line-clamp-4">
                   Description :{" "}
                 </span>
-                {lectures && lectures[currentVideoIndex]?.description}
+                {clubcoordinator && clubcoordinator[currentVideoIndex]?.description}
               </p>
             </div>
           </div>
 
-          {/* right section for displaying all the lectures of the course */}
+          {/* right section for displaying all the tcacoordinators of the course */}
           <ul className="w-[28rem] p-2 rounded-lg shadow-[0_0_10px_black] space-y-4">
 
 
             <li className="font-semibold text-xl text-yellow-500 flex items-center justify-between">
-              <p>Club Coordinators List</p>
+              <p>Faculty Coordinators List</p>
               {role === "ADMIN" && (
                 <button
                   onClick={() =>
@@ -86,8 +89,8 @@ const Displayclubcoordinator = () => {
             </li>
 
 
-            {courseDetails.clubcoordinator &&
-              courseDetails.clubcoordinator.map((element, index) => {
+            {clubcoordinator &&
+              clubcoordinator.map((element, index) => {
                 return (
                   <li className="space-y-2" key={element._id}>
                     <p
@@ -116,7 +119,7 @@ const Displayclubcoordinator = () => {
           </ul>
         </div>
       </div>
-    
+    </Layout>
   );
 };
 
