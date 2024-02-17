@@ -19,7 +19,7 @@ export default function Fas() {
    
 
     const [eventdetails, setEventdetails] = useState({
-        eventId: '65b7b89581bbded4d9d763a2',
+        eventId: '65cf977c762805baf9ec2e1c',
         minParticipants: 1,
         maxParticipants: 2
 
@@ -32,7 +32,7 @@ export default function Fas() {
         if (tabId === "step-one") {
             console.log("step-one");
             setEventdetails({
-                eventId: '65b7b89581bbded4d9d763a2',
+                eventId: '65cf977c762805baf9ec2e1c',
                 minParticipants: 1,
                 maxParticipants: 2
             });
@@ -40,7 +40,7 @@ export default function Fas() {
         if (tabId === "step-two") {
             console.log("step-two");
             setEventdetails({
-                eventId: '65b7b89581bbded4d9d763a2',
+                eventId: '65cf977c762805baf9ec2e1c',
                 minParticipants: 1,
                 maxParticipants: 2
             });
