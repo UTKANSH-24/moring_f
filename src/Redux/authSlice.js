@@ -46,14 +46,18 @@ export const login = createAsyncThunk("auth/login", async (data) => {
       success: (data) => {
         return data?.data?.message;
       },
-      error: "Failed to log in",
+      // error: (data) => {
+      //   return data?.data?.message;
+      // },
     });
 
     // getting response resolved here
     res = await res;
+ 
     return res.data;
   } catch (error) {
-    toast.error(error.message);
+    console.log("error",error);
+    toast.error(error.response.data.message);
   }
 });
 
@@ -175,6 +179,27 @@ export const resetPassword = createAsyncThunk("/user/reset", async (data) => {
     });
     // getting response resolved here
     res = await res;
+    return res.data;
+  } catch (error) {
+    toast.error(error?.response?.data?.message);
+  }
+});
+
+
+export const verifyAccount = createAsyncThunk("/user/reset", async (data) => {
+  try {
+    let res = axiosInstance.post(`/user/verify/${data.verificationToken}`);
+
+    toast.promise(res, {
+      loading: "Verifying...",
+      success: (data) => {
+        return data?.data?.message;
+      },
+      error: "Failed to verify account",
+    });
+    // getting response resolved here
+    res = await res;
+    console.log("res",res);
     return res.data;
   } catch (error) {
     toast.error(error?.response?.data?.message);
