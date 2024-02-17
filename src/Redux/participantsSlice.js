@@ -131,16 +131,16 @@ export const deleteEventParticipants = createAsyncThunk(
 export const changeparticipantsverification = createAsyncThunk(
   "/course/lecture/delete",
   async (data) => {
-    console.log(data);
+    console.log("data at participantsslice",data);
     try {
       const res = axiosInstance.put(
         `/event/?courseId=${data.courseId}&lectureId=${data.lectureId}`
-      );
+      ,data);
 
       toast.promise(res, {
-        loading: "Verifying the participant...",
-        success: "Participant Verified",
-        error: "Failed to verify participant",
+        loading: "Updating the verification Status...",
+        success: "Verification updated successfully",
+        error: "Failed to update verification",
       });
 
       const response = await res;

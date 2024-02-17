@@ -9,6 +9,7 @@
    width: 100%;
    max-width: 1200px;
    margin: 0 auto;
+   background-image: linear-gradient(to top, #022709 0%, #041c02 100%);
  }
 
  .row12 {
