@@ -83,7 +83,7 @@ const Layout = ({ children }) => {
 
             {isLoggedIn && role === "USER" && (
               <li>
-                <Link style={{ textDecoration: 'none' }} to={"/user/dashboard"}>Events Dashboard</Link>
+                <Link style={{ textDecoration: 'none' }} to={"/user/dashboard"}>My Events</Link>
               </li>
             )}
             {isLoggedIn && role === "USER" && (
@@ -126,7 +126,7 @@ const Layout = ({ children }) => {
             }
             {isLoggedIn && (
               <li>
-                <Link style={{ textDecoration: 'none' }} to={"/user/profile"}>Profile</Link>
+                <Link style={{ textDecoration: 'none' }} to={"/user/profile"}>My Profile</Link>
               </li>
             )}
 

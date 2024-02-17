@@ -14,9 +14,9 @@ export const getfacultycordinator = createAsyncThunk(
       const res = axiosInstance.get(`/event/facultycoordinator/${courseId}`);
          
       toast.promise(res, {
-        loading: "Fetching the lectures...",
-        success: "Lectures fetched successfully",
-        error: "Failed to fetch lectures",
+        loading: "Fetching the FacultyCoordinators...",
+        success: "FacultyCoordinators fetched successfully",
+        error: "Failed to fetch FacultyCoordinators",
       });
 
       const response = await res;
@@ -38,9 +38,9 @@ export const addfacultycoordinator = createAsyncThunk(
       const res = axiosInstance.post(`/event/facultycoordinator/${data.id}`, data);
     
       toast.promise(res, {
-        loading: "Adding the lecture...",
-        success: "Lecture added successfully",
-        error: "Failed to add lectureghfghfghjgh",
+        loading: "Adding the FacultyCoordinator...",
+        success: "FacultyCoordinator added successfully",
+        error: "Failed to add FacultyCoordinator",
       });
 
       const response = await res;
@@ -64,9 +64,9 @@ export const deletefacultyCordinatot = createAsyncThunk(
       );
 
       toast.promise(res, {
-        loading: "Deleting the lecture...",
-        success: "Lecture deleted successfully",
-        error: "Failed to delete lecture",
+        loading: "Deleting the FacultyCoordinator...",
+        success: "FacultyCoordinator deleted successfully",
+        error: "Failed to delete FacultyCoordinator",
       });
 
       const response = await res;

@@ -66,6 +66,7 @@ import MyBookings from "./Pages/Dashboard/MyBookings";
 import Addfacultycoordinator from "./Pages/Dashboard/Addfacultycoordinator";
 import Displayfacultycoordinator from "./Pages/Dashboard/Displayfacultycoordinator";
 import UserDashboard from "./Pages/Dashboard/User Dashboard ";
+import Displaycontactperson from "./Pages/Dashboard/Displaycontactperson";
 // userside end
 
 const App = () => {
@@ -84,6 +85,8 @@ const App = () => {
         <Route element={<RequireAuth allowedRoles={["USER", "ADMIN", "COORDINATOR"]} />}>
             <Route path="/event/details" element={<EventDetails />} />
           <Route path="/user/dashboard" element={<UserDashboard />} />
+          <Route path="/user/displaycontactperson" element={<Displaycontactperson />} />
+         
           <Route path="/changepassword" element={<ChangePassword />} />
           <Route path="/user/profile" element={<Profile />} />
           <Route path="/event/registerinevent" element={<EventRegistrationForm />} />

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { BsCollectionPlayFill, BsTrash } from "react-icons/bs";
-import { MdOutlineModeEdit } from "react-icons/md";
-import { MdGppGood, MdGppBad } from "react-icons/md";
+import { MdOutlineModeEdit, MdOutlineDownload } from "react-icons/md";
+import { MdGppGood,MdPeople,MdOutlineDetails, MdGppBad } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteEvent, getAllEvent } from "../../Redux/eventSlice";
@@ -13,12 +13,11 @@ const UserDashboard = () => {
   const navigate = useNavigate();
 
 
-
-
+  const userData = useSelector((state) => state?.auth?.data);
+console.log('a',userData);
   // getting the courses data from redux toolkit store
   const myEvents = useSelector((state) => state.event.eventsData);
-  // console.log("Admin Dashboard");
-  // console.log(myEvents);
+  console.log("myEvents", myEvents);
 
   // function to handle the course delete
   const handleEventDelete = async (id) => {
@@ -56,26 +55,7 @@ const UserDashboard = () => {
             Event Overview
           </h1>
 
-          {/* add course card */}
-          {/* <button
-            onClick={() => {
-              navigate("/event/createevent", {
-                state: {
-                  initialEventData: {
-                    newEvent: true,
-                    title: "",
-                    club: "",
-                    createdBy: "",
-                    description: "",
 
-                  },
-                },
-              });
-            }}
-            className="w-fit bg-yellow-500 hover:bg-yellow-600 transition-all ease-in-out duration-300 rounded py-2 px-4 font-semibold text-lg cursor-pointer"
-          >
-            Create New Event
-          </button> */}
         </div>
 
         <table className="table overflow-x-scroll" >
@@ -84,13 +64,8 @@ const UserDashboard = () => {
               <th>S No.</th>
               <th>Event Title</th>
               <th>Club</th>
-              {/* <th>Instructor</th> */}
               <th>Total Participants</th>
-              {/* <th>Course Description</th> */}
               <th>Details</th>
-              {/* <th>Faculty<br></br>Coordinator</th> */}
-              {/* <th>Tca<br></br>Coordinator</th> */}
-
               <th>Contact Person</th>
               <th>Status</th>
               <th>Receipt</th>
@@ -119,8 +94,8 @@ const UserDashboard = () => {
 
                   <td >
                     {/* to edit the course */}
-                    <button
-                      onClick={() =>
+                   
+                      <MdOutlineDetails  onClick={() =>
                         navigate("/event/details", {
                           state: {
                             initialEventData: {
@@ -129,56 +104,22 @@ const UserDashboard = () => {
                             },
                           },
                         })
-                      }
-                      className="bg-yellow-500 hover:bg-yellow-600 transition-all ease-in-out duration-300 text-xl py-2 px-4 rounded-md font-bold"
-                    >
-                      <MdOutlineModeEdit />
-                    </button>
+                      }/>
+                    
                   </td>
-                  {/* <td>
-
-                    <button
-                      onClick={() =>
-                        navigate("/event/displayfacultycoordinator", {
-                          state: { ...element },
-                        })
-                      }
-                      className="bg-green-500 hover:bg-green-600 transition-all ease-in-out duration-30 text-xl py-2 px-4 rounded-md font-bold"
-                    >
-                      <BsCollectionPlayFill />
-                    </button>
-                  </td> */}
 
 
-
-
-                  {/* <td>
-
-                    <button
-                      onClick={() =>
-                        navigate("/event/displaytcacoordinator", {
-                          state: { ...element },
-                        })
-                      }
-                      className="bg-green-500 hover:bg-green-600 transition-all ease-in-out duration-30 text-xl py-2 px-4 rounded-md font-bold"
-                    >
-                      <BsCollectionPlayFill />
-                    </button>
-                  </td> */}
 
 
                   <td>
-                    <button
-                      onClick={() =>
-                        navigate("/event/displayclubcoordinator", {
+                   
+                      <MdPeople  onClick={() =>
+                        navigate("/user/displaycontactperson", {
                           state: { ...element },
                         })
-                      }
-                      className="bg-green-500 hover:bg-green-600 transition-all ease-in-out duration-30 text-xl py-2 px-4 rounded-md font-bold"
-                    >
-                      <BsCollectionPlayFill />
+                      }/>
 
-                    </button>
+                  
 
 
 
@@ -188,10 +129,11 @@ const UserDashboard = () => {
 
 
                   <td>
+                  {element.participant.some(obj => (obj.enrolledby === userData._id) && (obj.isverified === true)) ? 'Verified' : 'Unverified'}
 
 
                     {/* to CRUD the lectures */}
-                    <button
+                    {/* <button
                       onClick={() =>
                         navigate("/event/displayparticipants", {
                           state: { ...element },
@@ -200,22 +142,26 @@ const UserDashboard = () => {
                       className="bg-green-500 hover:bg-green-600 transition-all ease-in-out duration-30 text-xl py-2 px-4 rounded-md font-bold"
                     ><MdGppGood />
 
-                    </button>
+                    </button> */}
                   </td>
 
 
                   <td>
-
+{/* 
                     <button
                       onClick={() =>
                         navigate("/event/displayUnverifiedparticipants", {
                           state: { ...element },
                         })
                       }
-                      className="bg-red-500 hover:bg-green-600 transition-all ease-in-out duration-30 text-xl py-2 px-4 rounded-md font-bold"
-                    >
-                      <MdGppBad />
-                    </button>
+                      className="bg-none hover:bg-green-600 transition-all ease-in-out duration-30 text-xl py-2 px-4 rounded-md font-bold color-black"
+                    > */}
+                      <MdOutlineDownload onClick={() =>
+                        navigate("/event/displayUnverifiedparticipants", {
+                          state: { ...element },
+                        })
+                      }/>
+                    {/* </button> */}
                   </td>
                 </tr>
 
