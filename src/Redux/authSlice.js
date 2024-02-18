@@ -216,30 +216,27 @@ const authSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      // for user login
       .addCase(login.fulfilled, (state, action) => {
         console.error("Login:", action);
         if (action?.payload?.success) {
-
           localStorage.setItem("data", JSON.stringify(action?.payload?.user));
           localStorage.setItem("isLoggedIn", true);
           localStorage.setItem("role", action?.payload?.user?.role);
           state.isLoggedIn = true;
-          state.data = action?.payload?.user;
+          state.data = action?.payload?.user; // Update 'data' in Redux state
           state.role = action?.payload?.user?.role;
         } else {
           // Handle unsuccessful login (optional)
-          // You may want to show an error message or take other actions here
           console.error("Login failed:", action);
+          // Reset 'data' in Redux state when login fails
+          state.data = {};
         }
       })
-      // for user logout
       .addCase(logout.fulfilled, (state) => {
         localStorage.clear();
         state.isLoggedIn = false;
-        state.data = {};
+        state.data = {}; // Clear 'data' from Redux state on logout
       })
-      // for user details
       .addCase(getUserData.fulfilled, (state, action) => {
         localStorage.setItem("data", JSON.stringify(action?.payload?.user));
         localStorage.setItem("isLoggedIn", true);
