@@ -45,6 +45,7 @@ export const login = createAsyncThunk("auth/login", async (data) => {
     await toast.promise(res, {
       loading: "Loading...",
       success: (data) => {
+        console.log(data?.data?.message);
         return data?.data?.message;
       },
       // error: (data) => {
