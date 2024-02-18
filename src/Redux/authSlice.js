@@ -3,12 +3,12 @@ import { toast } from "react-hot-toast";
 import axiosInstance from "../Helper/axiosInstance";
 
 console.log("isLoggedIn:", localStorage.getItem("isLoggedIn"));
-console.log("data:", localStorage.getItem("data"));
+console.log("data:", localStorage.getItem("data") || "{}");
 console.log("role:", localStorage.getItem("role"));
 
 const initialState = {
   isLoggedIn: !!localStorage.getItem("isLoggedIn"),
-  data: JSON.parse(localStorage.getItem("data")) || {},
+  data: JSON.parse(localStorage.getItem("data") || {}),
   role: localStorage.getItem("role") || "",
 };
 
@@ -55,10 +55,10 @@ export const login = createAsyncThunk("auth/login", async (data) => {
 
     // getting response resolved here
     res = await res;
- 
+
     return res.data;
   } catch (error) {
-    console.log("error",error);
+    console.log("error", error);
     toast.error(error.response.data.message);
   }
 });
@@ -136,7 +136,7 @@ export const forgetPassword = createAsyncThunk(
       // getting response resolved here
       res = await res;
       return res.data;
-     } catch (error) {
+    } catch (error) {
       toast.error(error?.response?.data?.message);
     }
   }
@@ -201,7 +201,7 @@ export const verifyAccount = createAsyncThunk("/user/reset", async (data) => {
     });
     // getting response resolved here
     res = await res;
-    console.log("res",res);
+    console.log("res", res);
     return res.data;
   } catch (error) {
 
