@@ -218,7 +218,7 @@ const authSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(login.fulfilled, (state, action) => {
-        console.error("Login:", action);
+        // console.error("Login:", action);
         if (action?.payload?.success) {
           localStorage.setItem("data", JSON.stringify(action?.payload?.user));
           localStorage.setItem("isLoggedIn", true);
