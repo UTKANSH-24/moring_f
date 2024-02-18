@@ -8,7 +8,7 @@ console.log("role:", localStorage.getItem("role"));
 
 const initialState = {
   isLoggedIn: !!localStorage.getItem("isLoggedIn"),
-  data: JSON.parse(localStorage.getItem("data") || {}),
+  data: JSON.parse(localStorage.getItem("data") || " "),
   role: localStorage.getItem("role") || "",
 };
 
