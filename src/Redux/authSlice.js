@@ -236,6 +236,7 @@ const authSlice = createSlice({
       .addCase(logout.fulfilled, (state) => {
         localStorage.clear();
         state.isLoggedIn = false;
+        state.role = "";
         state.data = {}; // Clear 'data' from Redux state on logout
       })
       .addCase(getUserData.fulfilled, (state, action) => {
