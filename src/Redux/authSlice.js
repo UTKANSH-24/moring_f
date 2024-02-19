@@ -38,7 +38,7 @@ export const createAccount = createAsyncThunk("/auth/signup", async (data) => {
 });
 
 // function to handle login
-export const login = createAsyncThunk("auth/login", async (data) => {
+export const login = createAsyncThunk("/auth/login", async (data) => {
   try {
     let res = axiosInstance.post("/user/login", data);
 
@@ -64,7 +64,7 @@ export const login = createAsyncThunk("auth/login", async (data) => {
 });
 
 // function to handle logout
-export const logout = createAsyncThunk("auth/logout", async () => {
+export const logout = createAsyncThunk("/auth/logout", async () => {
   try {
     let res = axiosInstance.post("/user/logout");
 

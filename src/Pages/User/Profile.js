@@ -65,14 +65,14 @@ const Profile = () => {
             </Link>
           </div>
 
-          {userData?.subscription?.status === "active" && (
+          {/* {userData?.subscription?.status === "active" && (
             <button
               onClick={handleCourseCancelSubscription}
               className="w-full bg-red-600 hover:bg-red-500 transition-all ease-in-out duration-300 rounded-sm py-2 font-semibold cursor-pointer text-center"
             >
               Cancel Subscription
             </button>
-          )}
+          )} */}
         </div>
       </div>
     // </Layout>
