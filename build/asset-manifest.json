@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.33754120.css",
+    "main.js": "/static/js/main.cf991d53.js",
+    "static/media/fast_clip_1.mp4": "/static/media/fast_clip_1.a2a8ac03d9e6f0adb08b.mp4",
+    "static/media/background-video.mp4": "/static/media/background-video.b8418b781efbaae62cda.mp4",
+    "static/media/qrCode.jpg": "/static/media/qrCode.00d68794a2a74c8d1754.jpg",
+    "static/media/Group 59.svg": "/static/media/Group 59.6950047251b338b71bad3a7e2138d0ce.svg",
+    "static/media/beyond_the_mountains.ttf": "/static/media/beyond_the_mountains.d0de53d89f73b262e108.ttf",
+    "static/media/t2.png": "/static/media/t2.c25798a953f004b09207.png",
+    "static/media/t3.png": "/static/media/t3.c25798a953f004b09207.png",
+    "static/media/t4.png": "/static/media/t4.c25798a953f004b09207.png",
+    "static/media/beyond_the_mountains.otf": "/static/media/beyond_the_mountains.5c8e1726402fbfffcad1.otf",
+    "static/media/t1.png": "/static/media/t1.b1398b6ee1a2e49f6935.png",
+    "index.html": "/index.html",
+    "static/media/arrow-down-double-line.svg": "/static/media/arrow-down-double-line.4aa2b85776c441285e90d99ac5deb2f4.svg",
+    "main.33754120.css.map": "/static/css/main.33754120.css.map",
+    "main.cf991d53.js.map": "/static/js/main.cf991d53.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33754120.css",
+    "static/js/main.cf991d53.js"
+  ]
+}
