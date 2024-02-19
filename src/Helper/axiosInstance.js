@@ -1,7 +1,8 @@
 import axios from "axios";
 import Cookies from 'js-cookie';
 
-const BASE_URL = "http://localhost:5000/api/v1/";
+// const BASE_URL = "http://localhost:5000/api/v1/";
+const BASE_URL = "https://utkb24.onrender.com/";
 // const BASE_URL = "https://utk-b-24.onrender.com/api/v1/";
 
 
