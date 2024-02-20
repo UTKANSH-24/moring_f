@@ -5,6 +5,7 @@ import Cookies from 'js-cookie';
 // Create an instance of axios with custom configuration
 const axiosInstance = axios.create({
     baseURL: 'https://utkb.vercel.app/api/v1/',
+    // baseURL: 'http://localhost:5000/api/v1/',
     timeout: 50000,
     headers: {
         'Content-Type': 'application/json',
@@ -27,6 +28,6 @@ axiosInstance.interceptors.request.use(
     }
 );
 
-axiosInstance.defaults.withCredentials = true;
+// axiosInstance.defaults.withCredentials = true;
 
 export default axiosInstance;
