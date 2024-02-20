@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 // Create an instance of axios with custom configuration
 const axiosInstance = axios.create({
     // baseURL: process.env.BASE_URL,
-    baseURL: "https://utkansh2024backend.onrender.com",
+    baseURL: "https://utkansh2024backend.onrender.com//api/v1",
     timeout: 50000,
     headers: {
         'Content-Type': 'application/json',
