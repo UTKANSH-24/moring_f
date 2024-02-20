@@ -1,8 +1,8 @@
 import axios from "axios";
 import Cookies from 'js-cookie';
 
-const BASE_URL = "https://utkansh2024.vercel.app/api/v1/";
-// const BASE_URL = "https://utk-b-24.onrender.com/api/v1/";
+// const BASE_URL = "https://utkansh2024.vercel.app/api/v1/";
+const BASE_URL = "https://utkansh2024backend.onrender.com/api/v1/";
 
 
 // Create an instance of axios with custom configuration
