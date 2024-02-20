@@ -5,6 +5,8 @@ import Cookies from 'js-cookie';
 const BASE_URL = "https://utkansh2024backend.onrender.com/api/v1/";
 
 
+
+
 // Create an instance of axios with custom configuration
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
