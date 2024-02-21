@@ -101,17 +101,12 @@ export default function VerticalTabs2() {
             <TabPanel value={value} index={1} background="https://unsplash.it/1920/500?image=11">
                 <div className='each'>
                 <div> 
-                    <h1 className='heads'>HALLA BOL</h1>
-                        <p className='para'>Venue:CENTRAL LAWN </p>
-                        <p className='para'>Time:10:00 AM</p>
-
-                    </div>
-                <div> 
-                    <h1 className='heads'>IMPROV</h1>
-                        <p className='para'>Venue:CENTRAL LAWN </p>
+                    <h1 className='heads'>MONOACT</h1>
+                        <p className='para'>Venue:Community center </p>
                         <p className='para'>Time:03:00 PM</p>
 
                     </div>
+              
 
                 </div>
             </TabPanel>
@@ -129,9 +124,9 @@ export default function VerticalTabs2() {
             <TabPanel value={value} index={5} background="https://unsplash.it/1920/500?image=11">
                 <div className='each'>
                 <div> 
-                    <h1 className='heads'>PRAGYANSH</h1>
-                        <p className='para'>Venue:SCIENCE BLOCK-2 </p>
-                        <p className='para'>Time:02:00 PM</p>
+                    <h1 className='heads'>PATROKAR BABU</h1>
+                        <p className='para'>Venue:SCIENCE BLOCK</p>
+                        <p className='para'>Time:10:30 AM</p>
 
                     </div>
 
@@ -202,6 +197,12 @@ export default function VerticalTabs2() {
                     <h1 className='heads'>DRISHYA</h1>
                         <p className='para'>Venue:IT BUILDING </p>
                         <p className='para'>Time:09:00 AM</p>
+
+                    </div>
+                <div> 
+                    <h1 className='heads'>Weekend Dairy (CINEPULSE)</h1>
+                        <p className='para'>Venue:IT BUILDING </p>
+                        <p className='para'>Time:00:00</p>
 
                     </div>
 
