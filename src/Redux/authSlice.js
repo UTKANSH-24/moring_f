@@ -3,7 +3,7 @@ import { toast } from "react-hot-toast";
 import axiosInstance from "../Helper/axiosInstance";
 
 console.log("isLoggedIn:", localStorage.getItem("isLoggedIn"));
-console.log("data:", localStorage.getItem("data") || "{}");
+console.log("data:", localStorage.getItem("data"));
 console.log("role:", localStorage.getItem("role"));
 
 const initialState = {
@@ -38,9 +38,9 @@ export const createAccount = createAsyncThunk("/auth/signup", async (data) => {
 });
 
 // function to handle login
-export const login = createAsyncThunk("auth/login", async (data) => {
+export const login = createAsyncThunk("/auth/login", async (data) => {
   try {
-    let res = axiosInstance.post("/user/login", data);
+    let res = axiosInstance.post("user/login", data);
 
     await toast.promise(res, {
       loading: "Loading...",
@@ -64,7 +64,7 @@ export const login = createAsyncThunk("auth/login", async (data) => {
 });
 
 // function to handle logout
-export const logout = createAsyncThunk("auth/logout", async () => {
+export const logout = createAsyncThunk("/auth/logout", async () => {
   try {
     let res = axiosInstance.post("/user/logout");
 
@@ -87,7 +87,9 @@ export const logout = createAsyncThunk("auth/logout", async () => {
 // function to fetch user data
 export const getUserData = createAsyncThunk("/user/details", async () => {
   try {
-    const res = await axiosInstance.get("/user/me");
+    const res = await axiosInstance.get("/user/me", {
+      withCredentials:true,
+    });
     return res?.data;
   } catch (error) {
     toast.error(error.message);
@@ -230,7 +232,7 @@ const authSlice = createSlice({
           // Handle unsuccessful login (optional)
           console.error("Login failed:", action);
           // Reset 'data' in Redux state when login fails
-          state.data = {};
+          // state.data = {};
         }
       })
       .addCase(logout.fulfilled, (state) => {
@@ -240,11 +242,15 @@ const authSlice = createSlice({
         state.data = {}; // Clear 'data' from Redux state on logout
       })
       .addCase(getUserData.fulfilled, (state, action) => {
-        localStorage.setItem("data", JSON.stringify(action?.payload?.user));
-        localStorage.setItem("isLoggedIn", true);
-        state.isLoggedIn = true;
-        state.data = action?.payload?.user;
-        state.role = action?.payload?.user?.role;
+        if (action?.payload?.success) {
+          localStorage.setItem("data", JSON.stringify(action?.payload?.user));
+          localStorage.setItem("isLoggedIn", true);
+          state.isLoggedIn = true;
+          state.data = action?.payload?.user;
+          state.role = action?.payload?.user?.role;
+        } else {
+          console.error(action);
+        }
       });
   },
 });
