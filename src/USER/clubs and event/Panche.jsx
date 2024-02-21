@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useNavigate } from 'react';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 import '../css/event.css';
@@ -9,13 +9,19 @@ import '../css/style.css';
 import '../css/div_comming_css.css'
 
 export default function Panche() {
-    const handleClick = (event) => {
-        console.log(event.target.name);
-        if (sessionStorage.getItem("loginToken") === null) {
-            window.location = "../signin.html";
-        } else {
-            window.location = "../paidEventRegister.html?code=" + event.target.id;
-        }
+
+    const [eventdetails, setEventdetails] = useState({
+        eventId: '65cf977c762805baf9ec2e1c',
+        minParticipants: 1,
+        maxParticipants: 2
+
+    });
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        console.log("clicked", eventdetails);
+        navigate("/event/registerinevent", { state: { ...eventdetails } });
     };
     return (
         <div>
