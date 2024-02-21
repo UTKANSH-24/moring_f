@@ -1,28 +1,49 @@
 import React, { useState } from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 import '../css/event.css';
 import '../css/bootstrap.min.css'; // Bootstrap CSS
 import '../css/fontawesome-all.min.css'; // FontAwesome CSS
 import '../css/swiper.min.css'; // Swiper CSS (Note: this import might differ)
 import '../css/style.css';
 import '../css/div_comming_css.css'
+import { useNavigate } from 'react-router-dom';
 export default function Animation() {
-    const handleClick = (event) => {
-        // console.log(event.target.name);
-        if (sessionStorage.getItem("loginToken") === null) {
-            window.location = "../signin.html";
-        } else {
-            window.location = "../paidEventRegister.html?code=" + event.target.id;
-        }
-    };
-
+    
     const [activeTab, setActiveTab] = useState('step-1');
 
+    const [eventdetails, setEventdetails] = useState({
+        eventId: '65cf977c762805baf9ec2e1c',
+        minParticipants: 1,
+        maxParticipants: 2
+
+    });
+
+    const navigate = useNavigate();
     const handleTabClick = (tabId) => {
+        console.log("tabId", tabId);
         setActiveTab(tabId);
+        if (tabId === "step-1") {
+            console.log("step-1");
+            setEventdetails({
+                eventId: '65cf977c762805baf9ec2e1c',
+                minParticipants: 1,
+                maxParticipants: 2
+            });
+        }
+        if (tabId === "step-2") {
+            console.log("step-2");
+            setEventdetails({
+                eventId: '65cf977c762805baf9ec2e1c',
+                minParticipants: 1,
+                maxParticipants: 2
+            });
+        }
+
     };
+    const handleClick = () => {
+        console.log("clicked", eventdetails);
+        navigate("/event/registerinevent", { state: { ...eventdetails } });
+    };
+
     return (<div>
 
         {/* Our Schedule Area Start */}

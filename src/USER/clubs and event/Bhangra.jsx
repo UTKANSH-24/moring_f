@@ -1,6 +1,6 @@
 // src/components/BhangraClub.js
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import '../css/event.css';
 import '../css/bootstrap.min.css';
@@ -14,13 +14,15 @@ const BhangraClub = () => {
     const navigate = useNavigate();
     
 
-    const handleClick = (event) => {
-        // console.log(event.target.name);
-        if (sessionStorage.getItem('loginToken') === null) {
-            window.location = '../signin.html';
-        } else {
-            window.location = `../paidEventRegister.html?code=${event.target.id}`;
-        }
+    const [eventdetails, setEventdetails] = useState({
+        eventId: '65cf977c762805baf9ec2e1c',
+        minParticipants: 1,
+        maxParticipants: 2
+
+    });
+    const handleClick = () => {
+        console.log("clicked", eventdetails);
+        navigate("/event/registerinevent", { state: { ...eventdetails } });
     };
 
 

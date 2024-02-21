@@ -9,20 +9,16 @@ import '../css/swiper.min.css'; // Swiper CSS (Note: this import might differ)
 import '../css/style.css';
 import '../css/div_comming_css.css'
 export default function PhotoClub() {
-    const handleClick = (event) => {
-        console.log(event.target.name);
-        if (sessionStorage.getItem("loginToken") === null) {
-            window.location = "../signin.html";
-        } else {
-            window.location = "../paidEventRegister.html?code=" + event.target.id;
-        }
-    };
-
+   
     const [activeTab, setActiveTab] = useState('step-1');
 
+    const navigate = useNavigate();
     const handleTabClick = (tabId) => {
+        console.log("tabId", tabId);
         setActiveTab(tabId);
+
     };
+ 
     return (
         <div>
 

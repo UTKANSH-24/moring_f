@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useNavigate } from 'react';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import all stylesheets
@@ -10,19 +10,41 @@ import '../css/swiper.min.css'; // Swiper CSS (Note: this import might differ)
 import '../css/style.css';
 import '../css/div_comming_css.css'
 const Drama = () => {
-    const handleClick = (event) => {
-        // console.log(event.target.name);
-        if (sessionStorage.getItem("loginToken") === null) {
-            window.location = "../signin.html";
-        } else {
-            window.location = "../paidEventRegister.html?code=" + event.target.id;
-        }
-    };
-
+ 
     const [activeTab, setActiveTab] = useState('step-one');
 
+    const [eventdetails, setEventdetails] = useState({
+        eventId: '65cf977c762805baf9ec2e1c',
+        minParticipants: 1,
+        maxParticipants: 2
+
+    });
+
+    const navigate = useNavigate();
     const handleTabClick = (tabId) => {
+        console.log("tabId", tabId);
         setActiveTab(tabId);
+        if (tabId === "step-one") {
+            console.log("step-one");
+            setEventdetails({
+                eventId: '65cf977c762805baf9ec2e1c',
+                minParticipants: 1,
+                maxParticipants: 2
+            });
+        }
+        if (tabId === "step-two") {
+            console.log("step-two");
+            setEventdetails({
+                eventId: '65cf977c762805baf9ec2e1c',
+                minParticipants: 1,
+                maxParticipants: 2
+            });
+        }
+
+    };
+    const handleClick = () => {
+        console.log("clicked", eventdetails);
+        navigate("/event/registerinevent", { state: { ...eventdetails } });
     };
 
 
