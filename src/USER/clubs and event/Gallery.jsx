@@ -8,12 +8,14 @@ import { useLocation } from 'react-router-dom';
 export default function Gallery() {
 
     const galleryItems = [
-        'https://i.ibb.co/qCkd9jS/img1.jpg',
-        'https://i.ibb.co/jrRb11q/img2.jpg',
-        'https://i.ibb.co/NSwVv8D/img3.jpg',
-        'https://i.ibb.co/Bq4Q0M8/img4.jpg',
-        'https://i.ibb.co/jTQfmTq/img5.jpg',
-        'https://i.ibb.co/RNkk6L0/img6.jpg'
+        'https://res.cloudinary.com/dijzvijky/image/upload/v1677902291/gallery/1_prffnm.jpg',
+        'https://res.cloudinary.com/dijzvijky/image/upload/v1677902284/gallery/1_2_jcq82k.jpg',
+        'https://res.cloudinary.com/dijzvijky/image/upload/v1677902284/gallery/1_3_hqdecm.jpg',
+        'https://res.cloudinary.com/dijzvijky/image/upload/v1677902286/gallery/1_4_vlvtip.jpg',
+        'https://res.cloudinary.com/dijzvijky/image/upload/v1677902287/gallery/1_7_t6x92w.jpg',
+        'https://res.cloudinary.com/dijzvijky/image/upload/v1677902287/gallery/1_6_n7toyb.jpg',
+        'https://res.cloudinary.com/dijzvijky/image/upload/v1677902287/gallery/1_8_kshskq.jpg',
+        'https://res.cloudinary.com/dijzvijky/image/upload/v1677902288/gallery/1_9_yoexyu.jpg'
     ];
 
     const location = useLocation();
