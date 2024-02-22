@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-.teamheading{
+
+.teamheading {
     text-align: centre;
     justify-content: center;
     /* margin-left: 100px; */
@@ -20,6 +21,33 @@
     max-width: 100%;
     flex-wrap: wrap;
 }
+.container0{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.main-card {
+    position: absolute;
+    left: 40%;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(153, 150, 150, 0.713);
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 1.5px rgb(186, 182, 182);
+    border-left: solid 1.5px rgb(186, 182, 182);
+    backdrop-filter: blur(05px);
+}
+
 
 .card4545 {
     position: relative;

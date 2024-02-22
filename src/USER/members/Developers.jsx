@@ -23,7 +23,7 @@ const Developers = () => {
                 <h2 className='teamheading' style={{ textAlign: 'center', }}>Developers</h2>
                 <div className="cont">
                     <div className="card4545 card1">
-                        <h3>Lovish Garg</h3>
+                        <h3>rawwww</h3>
                         <h4>Convenor</h4>
                         <span>
                             <img src="https://res.cloudinary.com/dijzvijky/image/upload/v1676977602/core_members/lovish_garg_e2rvqt.jpg" alt="" />
