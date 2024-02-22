@@ -70,12 +70,7 @@ const Tshirtdetails = () => {
 
         <h4>Product Details</h4>
         <span>
-          Embrace the timeless elegance of simplicity with our Classic Utkansh T-Shirt. This design
-          features the iconic Utkansh logo in a clean and minimalistic style, allowing the essence of
-          the fest to speak for itself. The classic Utkansh lettering is artfully integrated, creating
-          a sophisticated and versatile look suitable for various occasions. Whether you're attending
-          events, workshops, or simply expressing your college fest pride, this T-shirt is a perfect
-          choice for those who appreciate understated elegance.
+        Indulge in the eternal charm of simplicity with our Classic Utkansh T-Shirt! 🌟 This design showcases the iconic Utkansh logo in a clean and minimalist style, letting the festival's essence shine through effortlessly. 🎨 The timeless Utkansh lettering is seamlessly incorporated, crafting a refined and adaptable appearance ideal for any occasion. 🎓 Whether you're partaking in events, workshops, or just flaunting your college fest spirit, this T-shirt is the ultimate pick for those who cherish understated elegance. 💫
         </span>
       </div>
     </section>
